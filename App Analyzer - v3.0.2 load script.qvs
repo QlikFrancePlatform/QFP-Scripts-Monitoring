@@ -51,7 +51,7 @@ Trace Configuration;
 1. Fully qualified domain name for your tenant. 
 		Example: 'company.us.qlikcloud.com'
 */
-Set vu_tenant_fqdn = 'qfp.de.qlikcloud.com';
+Set vu_tenant_fqdn = 
 
 /*
 2. The name of the REST connection that will be used. You must first create a valid REST connection to any endpoint to Qlik Sense tenant.
