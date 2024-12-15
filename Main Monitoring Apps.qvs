@@ -499,6 +499,58 @@ RESIDENT [GitHubTmp];
 
 Drop table [GitHubTmp];
 
+LIB CONNECT TO 'Monitoring:GitHub - magikcypress';
+
+[Github Pull Request]:
+LOAD Id as [PullRequests.Id], 
+	Url as [PullRequests.Url], 
+	Number as [PullRequests.Number], 
+	Title as [PullRequests.Title], 
+	State as [PullRequests.State], 
+	Body as [PullRequests.Body], 
+	User_Login as [PullRequests.User_Login], 
+	Assignee_Login as [PullRequests.Assignee_Login], 
+	Labels_Name as [PullRequests.Labels_Name], 
+	Requested_Reviewers_Login as [PullRequests.Requested_Reviewers_Login], 
+	Requested_Teams_Name as [PullRequests.Requested_Teams_Name], 
+	Assignees_Login as [PullRequests.Assignees_Login], 
+	Merge_Commit_Sha as [PullRequests.Merge_Commit_Sha], 
+	Active_Lock_Reason as [PullRequests.Active_Lock_Reason], 
+	Author_Association as [PullRequests.Author_Association], 
+	Draft as [PullRequests.Draft], 
+	Locked as [PullRequests.Locked], 
+	Created as [PullRequests.Created], 
+	Updated as [PullRequests.Updated], 
+	Closed_At as [PullRequests.Closed_At], 
+	Merged_At as [PullRequests.Merged_At];
+
+SELECT Id,
+	Url,
+	Number,
+	Title,
+	State,
+	Body,
+	User_Login,
+	Assignee_Login,
+	Labels_Name,
+	Requested_Reviewers_Login,
+	Requested_Teams_Name,
+	Assignees_Login,
+	Merge_Commit_Sha,
+	Active_Lock_Reason,
+	Author_Association,
+	Draft,
+	Locked,
+	Created,
+	Updated,
+	Closed_At,
+	Merged_At
+FROM PullRequests
+WITH PROPERTIES (
+repoName='QlikFrancePlatform/QFP-Scripts-Monitoring',
+state='all'
+);
+
 
 ///$tab Datafile local
 Set vConcatenate = ;
