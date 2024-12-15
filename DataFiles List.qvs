@@ -1,0 +1,8685 @@
+///$tab Main
+SET ThousandSep=' ';
+SET DecimalSep=',';
+SET MoneyThousandSep=' ';
+SET MoneyDecimalSep=',';
+SET MoneyFormat='# ##0,00 €;-# ##0,00 €';
+SET TimeFormat='hh:mm:ss';
+SET DateFormat='DD/MM/YYYY';
+SET TimestampFormat='DD/MM/YYYY hh:mm:ss[.fff]';
+SET FirstWeekDay=0;
+SET BrokenWeeks=0;
+SET ReferenceDay=4;
+SET FirstMonthOfYear=1;
+SET CollationLocale='fr-FR';
+SET MonthNames='janv.;févr.;mars;avr.;mai;juin;juil.;août;sept.;oct.;nov.;déc.';
+SET LongMonthNames='janvier;février;mars;avril;mai;juin;juillet;août;septembre;octobre;novembre;décembre';
+SET DayNames='lun.;mar.;mer.;jeu.;ven.;sam.;dim.';
+SET LongDayNames='lundi;mardi;mercredi;jeudi;vendredi;samedi;dimanche';
+SET NumericalAbbreviation='3:k;6:M;9:G;12:T;15:P;18:E;21:Z;24:Y;-3:m;-6:μ;-9:n;-12:p;-15:f;-18:a;-21:z;-24:y';
+
+///$tab Load QVD
+Users:
+LOAD
+    OwnerId,
+    OwnerName
+FROM [lib://Monitoring:DataFiles/UsersList.qvd]
+(qvd) 
+//where Exists(OwnerId)
+;
+
+Data:
+LOAD
+    Spacename,
+    Name,
+    Size,
+    OwnerId,
+    DataFileID,
+    DateExtraction
+FROM [lib://Monitoring:DataFiles/datafiles_12_10_2023.qvd]
+(qvd);
+
+LOAD
+    Spacename,
+    Name,
+    Size,
+    OwnerId,
+    DataFileID,
+    DateExtraction
+FROM [lib://Monitoring:DataFiles/datafiles_13_10_2023.qvd]
+(qvd);
+LOAD
+    Spacename,
+    Name,
+    Size,
+    OwnerId,
+    DataFileID,
+    DateExtraction
+FROM [lib://Monitoring:DataFiles/datafiles_15_10_2023.qvd]
+(qvd);
+
+LOAD
+    Spacename,
+    Name,
+    Size,
+    OwnerId,
+    DataFileID,
+    DateExtraction
+FROM [lib://Monitoring:DataFiles/datafiles_16_10_2023.qvd]
+(qvd);
+
+LOAD
+    Spacename,
+    Name,
+    Size,
+    OwnerId,
+    DataFileID,
+    DateExtraction
+FROM [lib://Monitoring:DataFiles/datafiles_17_10_2023.qvd]
+(qvd);
+
+
+LOAD
+    Spacename,
+    Name,
+    Size,
+    OwnerId,
+    DataFileID,
+    DateExtraction
+FROM [lib://Monitoring:DataFiles/datafiles_18_10_2023.qvd]
+(qvd);LOAD
+    Spacename,
+    Name,
+    Size,
+    OwnerId,
+    DataFileID,
+    DateExtraction
+FROM [lib://Monitoring:DataFiles/datafiles_19_10_2023.qvd]
+(qvd);LOAD
+    Spacename,
+    Name,
+    Size,
+    OwnerId,
+    DataFileID,
+    DateExtraction
+FROM [lib://Monitoring:DataFiles/datafiles_20_10_2023.qvd]
+(qvd);LOAD
+    Spacename,
+    Name,
+    Size,
+    OwnerId,
+    DataFileID,
+    DateExtraction
+FROM [lib://Monitoring:DataFiles/datafiles_21_10_2023.qvd]
+(qvd);LOAD
+    Spacename,
+    Name,
+    Size,
+    OwnerId,
+    DataFileID,
+    DateExtraction
+FROM [lib://Monitoring:DataFiles/datafiles_22_10_2023.qvd]
+(qvd);LOAD
+    Spacename,
+    Name,
+    Size,
+    OwnerId,
+    DataFileID,
+    DateExtraction
+FROM [lib://Monitoring:DataFiles/datafiles_23_10_2023.qvd]
+(qvd);LOAD
+    Spacename,
+    Name,
+    Size,
+    OwnerId,
+    DataFileID,
+    DateExtraction
+FROM [lib://Monitoring:DataFiles/datafiles_24_10_2023.qvd]
+(qvd);LOAD
+    Spacename,
+    Name,
+    Size,
+    OwnerId,
+    DataFileID,
+    DateExtraction
+FROM [lib://Monitoring:DataFiles/datafiles_25_10_2023.qvd]
+(qvd);LOAD
+    Spacename,
+    Name,
+    Size,
+    OwnerId,
+    DataFileID,
+    DateExtraction
+FROM [lib://Monitoring:DataFiles/datafiles_26_10_2023.qvd]
+(qvd);LOAD
+    Spacename,
+    Name,
+    Size,
+    OwnerId,
+    DataFileID,
+    DateExtraction
+FROM [lib://Monitoring:DataFiles/datafiles_27_10_2023.qvd]
+(qvd);LOAD
+    Spacename,
+    Name,
+    Size,
+    OwnerId,
+    DataFileID,
+    DateExtraction
+FROM [lib://Monitoring:DataFiles/datafiles_28_10_2023.qvd]
+(qvd);LOAD
+    Spacename,
+    Name,
+    Size,
+    OwnerId,
+    DataFileID,
+    DateExtraction
+FROM [lib://Monitoring:DataFiles/datafiles_29_10_2023.qvd]
+(qvd);LOAD
+    Spacename,
+    Name,
+    Size,
+    OwnerId,
+    DataFileID,
+    DateExtraction
+FROM [lib://Monitoring:DataFiles/datafiles_30_10_2023.qvd]
+(qvd);LOAD
+    Spacename,
+    Name,
+    Size,
+    OwnerId,
+    DataFileID,
+    DateExtraction
+FROM [lib://Monitoring:DataFiles/datafiles_31_10_2023.qvd]
+(qvd);LOAD
+    Spacename,
+    Name,
+    Size,
+    OwnerId,
+    DataFileID,
+    DateExtraction
+FROM [lib://Monitoring:DataFiles/datafiles_1_11_2023.qvd]
+(qvd);LOAD
+    Spacename,
+    Name,
+    Size,
+    OwnerId,
+    DataFileID,
+    DateExtraction
+FROM [lib://Monitoring:DataFiles/datafiles_2_11_2023.qvd]
+(qvd);LOAD
+    Spacename,
+    Name,
+    Size,
+    OwnerId,
+    DataFileID,
+    DateExtraction
+FROM [lib://Monitoring:DataFiles/datafiles_3_11_2023.qvd]
+(qvd);LOAD
+    Spacename,
+    Name,
+    Size,
+    OwnerId,
+    DataFileID,
+    DateExtraction
+FROM [lib://Monitoring:DataFiles/datafiles_4_11_2023.qvd]
+(qvd);LOAD
+    Spacename,
+    Name,
+    Size,
+    OwnerId,
+    DataFileID,
+    DateExtraction
+FROM [lib://Monitoring:DataFiles/datafiles_5_11_2023.qvd]
+(qvd);LOAD
+    Spacename,
+    Name,
+    Size,
+    OwnerId,
+    DataFileID,
+    DateExtraction
+FROM [lib://Monitoring:DataFiles/datafiles_6_11_2023.qvd]
+(qvd);LOAD
+    Spacename,
+    Name,
+    Size,
+    OwnerId,
+    DataFileID,
+    DateExtraction
+FROM [lib://Monitoring:DataFiles/datafiles_7_11_2023.qvd]
+(qvd);LOAD
+    Spacename,
+    Name,
+    Size,
+    OwnerId,
+    DataFileID,
+    DateExtraction
+FROM [lib://Monitoring:DataFiles/datafiles_8_11_2023.qvd]
+(qvd);LOAD
+    Spacename,
+    Name,
+    Size,
+    OwnerId,
+    DataFileID,
+    DateExtraction
+FROM [lib://Monitoring:DataFiles/datafiles_9_11_2023.qvd]
+(qvd);LOAD
+    Spacename,
+    Name,
+    Size,
+    OwnerId,
+    DataFileID,
+    DateExtraction
+FROM [lib://Monitoring:DataFiles/datafiles_10_11_2023.qvd]
+(qvd);LOAD
+    Spacename,
+    Name,
+    Size,
+    OwnerId,
+    DataFileID,
+    DateExtraction
+FROM [lib://Monitoring:DataFiles/datafiles_11_11_2023.qvd]
+(qvd);LOAD
+    Spacename,
+    Name,
+    Size,
+    OwnerId,
+    DataFileID,
+    DateExtraction
+FROM [lib://Monitoring:DataFiles/datafiles_12_11_2023.qvd]
+(qvd);LOAD
+    Spacename,
+    Name,
+    Size,
+    OwnerId,
+    DataFileID,
+    DateExtraction
+FROM [lib://Monitoring:DataFiles/datafiles_13_11_2023.qvd]
+(qvd);LOAD
+    Spacename,
+    Name,
+    Size,
+    OwnerId,
+    DataFileID,
+    DateExtraction
+FROM [lib://Monitoring:DataFiles/datafiles_14_11_2023.qvd]
+(qvd);LOAD
+    Spacename,
+    Name,
+    Size,
+    OwnerId,
+    DataFileID,
+    DateExtraction
+FROM [lib://Monitoring:DataFiles/datafiles_15_11_2023.qvd]
+(qvd);LOAD
+    Spacename,
+    Name,
+    Size,
+    OwnerId,
+    DataFileID,
+    DateExtraction
+FROM [lib://Monitoring:DataFiles/datafiles_16_11_2023.qvd]
+(qvd);LOAD
+    Spacename,
+    Name,
+    Size,
+    OwnerId,
+    DataFileID,
+    DateExtraction
+FROM [lib://Monitoring:DataFiles/datafiles_17_11_2023.qvd]
+(qvd);LOAD
+    Spacename,
+    Name,
+    Size,
+    OwnerId,
+    DataFileID,
+    DateExtraction
+FROM [lib://Monitoring:DataFiles/datafiles_18_11_2023.qvd]
+(qvd);LOAD
+    Spacename,
+    Name,
+    Size,
+    OwnerId,
+    DataFileID,
+    DateExtraction
+FROM [lib://Monitoring:DataFiles/datafiles_19_11_2023.qvd]
+(qvd);LOAD
+    Spacename,
+    Name,
+    Size,
+    OwnerId,
+    DataFileID,
+    DateExtraction
+FROM [lib://Monitoring:DataFiles/datafiles_20_11_2023.qvd]
+(qvd);LOAD
+    Spacename,
+    Name,
+    Size,
+    OwnerId,
+    DataFileID,
+    DateExtraction
+FROM [lib://Monitoring:DataFiles/datafiles_21_11_2023.qvd]
+(qvd);LOAD
+    Spacename,
+    Name,
+    Size,
+    OwnerId,
+    DataFileID,
+    DateExtraction
+FROM [lib://Monitoring:DataFiles/datafiles_22_11_2023.qvd]
+(qvd);LOAD
+    Spacename,
+    Name,
+    Size,
+    OwnerId,
+    DataFileID,
+    DateExtraction
+FROM [lib://Monitoring:DataFiles/datafiles_22_11_2023.qvd]
+(qvd);LOAD
+    Spacename,
+    Name,
+    Size,
+    OwnerId,
+    DataFileID,
+    DateExtraction
+FROM [lib://Monitoring:DataFiles/datafiles_23_11_2023.qvd]
+(qvd);LOAD
+    Spacename,
+    Name,
+    Size,
+    OwnerId,
+    DataFileID,
+    DateExtraction
+FROM [lib://Monitoring:DataFiles/datafiles_24_11_2023.qvd]
+(qvd);LOAD
+    Spacename,
+    Name,
+    Size,
+    OwnerId,
+    DataFileID,
+    DateExtraction
+FROM [lib://Monitoring:DataFiles/datafiles_25_11_2023.qvd]
+(qvd);LOAD
+    Spacename,
+    Name,
+    Size,
+    OwnerId,
+    DataFileID,
+    DateExtraction
+FROM [lib://Monitoring:DataFiles/datafiles_26_11_2023.qvd]
+(qvd);
+
+Data:
+LOAD
+Spacename,
+Name,
+Size,
+OwnerId,
+DataFileID,
+DateExtraction
+FROM [lib://Monitoring:DataFiles/datafiles_27_11_2023.qvd]
+(qvd);
+
+AppFiles:
+LOAD
+    AppSpacename,
+    AppName,
+    DiskSize,
+    MemorySize,
+    lastReloadTime,
+    OwnerId,
+    AppID,
+    LastReloadDate
+
+FROM [lib://Monitoring:DataFiles/appFiles_27_11_2023.qvd]
+(qvd);
+
+Data:
+LOAD
+Spacename,
+Name,
+Size,
+OwnerId,
+DataFileID,
+DateExtraction
+FROM [lib://Monitoring:DataFiles/datafiles_28_11_2023.qvd]
+(qvd);
+
+AppFiles:
+LOAD
+    AppSpacename,
+    AppName,
+    DiskSize,
+    MemorySize,
+    lastReloadTime,
+    OwnerId,
+    AppID,
+    LastReloadDate
+
+FROM [lib://Monitoring:DataFiles/appFiles_28_11_2023.qvd]
+(qvd);
+
+Data:
+LOAD
+Spacename,
+Name,
+Size,
+OwnerId,
+DataFileID,
+DateExtraction
+FROM [lib://Monitoring:DataFiles/datafiles_29_11_2023.qvd]
+(qvd);
+
+AppFiles:
+LOAD
+    AppSpacename,
+    AppName,
+    DiskSize,
+    MemorySize,
+    lastReloadTime,
+    OwnerId,
+    AppID,
+    LastReloadDate
+
+FROM [lib://Monitoring:DataFiles/appFiles_29_11_2023.qvd]
+(qvd);
+
+Data:
+LOAD
+Spacename,
+Name,
+Size,
+OwnerId,
+DataFileID,
+DateExtraction
+FROM [lib://Monitoring:DataFiles/datafiles_30_11_2023.qvd]
+(qvd);
+
+AppFiles:
+LOAD
+    AppSpacename,
+    AppName,
+    DiskSize,
+    MemorySize,
+    lastReloadTime,
+    OwnerId,
+    AppID,
+    LastReloadDate
+
+FROM [lib://Monitoring:DataFiles/appFiles_30_11_2023.qvd]
+(qvd);Data:
+LOAD
+Spacename,
+Name,
+Size,
+OwnerId,
+DataFileID,
+DateExtraction
+FROM [lib://Monitoring:DataFiles/datafiles_1_12_2023.qvd]
+(qvd);
+
+AppFiles:
+LOAD
+    AppSpacename,
+    AppName,
+    DiskSize,
+    MemorySize,
+    lastReloadTime,
+    OwnerId,
+    AppID,
+    LastReloadDate
+
+FROM [lib://Monitoring:DataFiles/appFiles_1_12_2023.qvd]
+(qvd);Data:
+LOAD
+Spacename,
+Name,
+Size,
+OwnerId,
+DataFileID,
+DateExtraction
+FROM [lib://Monitoring:DataFiles/datafiles_2_12_2023.qvd]
+(qvd);
+
+AppFiles:
+LOAD
+    AppSpacename,
+    AppName,
+    DiskSize,
+    MemorySize,
+    lastReloadTime,
+    OwnerId,
+    AppID,
+    LastReloadDate
+
+FROM [lib://Monitoring:DataFiles/appFiles_2_12_2023.qvd]
+(qvd);Data:
+LOAD
+Spacename,
+Name,
+Size,
+OwnerId,
+DataFileID,
+DateExtraction
+FROM [lib://Monitoring:DataFiles/datafiles_3_12_2023.qvd]
+(qvd);
+
+AppFiles:
+LOAD
+    AppSpacename,
+    AppName,
+    DiskSize,
+    MemorySize,
+    lastReloadTime,
+    OwnerId,
+    AppID,
+    LastReloadDate
+
+FROM [lib://Monitoring:DataFiles/appFiles_3_12_2023.qvd]
+(qvd);Data:
+LOAD
+Spacename,
+Name,
+Size,
+OwnerId,
+DataFileID,
+DateExtraction
+FROM [lib://Monitoring:DataFiles/datafiles_4_12_2023.qvd]
+(qvd);
+
+AppFiles:
+LOAD
+    AppSpacename,
+    AppName,
+    DiskSize,
+    MemorySize,
+    lastReloadTime,
+    OwnerId,
+    AppID,
+    LastReloadDate
+
+FROM [lib://Monitoring:DataFiles/appFiles_4_12_2023.qvd]
+(qvd);
+Data:
+LOAD
+Spacename,
+Name,
+Size,
+OwnerId,
+DataFileID,
+DateExtraction
+FROM [lib://Monitoring:DataFiles/datafiles_5_12_2023.qvd]
+(qvd);
+
+AppFiles:
+LOAD
+    AppSpacename,
+    AppName,
+    DiskSize,
+    MemorySize,
+    lastReloadTime,
+    OwnerId,
+    AppID,
+    LastReloadDate
+
+FROM [lib://Monitoring:DataFiles/appFiles_5_12_2023.qvd]
+(qvd);Data:
+LOAD
+Spacename,
+Name,
+Size,
+OwnerId,
+DataFileID,
+DateExtraction
+FROM [lib://Monitoring:DataFiles/datafiles_6_12_2023.qvd]
+(qvd);
+
+AppFiles:
+LOAD
+    AppSpacename,
+    AppName,
+    DiskSize,
+    MemorySize,
+    lastReloadTime,
+    OwnerId,
+    AppID,
+    LastReloadDate
+
+FROM [lib://Monitoring:DataFiles/appFiles_6_12_2023.qvd]
+(qvd);Data:
+LOAD
+Spacename,
+Name,
+Size,
+OwnerId,
+DataFileID,
+DateExtraction
+FROM [lib://Monitoring:DataFiles/datafiles_7_12_2023.qvd]
+(qvd);
+
+AppFiles:
+LOAD
+    AppSpacename,
+    AppName,
+    DiskSize,
+    MemorySize,
+    lastReloadTime,
+    OwnerId,
+    AppID,
+    LastReloadDate
+
+FROM [lib://Monitoring:DataFiles/appFiles_7_12_2023.qvd]
+(qvd);Data:
+LOAD
+Spacename,
+Name,
+Size,
+OwnerId,
+DataFileID,
+DateExtraction
+FROM [lib://Monitoring:DataFiles/datafiles_8_12_2023.qvd]
+(qvd);
+
+AppFiles:
+LOAD
+    AppSpacename,
+    AppName,
+    DiskSize,
+    MemorySize,
+    lastReloadTime,
+    OwnerId,
+    AppID,
+    LastReloadDate
+
+FROM [lib://Monitoring:DataFiles/appFiles_8_12_2023.qvd]
+(qvd);Data:
+LOAD
+Spacename,
+Name,
+Size,
+OwnerId,
+DataFileID,
+DateExtraction
+FROM [lib://Monitoring:DataFiles/datafiles_9_12_2023.qvd]
+(qvd);
+
+AppFiles:
+LOAD
+    AppSpacename,
+    AppName,
+    DiskSize,
+    MemorySize,
+    lastReloadTime,
+    OwnerId,
+    AppID,
+    LastReloadDate
+
+FROM [lib://Monitoring:DataFiles/appFiles_9_12_2023.qvd]
+(qvd);Data:
+LOAD
+Spacename,
+Name,
+Size,
+OwnerId,
+DataFileID,
+DateExtraction
+FROM [lib://Monitoring:DataFiles/datafiles_10_12_2023.qvd]
+(qvd);
+
+AppFiles:
+LOAD
+    AppSpacename,
+    AppName,
+    DiskSize,
+    MemorySize,
+    lastReloadTime,
+    OwnerId,
+    AppID,
+    LastReloadDate
+
+FROM [lib://Monitoring:DataFiles/appFiles_10_12_2023.qvd]
+(qvd);Data:
+LOAD
+Spacename,
+Name,
+Size,
+OwnerId,
+DataFileID,
+DateExtraction
+FROM [lib://Monitoring:DataFiles/datafiles_11_12_2023.qvd]
+(qvd);
+
+AppFiles:
+LOAD
+    AppSpacename,
+    AppName,
+    DiskSize,
+    MemorySize,
+    lastReloadTime,
+    OwnerId,
+    AppID,
+    LastReloadDate
+
+FROM [lib://Monitoring:DataFiles/appFiles_11_12_2023.qvd]
+(qvd);Data:
+LOAD
+Spacename,
+Name,
+Size,
+OwnerId,
+DataFileID,
+DateExtraction
+FROM [lib://Monitoring:DataFiles/datafiles_12_12_2023.qvd]
+(qvd);
+
+AppFiles:
+LOAD
+    AppSpacename,
+    AppName,
+    DiskSize,
+    MemorySize,
+    lastReloadTime,
+    OwnerId,
+    AppID,
+    LastReloadDate
+
+FROM [lib://Monitoring:DataFiles/appFiles_12_12_2023.qvd]
+(qvd);Data:
+LOAD
+Spacename,
+Name,
+Size,
+OwnerId,
+DataFileID,
+DateExtraction
+FROM [lib://Monitoring:DataFiles/datafiles_13_12_2023.qvd]
+(qvd);
+
+AppFiles:
+LOAD
+    AppSpacename,
+    AppName,
+    DiskSize,
+    MemorySize,
+    lastReloadTime,
+    OwnerId,
+    AppID,
+    LastReloadDate
+
+FROM [lib://Monitoring:DataFiles/appFiles_13_12_2023.qvd]
+(qvd);Data:
+LOAD
+Spacename,
+Name,
+Size,
+OwnerId,
+DataFileID,
+DateExtraction
+FROM [lib://Monitoring:DataFiles/datafiles_14_12_2023_gzip.parquet] (parquet);
+
+AppFiles:
+LOAD
+    AppSpacename,
+    AppName,
+    DiskSize,
+    MemorySize,
+    lastReloadTime,
+    OwnerId,
+    AppID,
+    LastReloadDate
+FROM [lib://Monitoring:DataFiles/appFiles_14_12_2023.qvd] (qvd);
+
+Data:
+LOAD
+Spacename,
+Name,
+Size,
+OwnerId,
+DataFileID,
+Date(DateExtraction) as DateExtraction
+FROM [lib://Monitoring:DataFiles/datafiles_15_12_2023_gzip.parquet] (parquet);
+
+AppFiles:
+LOAD
+AppSpacename,
+AppName,
+DiskSize,
+MemorySize,
+lastReloadTime,
+OwnerId,
+AppID,
+LastReloadDate
+
+FROM [lib://Monitoring:DataFiles/appFiles_15_12_2023_gzip.parquet] (parquet);Data:
+LOAD
+Spacename,
+Name,
+Size,
+OwnerId,
+DataFileID,
+DateExtraction
+FROM [lib://Monitoring:DataFiles/datafiles_16_12_2023_gzip.parquet] (parquet);
+
+AppFiles:
+LOAD
+AppSpacename,
+AppName,
+DiskSize,
+MemorySize,
+lastReloadTime,
+OwnerId,
+AppID,
+LastReloadDate
+
+FROM [lib://Monitoring:DataFiles/appFiles_16_12_2023_gzip.parquet]
+(parquet);Data:
+LOAD
+Spacename,
+Name,
+Size,
+OwnerId,
+DataFileID,
+DateExtraction
+FROM [lib://Monitoring:DataFiles/datafiles_17_12_2023_gzip.parquet] (parquet);
+
+AppFiles:
+LOAD
+AppSpacename,
+AppName,
+DiskSize,
+MemorySize,
+lastReloadTime,
+OwnerId,
+AppID,
+LastReloadDate
+
+FROM [lib://Monitoring:DataFiles/appFiles_17_12_2023_gzip.parquet]
+(parquet);Data:
+LOAD
+Spacename,
+Name,
+Size,
+OwnerId,
+DataFileID,
+DateExtraction
+FROM [lib://Monitoring:DataFiles/datafiles_18_12_2023_gzip.parquet] (parquet);
+
+AppFiles:
+LOAD
+AppSpacename,
+AppName,
+DiskSize,
+MemorySize,
+lastReloadTime,
+OwnerId,
+AppID,
+LastReloadDate
+
+FROM [lib://Monitoring:DataFiles/appFiles_18_12_2023_gzip.parquet]
+(parquet);Data:
+LOAD
+Spacename,
+Name,
+Size,
+OwnerId,
+DataFileID,
+DateExtraction
+FROM [lib://Monitoring:DataFiles/datafiles_19_12_2023_gzip.parquet] (parquet);
+
+AppFiles:
+LOAD
+AppSpacename,
+AppName,
+DiskSize,
+MemorySize,
+lastReloadTime,
+OwnerId,
+AppID,
+LastReloadDate
+
+FROM [lib://Monitoring:DataFiles/appFiles_19_12_2023_gzip.parquet]
+(parquet);Data:
+LOAD
+Spacename,
+Name,
+Size,
+OwnerId,
+DataFileID,
+DateExtraction
+FROM [lib://Monitoring:DataFiles/datafiles_20_12_2023_gzip.parquet] (parquet);
+
+AppFiles:
+LOAD
+AppSpacename,
+AppName,
+DiskSize,
+MemorySize,
+lastReloadTime,
+OwnerId,
+AppID,
+LastReloadDate
+
+FROM [lib://Monitoring:DataFiles/appFiles_20_12_2023_gzip.parquet]
+(parquet);Data:
+LOAD
+Spacename,
+Name,
+Size,
+OwnerId,
+DataFileID,
+DateExtraction
+FROM [lib://Monitoring:DataFiles/datafiles_21_12_2023_gzip.parquet] (parquet);
+
+AppFiles:
+LOAD
+AppSpacename,
+AppName,
+DiskSize,
+MemorySize,
+lastReloadTime,
+OwnerId,
+AppID,
+LastReloadDate
+
+FROM [lib://Monitoring:DataFiles/appFiles_21_12_2023_gzip.parquet]
+(parquet);Data:
+LOAD
+Spacename,
+Name,
+Size,
+OwnerId,
+DataFileID,
+DateExtraction
+FROM [lib://Monitoring:DataFiles/datafiles_22_12_2023_gzip.parquet] (parquet);
+
+AppFiles:
+LOAD
+AppSpacename,
+AppName,
+DiskSize,
+MemorySize,
+lastReloadTime,
+OwnerId,
+AppID,
+LastReloadDate
+
+FROM [lib://Monitoring:DataFiles/appFiles_22_12_2023_gzip.parquet]
+(parquet);Data:
+LOAD
+Spacename,
+Name,
+Size,
+OwnerId,
+DataFileID,
+DateExtraction
+FROM [lib://Monitoring:DataFiles/datafiles_23_12_2023_gzip.parquet] (parquet);
+
+AppFiles:
+LOAD
+AppSpacename,
+AppName,
+DiskSize,
+MemorySize,
+lastReloadTime,
+OwnerId,
+AppID,
+LastReloadDate
+
+FROM [lib://Monitoring:DataFiles/appFiles_23_12_2023_gzip.parquet]
+(parquet);Data:
+LOAD
+Spacename,
+Name,
+Size,
+OwnerId,
+DataFileID,
+DateExtraction
+FROM [lib://Monitoring:DataFiles/datafiles_24_12_2023_gzip.parquet] (parquet);
+
+AppFiles:
+LOAD
+AppSpacename,
+AppName,
+DiskSize,
+MemorySize,
+lastReloadTime,
+OwnerId,
+AppID,
+LastReloadDate
+
+FROM [lib://Monitoring:DataFiles/appFiles_24_12_2023_gzip.parquet]
+(parquet);Data:
+LOAD
+Spacename,
+Name,
+Size,
+OwnerId,
+DataFileID,
+DateExtraction
+FROM [lib://Monitoring:DataFiles/datafiles_25_12_2023_gzip.parquet] (parquet);
+
+AppFiles:
+LOAD
+AppSpacename,
+AppName,
+DiskSize,
+MemorySize,
+lastReloadTime,
+OwnerId,
+AppID,
+LastReloadDate
+
+FROM [lib://Monitoring:DataFiles/appFiles_25_12_2023_gzip.parquet]
+(parquet);Data:
+LOAD
+Spacename,
+Name,
+Size,
+OwnerId,
+DataFileID,
+DateExtraction
+FROM [lib://Monitoring:DataFiles/datafiles_26_12_2023_gzip.parquet] (parquet);
+
+AppFiles:
+LOAD
+AppSpacename,
+AppName,
+DiskSize,
+MemorySize,
+lastReloadTime,
+OwnerId,
+AppID,
+LastReloadDate
+
+FROM [lib://Monitoring:DataFiles/appFiles_26_12_2023_gzip.parquet]
+(parquet);Data:
+LOAD
+Spacename,
+Name,
+Size,
+OwnerId,
+DataFileID,
+DateExtraction
+FROM [lib://Monitoring:DataFiles/datafiles_27_12_2023_gzip.parquet] (parquet);
+
+AppFiles:
+LOAD
+AppSpacename,
+AppName,
+DiskSize,
+MemorySize,
+lastReloadTime,
+OwnerId,
+AppID,
+LastReloadDate
+
+FROM [lib://Monitoring:DataFiles/appFiles_27_12_2023_gzip.parquet]
+(parquet);Data:
+LOAD
+Spacename,
+Name,
+Size,
+OwnerId,
+DataFileID,
+DateExtraction
+FROM [lib://Monitoring:DataFiles/datafiles_28_12_2023_gzip.parquet] (parquet);
+
+AppFiles:
+LOAD
+AppSpacename,
+AppName,
+DiskSize,
+MemorySize,
+lastReloadTime,
+OwnerId,
+AppID,
+LastReloadDate
+
+FROM [lib://Monitoring:DataFiles/appFiles_28_12_2023_gzip.parquet]
+(parquet);Data:
+LOAD
+Spacename,
+Name,
+Size,
+OwnerId,
+DataFileID,
+DateExtraction
+FROM [lib://Monitoring:DataFiles/datafiles_29_12_2023_gzip.parquet] (parquet);
+
+AppFiles:
+LOAD
+AppSpacename,
+AppName,
+DiskSize,
+MemorySize,
+lastReloadTime,
+OwnerId,
+AppID,
+LastReloadDate
+
+FROM [lib://Monitoring:DataFiles/appFiles_29_12_2023_gzip.parquet]
+(parquet);Data:
+LOAD
+Spacename,
+Name,
+Size,
+OwnerId,
+DataFileID,
+DateExtraction
+FROM [lib://Monitoring:DataFiles/datafiles_30_12_2023_gzip.parquet] (parquet);
+
+AppFiles:
+LOAD
+AppSpacename,
+AppName,
+DiskSize,
+MemorySize,
+lastReloadTime,
+OwnerId,
+AppID,
+LastReloadDate
+
+FROM [lib://Monitoring:DataFiles/appFiles_30_12_2023_gzip.parquet]
+(parquet);Data:
+LOAD
+Spacename,
+Name,
+Size,
+OwnerId,
+DataFileID,
+DateExtraction
+FROM [lib://Monitoring:DataFiles/datafiles_31_12_2023_gzip.parquet] (parquet);
+
+AppFiles:
+LOAD
+AppSpacename,
+AppName,
+DiskSize,
+MemorySize,
+lastReloadTime,
+OwnerId,
+AppID,
+LastReloadDate
+
+FROM [lib://Monitoring:DataFiles/appFiles_31_12_2023_gzip.parquet]
+(parquet);Data:
+LOAD
+Spacename,
+Name,
+Size,
+OwnerId,
+DataFileID,
+DateExtraction
+FROM [lib://Monitoring:DataFiles/datafiles_1_1_2024_gzip.parquet] (parquet);
+
+AppFiles:
+LOAD
+AppSpacename,
+AppName,
+DiskSize,
+MemorySize,
+lastReloadTime,
+OwnerId,
+AppID,
+LastReloadDate
+
+FROM [lib://Monitoring:DataFiles/appFiles_1_1_2024_gzip.parquet]
+(parquet);Data:
+LOAD
+Spacename,
+Name,
+Size,
+OwnerId,
+DataFileID,
+DateExtraction
+FROM [lib://Monitoring:DataFiles/datafiles_2_1_2024_gzip.parquet] (parquet);
+
+AppFiles:
+LOAD
+AppSpacename,
+AppName,
+DiskSize,
+MemorySize,
+lastReloadTime,
+OwnerId,
+AppID,
+LastReloadDate
+
+FROM [lib://Monitoring:DataFiles/appFiles_2_1_2024_gzip.parquet]
+(parquet);Data:
+LOAD
+Spacename,
+Name,
+Size,
+OwnerId,
+DataFileID,
+DateExtraction
+FROM [lib://Monitoring:DataFiles/datafiles_3_1_2024_gzip.parquet] (parquet);
+
+AppFiles:
+LOAD
+AppSpacename,
+AppName,
+DiskSize,
+MemorySize,
+lastReloadTime,
+OwnerId,
+AppID,
+LastReloadDate
+
+FROM [lib://Monitoring:DataFiles/appFiles_3_1_2024_gzip.parquet]
+(parquet);Data:
+LOAD
+Spacename,
+Name,
+Size,
+OwnerId,
+DataFileID,
+DateExtraction
+FROM [lib://Monitoring:DataFiles/datafiles_4_1_2024_gzip.parquet] (parquet);
+
+AppFiles:
+LOAD
+AppSpacename,
+AppName,
+DiskSize,
+MemorySize,
+lastReloadTime,
+OwnerId,
+AppID,
+LastReloadDate
+
+FROM [lib://Monitoring:DataFiles/appFiles_4_1_2024_gzip.parquet]
+(parquet);Data:
+LOAD
+Spacename,
+Name,
+Size,
+OwnerId,
+DataFileID,
+DateExtraction
+FROM [lib://Monitoring:DataFiles/datafiles_5_1_2024_gzip.parquet] (parquet);
+
+AppFiles:
+LOAD
+AppSpacename,
+AppName,
+DiskSize,
+MemorySize,
+lastReloadTime,
+OwnerId,
+AppID,
+LastReloadDate
+
+FROM [lib://Monitoring:DataFiles/appFiles_5_1_2024_gzip.parquet]
+(parquet);Data:
+LOAD
+Spacename,
+Name,
+Size,
+OwnerId,
+DataFileID,
+DateExtraction
+FROM [lib://Monitoring:DataFiles/datafiles_6_1_2024_gzip.parquet] (parquet);
+
+AppFiles:
+LOAD
+AppSpacename,
+AppName,
+DiskSize,
+MemorySize,
+lastReloadTime,
+OwnerId,
+AppID,
+LastReloadDate
+
+FROM [lib://Monitoring:DataFiles/appFiles_6_1_2024_gzip.parquet]
+(parquet);Data:
+LOAD
+Spacename,
+Name,
+Size,
+OwnerId,
+DataFileID,
+DateExtraction
+FROM [lib://Monitoring:DataFiles/datafiles_7_1_2024_gzip.parquet] (parquet);
+
+AppFiles:
+LOAD
+AppSpacename,
+AppName,
+DiskSize,
+MemorySize,
+lastReloadTime,
+OwnerId,
+AppID,
+LastReloadDate
+
+FROM [lib://Monitoring:DataFiles/appFiles_7_1_2024_gzip.parquet]
+(parquet);Data:
+LOAD
+Spacename,
+Name,
+Size,
+OwnerId,
+DataFileID,
+DateExtraction
+FROM [lib://Monitoring:DataFiles/datafiles_8_1_2024_gzip.parquet] (parquet);
+
+AppFiles:
+LOAD
+AppSpacename,
+AppName,
+DiskSize,
+MemorySize,
+lastReloadTime,
+OwnerId,
+AppID,
+LastReloadDate
+
+FROM [lib://Monitoring:DataFiles/appFiles_8_1_2024_gzip.parquet]
+(parquet);Data:
+LOAD
+Spacename,
+Name,
+Size,
+OwnerId,
+DataFileID,
+DateExtraction
+FROM [lib://Monitoring:DataFiles/datafiles_9_1_2024_gzip.parquet] (parquet);
+
+AppFiles:
+LOAD
+AppSpacename,
+AppName,
+DiskSize,
+MemorySize,
+lastReloadTime,
+OwnerId,
+AppID,
+LastReloadDate
+
+FROM [lib://Monitoring:DataFiles/appFiles_9_1_2024_gzip.parquet]
+(parquet);Data:
+LOAD
+Spacename,
+Name,
+Size,
+OwnerId,
+DataFileID,
+DateExtraction
+FROM [lib://Monitoring:DataFiles/datafiles_10_1_2024_gzip.parquet] (parquet);
+
+AppFiles:
+LOAD
+AppSpacename,
+AppName,
+DiskSize,
+MemorySize,
+lastReloadTime,
+OwnerId,
+AppID,
+LastReloadDate
+
+FROM [lib://Monitoring:DataFiles/appFiles_10_1_2024_gzip.parquet]
+(parquet);Data:
+LOAD
+Spacename,
+Name,
+Size,
+OwnerId,
+DataFileID,
+DateExtraction
+FROM [lib://Monitoring:DataFiles/datafiles_11_1_2024_gzip.parquet] (parquet);
+
+AppFiles:
+LOAD
+AppSpacename,
+AppName,
+DiskSize,
+MemorySize,
+lastReloadTime,
+OwnerId,
+AppID,
+LastReloadDate
+
+FROM [lib://Monitoring:DataFiles/appFiles_11_1_2024_gzip.parquet]
+(parquet);Data:
+LOAD
+Spacename,
+Name,
+Size,
+OwnerId,
+DataFileID,
+DateExtraction
+FROM [lib://Monitoring:DataFiles/datafiles_12_1_2024_gzip.parquet] (parquet);
+
+AppFiles:
+LOAD
+AppSpacename,
+AppName,
+DiskSize,
+MemorySize,
+lastReloadTime,
+OwnerId,
+AppID,
+LastReloadDate
+
+FROM [lib://Monitoring:DataFiles/appFiles_12_1_2024_gzip.parquet]
+(parquet);Data:
+LOAD
+Spacename,
+Name,
+Size,
+OwnerId,
+DataFileID,
+DateExtraction
+FROM [lib://Monitoring:DataFiles/datafiles_13_1_2024_gzip.parquet] (parquet);
+
+AppFiles:
+LOAD
+AppSpacename,
+AppName,
+DiskSize,
+MemorySize,
+lastReloadTime,
+OwnerId,
+AppID,
+LastReloadDate
+
+FROM [lib://Monitoring:DataFiles/appFiles_13_1_2024_gzip.parquet]
+(parquet);Data:
+LOAD
+Spacename,
+Name,
+Size,
+OwnerId,
+DataFileID,
+DateExtraction
+FROM [lib://Monitoring:DataFiles/datafiles_14_1_2024_gzip.parquet] (parquet);
+
+AppFiles:
+LOAD
+AppSpacename,
+AppName,
+DiskSize,
+MemorySize,
+lastReloadTime,
+OwnerId,
+AppID,
+LastReloadDate
+
+FROM [lib://Monitoring:DataFiles/appFiles_14_1_2024_gzip.parquet]
+(parquet);Data:
+LOAD
+Spacename,
+Name,
+Size,
+OwnerId,
+DataFileID,
+DateExtraction
+FROM [lib://Monitoring:DataFiles/datafiles_15_1_2024_gzip.parquet] (parquet);
+
+AppFiles:
+LOAD
+AppSpacename,
+AppName,
+DiskSize,
+MemorySize,
+lastReloadTime,
+OwnerId,
+AppID,
+LastReloadDate
+
+FROM [lib://Monitoring:DataFiles/appFiles_15_1_2024_gzip.parquet]
+(parquet);Data:
+LOAD
+Spacename,
+Name,
+Size,
+OwnerId,
+DataFileID,
+DateExtraction
+FROM [lib://Monitoring:DataFiles/datafiles_16_1_2024_gzip.parquet] (parquet);
+
+AppFiles:
+LOAD
+AppSpacename,
+AppName,
+DiskSize,
+MemorySize,
+lastReloadTime,
+OwnerId,
+AppID,
+LastReloadDate
+
+FROM [lib://Monitoring:DataFiles/appFiles_16_1_2024_gzip.parquet]
+(parquet);Data:
+LOAD
+Spacename,
+Name,
+Size,
+OwnerId,
+DataFileID,
+DateExtraction
+FROM [lib://Monitoring:DataFiles/datafiles_17_1_2024_gzip.parquet] (parquet);
+
+AppFiles:
+LOAD
+AppSpacename,
+AppName,
+DiskSize,
+MemorySize,
+lastReloadTime,
+OwnerId,
+AppID,
+LastReloadDate
+
+FROM [lib://Monitoring:DataFiles/appFiles_17_1_2024_gzip.parquet]
+(parquet);Data:
+LOAD
+Spacename,
+Name,
+Size,
+OwnerId,
+DataFileID,
+DateExtraction
+FROM [lib://Monitoring:DataFiles/datafiles_18_1_2024_gzip.parquet] (parquet);
+
+AppFiles:
+LOAD
+AppSpacename,
+AppName,
+DiskSize,
+MemorySize,
+lastReloadTime,
+OwnerId,
+AppID,
+LastReloadDate
+
+FROM [lib://Monitoring:DataFiles/appFiles_18_1_2024_gzip.parquet]
+(parquet);Data:
+LOAD
+Spacename,
+Name,
+Size,
+OwnerId,
+DataFileID,
+DateExtraction
+FROM [lib://Monitoring:DataFiles/datafiles_19_1_2024_gzip.parquet] (parquet);
+
+AppFiles:
+LOAD
+AppSpacename,
+AppName,
+DiskSize,
+MemorySize,
+lastReloadTime,
+OwnerId,
+AppID,
+LastReloadDate
+
+FROM [lib://Monitoring:DataFiles/appFiles_19_1_2024_gzip.parquet]
+(parquet);Data:
+LOAD
+Spacename,
+Name,
+Size,
+OwnerId,
+DataFileID,
+DateExtraction
+FROM [lib://Monitoring:DataFiles/datafiles_20_1_2024_gzip.parquet] (parquet);
+
+AppFiles:
+LOAD
+AppSpacename,
+AppName,
+DiskSize,
+MemorySize,
+lastReloadTime,
+OwnerId,
+AppID,
+LastReloadDate
+
+FROM [lib://Monitoring:DataFiles/appFiles_20_1_2024_gzip.parquet]
+(parquet);Data:
+LOAD
+Spacename,
+Name,
+Size,
+OwnerId,
+DataFileID,
+DateExtraction
+FROM [lib://Monitoring:DataFiles/datafiles_21_1_2024_gzip.parquet] (parquet);
+
+AppFiles:
+LOAD
+AppSpacename,
+AppName,
+DiskSize,
+MemorySize,
+lastReloadTime,
+OwnerId,
+AppID,
+LastReloadDate
+
+FROM [lib://Monitoring:DataFiles/appFiles_21_1_2024_gzip.parquet]
+(parquet);Data:
+LOAD
+Spacename,
+Name,
+Size,
+OwnerId,
+DataFileID,
+DateExtraction
+FROM [lib://Monitoring:DataFiles/datafiles_22_1_2024_gzip.parquet] (parquet);
+
+AppFiles:
+LOAD
+AppSpacename,
+AppName,
+DiskSize,
+MemorySize,
+lastReloadTime,
+OwnerId,
+AppID,
+LastReloadDate
+
+FROM [lib://Monitoring:DataFiles/appFiles_22_1_2024_gzip.parquet]
+(parquet);Data:
+LOAD
+Spacename,
+Name,
+Size,
+OwnerId,
+DataFileID,
+DateExtraction
+FROM [lib://Monitoring:DataFiles/datafiles_23_1_2024_gzip.parquet] (parquet);
+
+AppFiles:
+LOAD
+AppSpacename,
+AppName,
+DiskSize,
+MemorySize,
+lastReloadTime,
+OwnerId,
+AppID,
+LastReloadDate
+
+FROM [lib://Monitoring:DataFiles/appFiles_23_1_2024_gzip.parquet]
+(parquet);Data:
+LOAD
+Spacename,
+Name,
+Size,
+OwnerId,
+DataFileID,
+DateExtraction
+FROM [lib://Monitoring:DataFiles/datafiles_24_1_2024_gzip.parquet] (parquet);
+
+AppFiles:
+LOAD
+AppSpacename,
+AppName,
+DiskSize,
+MemorySize,
+lastReloadTime,
+OwnerId,
+AppID,
+LastReloadDate
+
+FROM [lib://Monitoring:DataFiles/appFiles_24_1_2024_gzip.parquet]
+(parquet);Data:
+LOAD
+Spacename,
+Name,
+Size,
+OwnerId,
+DataFileID,
+Date(DateExtraction,'DD/MM/YYYY') as DateExtraction
+FROM [lib://Monitoring:DataFiles/datafiles_25_1_2024_gzip.parquet] (parquet);
+
+AppFiles:
+LOAD
+AppSpacename,
+AppName,
+DiskSize,
+MemorySize,
+lastReloadTime,
+OwnerId,
+AppID,
+LastReloadDate
+
+FROM [lib://Monitoring:DataFiles/appFiles_25_1_2024_gzip.parquet]
+(parquet);Data:
+LOAD
+Spacename,
+Name,
+Size,
+OwnerId,
+DataFileID,
+DateExtraction
+FROM [lib://Monitoring:DataFiles/datafiles_26_1_2024_gzip.parquet] (parquet);
+
+AppFiles:
+LOAD
+AppSpacename,
+AppName,
+DiskSize,
+MemorySize,
+lastReloadTime,
+OwnerId,
+AppID,
+LastReloadDate
+
+FROM [lib://Monitoring:DataFiles/appFiles_26_1_2024_gzip.parquet]
+(parquet);Data:
+LOAD
+Spacename,
+Name,
+Size,
+OwnerId,
+DataFileID,
+DateExtraction
+FROM [lib://Monitoring:DataFiles/datafiles_27_1_2024_gzip.parquet] (parquet);
+
+AppFiles:
+LOAD
+AppSpacename,
+AppName,
+DiskSize,
+MemorySize,
+lastReloadTime,
+OwnerId,
+AppID,
+LastReloadDate
+
+FROM [lib://Monitoring:DataFiles/appFiles_27_1_2024_gzip.parquet]
+(parquet);Data:
+LOAD
+Spacename,
+Name,
+Size,
+OwnerId,
+DataFileID,
+DateExtraction
+FROM [lib://Monitoring:DataFiles/datafiles_28_1_2024_gzip.parquet] (parquet);
+
+AppFiles:
+LOAD
+AppSpacename,
+AppName,
+DiskSize,
+MemorySize,
+lastReloadTime,
+OwnerId,
+AppID,
+LastReloadDate
+
+FROM [lib://Monitoring:DataFiles/appFiles_28_1_2024_gzip.parquet]
+(parquet);Data:
+LOAD
+Spacename,
+Name,
+Size,
+OwnerId,
+DataFileID,
+DateExtraction
+FROM [lib://Monitoring:DataFiles/datafiles_29_1_2024_gzip.parquet] (parquet);
+
+AppFiles:
+LOAD
+AppSpacename,
+AppName,
+DiskSize,
+MemorySize,
+lastReloadTime,
+OwnerId,
+AppID,
+LastReloadDate
+
+FROM [lib://Monitoring:DataFiles/appFiles_29_1_2024_gzip.parquet]
+(parquet);Data:
+LOAD
+Spacename,
+Name,
+Size,
+OwnerId,
+DataFileID,
+DateExtraction
+FROM [lib://Monitoring:DataFiles/datafiles_30_1_2024_gzip.parquet] (parquet);
+
+AppFiles:
+LOAD
+AppSpacename,
+AppName,
+DiskSize,
+MemorySize,
+lastReloadTime,
+OwnerId,
+AppID,
+LastReloadDate
+
+FROM [lib://Monitoring:DataFiles/appFiles_30_1_2024_gzip.parquet]
+(parquet);Data:
+LOAD
+Spacename,
+Name,
+Size,
+OwnerId,
+DataFileID,
+DateExtraction
+FROM [lib://Monitoring:DataFiles/datafiles_31_1_2024_gzip.parquet] (parquet);
+
+AppFiles:
+LOAD
+AppSpacename,
+AppName,
+DiskSize,
+MemorySize,
+lastReloadTime,
+OwnerId,
+AppID,
+LastReloadDate
+
+FROM [lib://Monitoring:DataFiles/appFiles_31_1_2024_gzip.parquet]
+(parquet);Data:
+LOAD
+Spacename,
+Name,
+Size,
+OwnerId,
+DataFileID,
+DateExtraction
+FROM [lib://Monitoring:DataFiles/datafiles_1_2_2024_gzip.parquet] (parquet);
+
+AppFiles:
+LOAD
+AppSpacename,
+AppName,
+DiskSize,
+MemorySize,
+lastReloadTime,
+OwnerId,
+AppID,
+LastReloadDate
+
+FROM [lib://Monitoring:DataFiles/appFiles_1_2_2024_gzip.parquet]
+(parquet);Data:
+LOAD
+Spacename,
+Name,
+Size,
+OwnerId,
+DataFileID,
+DateExtraction
+FROM [lib://Monitoring:DataFiles/datafiles_2_2_2024_gzip.parquet] (parquet);
+
+AppFiles:
+LOAD
+AppSpacename,
+AppName,
+DiskSize,
+MemorySize,
+lastReloadTime,
+OwnerId,
+AppID,
+LastReloadDate
+
+FROM [lib://Monitoring:DataFiles/appFiles_2_2_2024_gzip.parquet]
+(parquet);Data:
+LOAD
+Spacename,
+Name,
+Size,
+OwnerId,
+DataFileID,
+DateExtraction
+FROM [lib://Monitoring:DataFiles/datafiles_3_2_2024_gzip.parquet] (parquet);
+
+AppFiles:
+LOAD
+AppSpacename,
+AppName,
+DiskSize,
+MemorySize,
+lastReloadTime,
+OwnerId,
+AppID,
+LastReloadDate
+
+FROM [lib://Monitoring:DataFiles/appFiles_3_2_2024_gzip.parquet]
+(parquet);Data:
+LOAD
+Spacename,
+Name,
+Size,
+OwnerId,
+DataFileID,
+DateExtraction
+FROM [lib://Monitoring:DataFiles/datafiles_4_2_2024_gzip.parquet] (parquet);
+
+AppFiles:
+LOAD
+AppSpacename,
+AppName,
+DiskSize,
+MemorySize,
+lastReloadTime,
+OwnerId,
+AppID,
+LastReloadDate
+
+FROM [lib://Monitoring:DataFiles/appFiles_4_2_2024_gzip.parquet]
+(parquet);Data:
+LOAD
+Spacename,
+Name,
+Size,
+OwnerId,
+DataFileID,
+DateExtraction
+FROM [lib://Monitoring:DataFiles/datafiles_5_2_2024_gzip.parquet] (parquet);
+
+AppFiles:
+LOAD
+AppSpacename,
+AppName,
+DiskSize,
+MemorySize,
+lastReloadTime,
+OwnerId,
+AppID,
+LastReloadDate
+
+FROM [lib://Monitoring:DataFiles/appFiles_5_2_2024_gzip.parquet]
+(parquet);Data:
+LOAD
+Spacename,
+Name,
+Size,
+OwnerId,
+DataFileID,
+DateExtraction
+FROM [lib://Monitoring:DataFiles/datafiles_6_2_2024_gzip.parquet] (parquet);
+
+AppFiles:
+LOAD
+AppSpacename,
+AppName,
+DiskSize,
+MemorySize,
+lastReloadTime,
+OwnerId,
+AppID,
+LastReloadDate
+
+FROM [lib://Monitoring:DataFiles/appFiles_6_2_2024_gzip.parquet]
+(parquet);Data:
+LOAD
+Spacename,
+Name,
+Size,
+OwnerId,
+DataFileID,
+DateExtraction
+FROM [lib://Monitoring:DataFiles/datafiles_7_2_2024_gzip.parquet] (parquet);
+
+AppFiles:
+LOAD
+AppSpacename,
+AppName,
+DiskSize,
+MemorySize,
+lastReloadTime,
+OwnerId,
+AppID,
+LastReloadDate
+
+FROM [lib://Monitoring:DataFiles/appFiles_7_2_2024_gzip.parquet]
+(parquet);Data:
+LOAD
+Spacename,
+Name,
+Size,
+OwnerId,
+DataFileID,
+DateExtraction
+FROM [lib://Monitoring:DataFiles/datafiles_8_2_2024_gzip.parquet] (parquet);
+
+AppFiles:
+LOAD
+AppSpacename,
+AppName,
+DiskSize,
+MemorySize,
+lastReloadTime,
+OwnerId,
+AppID,
+LastReloadDate
+
+FROM [lib://Monitoring:DataFiles/appFiles_8_2_2024_gzip.parquet]
+(parquet);Data:
+LOAD
+Spacename,
+Name,
+Size,
+OwnerId,
+DataFileID,
+DateExtraction
+FROM [lib://Monitoring:DataFiles/datafiles_9_2_2024_gzip.parquet] (parquet);
+
+AppFiles:
+LOAD
+AppSpacename,
+AppName,
+DiskSize,
+MemorySize,
+lastReloadTime,
+OwnerId,
+AppID,
+LastReloadDate
+
+FROM [lib://Monitoring:DataFiles/appFiles_9_2_2024_gzip.parquet]
+(parquet);Data:
+LOAD
+Spacename,
+Name,
+Size,
+OwnerId,
+DataFileID,
+DateExtraction
+FROM [lib://Monitoring:DataFiles/datafiles_10_2_2024_gzip.parquet] (parquet);
+
+AppFiles:
+LOAD
+AppSpacename,
+AppName,
+DiskSize,
+MemorySize,
+lastReloadTime,
+OwnerId,
+AppID,
+LastReloadDate
+
+FROM [lib://Monitoring:DataFiles/appFiles_10_2_2024_gzip.parquet]
+(parquet);Data:
+LOAD
+Spacename,
+Name,
+Size,
+OwnerId,
+DataFileID,
+DateExtraction
+FROM [lib://Monitoring:DataFiles/datafiles_11_2_2024_gzip.parquet] (parquet);
+
+AppFiles:
+LOAD
+AppSpacename,
+AppName,
+DiskSize,
+MemorySize,
+lastReloadTime,
+OwnerId,
+AppID,
+LastReloadDate
+
+FROM [lib://Monitoring:DataFiles/appFiles_11_2_2024_gzip.parquet]
+(parquet);Data:
+LOAD
+Spacename,
+Name,
+Size,
+OwnerId,
+DataFileID,
+DateExtraction
+FROM [lib://Monitoring:DataFiles/datafiles_12_2_2024_gzip.parquet] (parquet);
+
+AppFiles:
+LOAD
+AppSpacename,
+AppName,
+DiskSize,
+MemorySize,
+lastReloadTime,
+OwnerId,
+AppID,
+LastReloadDate
+
+FROM [lib://Monitoring:DataFiles/appFiles_12_2_2024_gzip.parquet]
+(parquet);Data:
+LOAD
+Spacename,
+Name,
+Size,
+OwnerId,
+DataFileID,
+DateExtraction
+FROM [lib://Monitoring:DataFiles/datafiles_13_2_2024_gzip.parquet] (parquet);
+
+AppFiles:
+LOAD
+AppSpacename,
+AppName,
+DiskSize,
+MemorySize,
+lastReloadTime,
+OwnerId,
+AppID,
+LastReloadDate
+
+FROM [lib://Monitoring:DataFiles/appFiles_13_2_2024_gzip.parquet]
+(parquet);Data:
+LOAD
+Spacename,
+Name,
+Size,
+OwnerId,
+DataFileID,
+DateExtraction
+FROM [lib://Monitoring:DataFiles/datafiles_14_2_2024_gzip.parquet] (parquet);
+
+AppFiles:
+LOAD
+AppSpacename,
+AppName,
+DiskSize,
+MemorySize,
+lastReloadTime,
+OwnerId,
+AppID,
+LastReloadDate
+
+FROM [lib://Monitoring:DataFiles/appFiles_14_2_2024_gzip.parquet]
+(parquet);Data:
+LOAD
+Spacename,
+Name,
+Size,
+OwnerId,
+DataFileID,
+DateExtraction
+FROM [lib://Monitoring:DataFiles/datafiles_15_2_2024_gzip.parquet] (parquet);
+
+AppFiles:
+LOAD
+AppSpacename,
+AppName,
+DiskSize,
+MemorySize,
+lastReloadTime,
+OwnerId,
+AppID,
+LastReloadDate
+
+FROM [lib://Monitoring:DataFiles/appFiles_15_2_2024_gzip.parquet]
+(parquet);Data:
+LOAD
+Spacename,
+Name,
+Size,
+OwnerId,
+DataFileID,
+DateExtraction
+FROM [lib://Monitoring:DataFiles/datafiles_16_2_2024_gzip.parquet] (parquet);
+
+AppFiles:
+LOAD
+AppSpacename,
+AppName,
+DiskSize,
+MemorySize,
+lastReloadTime,
+OwnerId,
+AppID,
+LastReloadDate
+
+FROM [lib://Monitoring:DataFiles/appFiles_16_2_2024_gzip.parquet]
+(parquet);Data:
+LOAD
+Spacename,
+Name,
+Size,
+OwnerId,
+DataFileID,
+DateExtraction
+FROM [lib://Monitoring:DataFiles/datafiles_17_2_2024_gzip.parquet] (parquet);
+
+AppFiles:
+LOAD
+AppSpacename,
+AppName,
+DiskSize,
+MemorySize,
+lastReloadTime,
+OwnerId,
+AppID,
+LastReloadDate
+
+FROM [lib://Monitoring:DataFiles/appFiles_17_2_2024_gzip.parquet]
+(parquet);Data:
+LOAD
+Spacename,
+Name,
+Size,
+OwnerId,
+DataFileID,
+DateExtraction
+FROM [lib://Monitoring:DataFiles/datafiles_18_2_2024_gzip.parquet] (parquet);
+
+AppFiles:
+LOAD
+AppSpacename,
+AppName,
+DiskSize,
+MemorySize,
+lastReloadTime,
+OwnerId,
+AppID,
+LastReloadDate
+
+FROM [lib://Monitoring:DataFiles/appFiles_18_2_2024_gzip.parquet]
+(parquet);Data:
+LOAD
+Spacename,
+Name,
+Size,
+OwnerId,
+DataFileID,
+DateExtraction
+FROM [lib://Monitoring:DataFiles/datafiles_19_2_2024_gzip.parquet] (parquet);
+
+AppFiles:
+LOAD
+AppSpacename,
+AppName,
+DiskSize,
+MemorySize,
+lastReloadTime,
+OwnerId,
+AppID,
+LastReloadDate
+
+FROM [lib://Monitoring:DataFiles/appFiles_19_2_2024_gzip.parquet]
+(parquet);Data:
+LOAD
+Spacename,
+Name,
+Size,
+OwnerId,
+DataFileID,
+DateExtraction
+FROM [lib://Monitoring:DataFiles/datafiles_20_2_2024_gzip.parquet] (parquet);
+
+AppFiles:
+LOAD
+AppSpacename,
+AppName,
+DiskSize,
+MemorySize,
+lastReloadTime,
+OwnerId,
+AppID,
+LastReloadDate
+
+FROM [lib://Monitoring:DataFiles/appFiles_20_2_2024_gzip.parquet]
+(parquet);Data:
+LOAD
+Spacename,
+Name,
+Size,
+OwnerId,
+DataFileID,
+DateExtraction
+FROM [lib://Monitoring:DataFiles/datafiles_21_2_2024_gzip.parquet] (parquet);
+
+AppFiles:
+LOAD
+AppSpacename,
+AppName,
+DiskSize,
+MemorySize,
+lastReloadTime,
+OwnerId,
+AppID,
+LastReloadDate
+
+FROM [lib://Monitoring:DataFiles/appFiles_21_2_2024_gzip.parquet]
+(parquet);Data:
+LOAD
+Spacename,
+Name,
+Size,
+OwnerId,
+DataFileID,
+DateExtraction
+FROM [lib://Monitoring:DataFiles/datafiles_22_2_2024_gzip.parquet] (parquet);
+
+AppFiles:
+LOAD
+AppSpacename,
+AppName,
+DiskSize,
+MemorySize,
+lastReloadTime,
+OwnerId,
+AppID,
+LastReloadDate
+
+FROM [lib://Monitoring:DataFiles/appFiles_22_2_2024_gzip.parquet]
+(parquet);Data:
+LOAD
+Spacename,
+Name,
+Size,
+OwnerId,
+DataFileID,
+DateExtraction
+FROM [lib://Monitoring:DataFiles/datafiles_23_2_2024_gzip.parquet] (parquet);
+
+AppFiles:
+LOAD
+AppSpacename,
+AppName,
+DiskSize,
+MemorySize,
+lastReloadTime,
+OwnerId,
+AppID,
+LastReloadDate
+
+FROM [lib://Monitoring:DataFiles/appFiles_23_2_2024_gzip.parquet]
+(parquet);Data:
+LOAD
+Spacename,
+Name,
+Size,
+OwnerId,
+DataFileID,
+DateExtraction
+FROM [lib://Monitoring:DataFiles/datafiles_24_2_2024_gzip.parquet] (parquet);
+
+AppFiles:
+LOAD
+AppSpacename,
+AppName,
+DiskSize,
+MemorySize,
+lastReloadTime,
+OwnerId,
+AppID,
+LastReloadDate
+
+FROM [lib://Monitoring:DataFiles/appFiles_24_2_2024_gzip.parquet]
+(parquet);Data:
+LOAD
+Spacename,
+Name,
+Size,
+OwnerId,
+DataFileID,
+DateExtraction
+FROM [lib://Monitoring:DataFiles/datafiles_25_2_2024_gzip.parquet] (parquet);
+
+AppFiles:
+LOAD
+AppSpacename,
+AppName,
+DiskSize,
+MemorySize,
+lastReloadTime,
+OwnerId,
+AppID,
+LastReloadDate
+
+FROM [lib://Monitoring:DataFiles/appFiles_25_2_2024_gzip.parquet]
+(parquet);Data:
+LOAD
+Spacename,
+Name,
+Size,
+OwnerId,
+DataFileID,
+DateExtraction
+FROM [lib://Monitoring:DataFiles/datafiles_26_2_2024_gzip.parquet] (parquet);
+
+AppFiles:
+LOAD
+AppSpacename,
+AppName,
+DiskSize,
+MemorySize,
+lastReloadTime,
+OwnerId,
+AppID,
+LastReloadDate
+
+FROM [lib://Monitoring:DataFiles/appFiles_26_2_2024_gzip.parquet]
+(parquet);Data:
+LOAD
+Spacename,
+Name,
+Size,
+OwnerId,
+DataFileID,
+DateExtraction
+FROM [lib://Monitoring:DataFiles/datafiles_27_2_2024_gzip.parquet] (parquet);
+
+AppFiles:
+LOAD
+AppSpacename,
+AppName,
+DiskSize,
+MemorySize,
+lastReloadTime,
+OwnerId,
+AppID,
+LastReloadDate
+
+FROM [lib://Monitoring:DataFiles/appFiles_27_2_2024_gzip.parquet]
+(parquet);Data:
+LOAD
+Spacename,
+Name,
+Size,
+OwnerId,
+DataFileID,
+DateExtraction
+FROM [lib://Monitoring:DataFiles/datafiles_28_2_2024_gzip.parquet] (parquet);
+
+AppFiles:
+LOAD
+AppSpacename,
+AppName,
+DiskSize,
+MemorySize,
+lastReloadTime,
+OwnerId,
+AppID,
+LastReloadDate
+
+FROM [lib://Monitoring:DataFiles/appFiles_28_2_2024_gzip.parquet]
+(parquet);Data:
+LOAD
+Spacename,
+Name,
+Size,
+OwnerId,
+DataFileID,
+DateExtraction
+FROM [lib://Monitoring:DataFiles/datafiles_29_2_2024_gzip.parquet] (parquet);
+
+AppFiles:
+LOAD
+AppSpacename,
+AppName,
+DiskSize,
+MemorySize,
+lastReloadTime,
+OwnerId,
+AppID,
+LastReloadDate
+
+FROM [lib://Monitoring:DataFiles/appFiles_29_2_2024_gzip.parquet]
+(parquet);Data:
+LOAD
+Spacename,
+Name,
+Size,
+OwnerId,
+DataFileID,
+DateExtraction
+FROM [lib://Monitoring:DataFiles/datafiles_1_3_2024_gzip.parquet] (parquet);
+
+AppFiles:
+LOAD
+AppSpacename,
+AppName,
+DiskSize,
+MemorySize,
+lastReloadTime,
+OwnerId,
+AppID,
+LastReloadDate
+
+FROM [lib://Monitoring:DataFiles/appFiles_1_3_2024_gzip.parquet]
+(parquet);Data:
+LOAD
+Spacename,
+Name,
+Size,
+OwnerId,
+DataFileID,
+DateExtraction
+FROM [lib://Monitoring:DataFiles/datafiles_2_3_2024_gzip.parquet] (parquet);
+
+AppFiles:
+LOAD
+AppSpacename,
+AppName,
+DiskSize,
+MemorySize,
+lastReloadTime,
+OwnerId,
+AppID,
+LastReloadDate
+
+FROM [lib://Monitoring:DataFiles/appFiles_2_3_2024_gzip.parquet]
+(parquet);Data:
+LOAD
+Spacename,
+Name,
+Size,
+OwnerId,
+DataFileID,
+DateExtraction
+FROM [lib://Monitoring:DataFiles/datafiles_3_3_2024_gzip.parquet] (parquet);
+
+AppFiles:
+LOAD
+AppSpacename,
+AppName,
+DiskSize,
+MemorySize,
+lastReloadTime,
+OwnerId,
+AppID,
+LastReloadDate
+
+FROM [lib://Monitoring:DataFiles/appFiles_3_3_2024_gzip.parquet]
+(parquet);Data:
+LOAD
+Spacename,
+Name,
+Size,
+OwnerId,
+DataFileID,
+DateExtraction
+FROM [lib://Monitoring:DataFiles/datafiles_4_3_2024_gzip.parquet] (parquet);
+
+AppFiles:
+LOAD
+AppSpacename,
+AppName,
+DiskSize,
+MemorySize,
+lastReloadTime,
+OwnerId,
+AppID,
+LastReloadDate
+
+FROM [lib://Monitoring:DataFiles/appFiles_4_3_2024_gzip.parquet]
+(parquet);Data:
+LOAD
+Spacename,
+Name,
+Size,
+OwnerId,
+DataFileID,
+DateExtraction
+FROM [lib://Monitoring:DataFiles/datafiles_5_3_2024_gzip.parquet] (parquet);
+
+AppFiles:
+LOAD
+AppSpacename,
+AppName,
+DiskSize,
+MemorySize,
+lastReloadTime,
+OwnerId,
+AppID,
+LastReloadDate
+
+FROM [lib://Monitoring:DataFiles/appFiles_5_3_2024_gzip.parquet]
+(parquet);Data:
+LOAD
+Spacename,
+Name,
+Size,
+OwnerId,
+DataFileID,
+DateExtraction
+FROM [lib://Monitoring:DataFiles/datafiles_6_3_2024_gzip.parquet] (parquet);
+
+AppFiles:
+LOAD
+AppSpacename,
+AppName,
+DiskSize,
+MemorySize,
+lastReloadTime,
+OwnerId,
+AppID,
+LastReloadDate
+
+FROM [lib://Monitoring:DataFiles/appFiles_6_3_2024_gzip.parquet]
+(parquet);Data:
+LOAD
+Spacename,
+Name,
+Size,
+OwnerId,
+DataFileID,
+DateExtraction
+FROM [lib://Monitoring:DataFiles/datafiles_7_3_2024_gzip.parquet] (parquet);
+
+AppFiles:
+LOAD
+AppSpacename,
+AppName,
+DiskSize,
+MemorySize,
+lastReloadTime,
+OwnerId,
+AppID,
+LastReloadDate
+
+FROM [lib://Monitoring:DataFiles/appFiles_7_3_2024_gzip.parquet]
+(parquet);Data:
+LOAD
+Spacename,
+Name,
+Size,
+OwnerId,
+DataFileID,
+DateExtraction
+FROM [lib://Monitoring:DataFiles/datafiles_8_3_2024_gzip.parquet] (parquet);
+
+AppFiles:
+LOAD
+AppSpacename,
+AppName,
+DiskSize,
+MemorySize,
+lastReloadTime,
+OwnerId,
+AppID,
+LastReloadDate
+
+FROM [lib://Monitoring:DataFiles/appFiles_8_3_2024_gzip.parquet]
+(parquet);Data:
+LOAD
+Spacename,
+Name,
+Size,
+OwnerId,
+DataFileID,
+DateExtraction
+FROM [lib://Monitoring:DataFiles/datafiles_9_3_2024_gzip.parquet] (parquet);
+
+AppFiles:
+LOAD
+AppSpacename,
+AppName,
+DiskSize,
+MemorySize,
+lastReloadTime,
+OwnerId,
+AppID,
+LastReloadDate
+
+FROM [lib://Monitoring:DataFiles/appFiles_9_3_2024_gzip.parquet]
+(parquet);Data:
+LOAD
+Spacename,
+Name,
+Size,
+OwnerId,
+DataFileID,
+DateExtraction
+FROM [lib://Monitoring:DataFiles/datafiles_10_3_2024_gzip.parquet] (parquet);
+
+AppFiles:
+LOAD
+AppSpacename,
+AppName,
+DiskSize,
+MemorySize,
+lastReloadTime,
+OwnerId,
+AppID,
+LastReloadDate
+
+FROM [lib://Monitoring:DataFiles/appFiles_10_3_2024_gzip.parquet]
+(parquet);Data:
+LOAD
+Spacename,
+Name,
+Size,
+OwnerId,
+DataFileID,
+DateExtraction
+FROM [lib://Monitoring:DataFiles/datafiles_11_3_2024_gzip.parquet] (parquet);
+
+AppFiles:
+LOAD
+AppSpacename,
+AppName,
+DiskSize,
+MemorySize,
+lastReloadTime,
+OwnerId,
+AppID,
+LastReloadDate
+
+FROM [lib://Monitoring:DataFiles/appFiles_11_3_2024_gzip.parquet]
+(parquet);Data:
+LOAD
+Spacename,
+Name,
+Size,
+OwnerId,
+DataFileID,
+DateExtraction
+FROM [lib://Monitoring:DataFiles/datafiles_12_3_2024_gzip.parquet] (parquet);
+
+AppFiles:
+LOAD
+AppSpacename,
+AppName,
+DiskSize,
+MemorySize,
+lastReloadTime,
+OwnerId,
+AppID,
+LastReloadDate
+
+FROM [lib://Monitoring:DataFiles/appFiles_12_3_2024_gzip.parquet]
+(parquet);Data:
+LOAD
+Spacename,
+Name,
+Size,
+OwnerId,
+DataFileID,
+DateExtraction
+FROM [lib://Monitoring:DataFiles/datafiles_13_3_2024_gzip.parquet] (parquet);
+
+AppFiles:
+LOAD
+AppSpacename,
+AppName,
+DiskSize,
+MemorySize,
+lastReloadTime,
+OwnerId,
+AppID,
+LastReloadDate
+
+FROM [lib://Monitoring:DataFiles/appFiles_13_3_2024_gzip.parquet]
+(parquet);Data:
+LOAD
+Spacename,
+Name,
+Size,
+OwnerId,
+DataFileID,
+DateExtraction
+FROM [lib://Monitoring:DataFiles/datafiles_14_3_2024_gzip.parquet] (parquet);
+
+AppFiles:
+LOAD
+AppSpacename,
+AppName,
+DiskSize,
+MemorySize,
+lastReloadTime,
+OwnerId,
+AppID,
+LastReloadDate
+
+FROM [lib://Monitoring:DataFiles/appFiles_14_3_2024_gzip.parquet]
+(parquet);Data:
+LOAD
+Spacename,
+Name,
+Size,
+OwnerId,
+DataFileID,
+DateExtraction
+FROM [lib://Monitoring:DataFiles/datafiles_15_3_2024_gzip.parquet] (parquet);
+
+AppFiles:
+LOAD
+AppSpacename,
+AppName,
+DiskSize,
+MemorySize,
+lastReloadTime,
+OwnerId,
+AppID,
+LastReloadDate
+
+FROM [lib://Monitoring:DataFiles/appFiles_15_3_2024_gzip.parquet]
+(parquet);Data:
+LOAD
+Spacename,
+Name,
+Size,
+OwnerId,
+DataFileID,
+DateExtraction
+FROM [lib://Monitoring:DataFiles/datafiles_16_3_2024_gzip.parquet] (parquet);
+
+AppFiles:
+LOAD
+AppSpacename,
+AppName,
+DiskSize,
+MemorySize,
+lastReloadTime,
+OwnerId,
+AppID,
+LastReloadDate
+
+FROM [lib://Monitoring:DataFiles/appFiles_16_3_2024_gzip.parquet]
+(parquet);Data:
+LOAD
+Spacename,
+Name,
+Size,
+OwnerId,
+DataFileID,
+DateExtraction
+FROM [lib://Monitoring:DataFiles/datafiles_17_3_2024_gzip.parquet] (parquet);
+
+AppFiles:
+LOAD
+AppSpacename,
+AppName,
+DiskSize,
+MemorySize,
+lastReloadTime,
+OwnerId,
+AppID,
+LastReloadDate
+
+FROM [lib://Monitoring:DataFiles/appFiles_17_3_2024_gzip.parquet]
+(parquet);Data:
+LOAD
+Spacename,
+Name,
+Size,
+OwnerId,
+DataFileID,
+DateExtraction
+FROM [lib://Monitoring:DataFiles/datafiles_18_3_2024_gzip.parquet] (parquet);
+
+AppFiles:
+LOAD
+AppSpacename,
+AppName,
+DiskSize,
+MemorySize,
+lastReloadTime,
+OwnerId,
+AppID,
+LastReloadDate
+
+FROM [lib://Monitoring:DataFiles/appFiles_18_3_2024_gzip.parquet]
+(parquet);Data:
+LOAD
+Spacename,
+Name,
+Size,
+OwnerId,
+DataFileID,
+DateExtraction
+FROM [lib://Monitoring:DataFiles/datafiles_19_3_2024_gzip.parquet] (parquet);
+
+AppFiles:
+LOAD
+AppSpacename,
+AppName,
+DiskSize,
+MemorySize,
+lastReloadTime,
+OwnerId,
+AppID,
+LastReloadDate
+
+FROM [lib://Monitoring:DataFiles/appFiles_19_3_2024_gzip.parquet]
+(parquet);Data:
+LOAD
+Spacename,
+Name,
+Size,
+OwnerId,
+DataFileID,
+DateExtraction
+FROM [lib://Monitoring:DataFiles/datafiles_20_3_2024_gzip.parquet] (parquet);
+
+AppFiles:
+LOAD
+AppSpacename,
+AppName,
+DiskSize,
+MemorySize,
+lastReloadTime,
+OwnerId,
+AppID,
+LastReloadDate
+
+FROM [lib://Monitoring:DataFiles/appFiles_20_3_2024_gzip.parquet]
+(parquet);Data:
+LOAD
+Spacename,
+Name,
+Size,
+OwnerId,
+DataFileID,
+DateExtraction
+FROM [lib://Monitoring:DataFiles/datafiles_21_3_2024_gzip.parquet] (parquet);
+
+AppFiles:
+LOAD
+AppSpacename,
+AppName,
+DiskSize,
+MemorySize,
+lastReloadTime,
+OwnerId,
+AppID,
+LastReloadDate
+
+FROM [lib://Monitoring:DataFiles/appFiles_21_3_2024_gzip.parquet]
+(parquet);Data:
+LOAD
+Spacename,
+Name,
+Size,
+OwnerId,
+DataFileID,
+DateExtraction
+FROM [lib://Monitoring:DataFiles/datafiles_22_3_2024_gzip.parquet] (parquet);
+
+AppFiles:
+LOAD
+AppSpacename,
+AppName,
+DiskSize,
+MemorySize,
+lastReloadTime,
+OwnerId,
+AppID,
+LastReloadDate
+
+FROM [lib://Monitoring:DataFiles/appFiles_22_3_2024_gzip.parquet]
+(parquet);Data:
+LOAD
+Spacename,
+Name,
+Size,
+OwnerId,
+DataFileID,
+DateExtraction
+FROM [lib://Monitoring:DataFiles/datafiles_23_3_2024_gzip.parquet] (parquet);
+
+AppFiles:
+LOAD
+AppSpacename,
+AppName,
+DiskSize,
+MemorySize,
+lastReloadTime,
+OwnerId,
+AppID,
+LastReloadDate
+
+FROM [lib://Monitoring:DataFiles/appFiles_23_3_2024_gzip.parquet]
+(parquet);Data:
+LOAD
+Spacename,
+Name,
+Size,
+OwnerId,
+DataFileID,
+DateExtraction
+FROM [lib://Monitoring:DataFiles/datafiles_24_3_2024_gzip.parquet] (parquet);
+
+AppFiles:
+LOAD
+AppSpacename,
+AppName,
+DiskSize,
+MemorySize,
+lastReloadTime,
+OwnerId,
+AppID,
+LastReloadDate
+
+FROM [lib://Monitoring:DataFiles/appFiles_24_3_2024_gzip.parquet]
+(parquet);Data:
+LOAD
+Spacename,
+Name,
+Size,
+OwnerId,
+DataFileID,
+DateExtraction
+FROM [lib://Monitoring:DataFiles/datafiles_25_3_2024_gzip.parquet] (parquet);
+
+AppFiles:
+LOAD
+AppSpacename,
+AppName,
+DiskSize,
+MemorySize,
+lastReloadTime,
+OwnerId,
+AppID,
+LastReloadDate
+
+FROM [lib://Monitoring:DataFiles/appFiles_25_3_2024_gzip.parquet]
+(parquet);Data:
+LOAD
+Spacename,
+Name,
+Size,
+OwnerId,
+DataFileID,
+DateExtraction
+FROM [lib://Monitoring:DataFiles/datafiles_26_3_2024_gzip.parquet] (parquet);
+
+AppFiles:
+LOAD
+AppSpacename,
+AppName,
+DiskSize,
+MemorySize,
+lastReloadTime,
+OwnerId,
+AppID,
+LastReloadDate
+
+FROM [lib://Monitoring:DataFiles/appFiles_26_3_2024_gzip.parquet]
+(parquet);Data:
+LOAD
+Spacename,
+Name,
+Size,
+OwnerId,
+DataFileID,
+DateExtraction
+FROM [lib://Monitoring:DataFiles/datafiles_27_3_2024_gzip.parquet] (parquet);
+
+AppFiles:
+LOAD
+AppSpacename,
+AppName,
+DiskSize,
+MemorySize,
+lastReloadTime,
+OwnerId,
+AppID,
+LastReloadDate
+
+FROM [lib://Monitoring:DataFiles/appFiles_27_3_2024_gzip.parquet]
+(parquet);Data:
+LOAD
+Spacename,
+Name,
+Size,
+OwnerId,
+DataFileID,
+DateExtraction
+FROM [lib://Monitoring:DataFiles/datafiles_28_3_2024_gzip.parquet] (parquet);
+
+AppFiles:
+LOAD
+AppSpacename,
+AppName,
+DiskSize,
+MemorySize,
+lastReloadTime,
+OwnerId,
+AppID,
+LastReloadDate
+
+FROM [lib://Monitoring:DataFiles/appFiles_28_3_2024_gzip.parquet]
+(parquet);Data:
+LOAD
+Spacename,
+Name,
+Size,
+OwnerId,
+DataFileID,
+DateExtraction
+FROM [lib://Monitoring:DataFiles/datafiles_29_3_2024_gzip.parquet] (parquet);
+
+AppFiles:
+LOAD
+AppSpacename,
+AppName,
+DiskSize,
+MemorySize,
+lastReloadTime,
+OwnerId,
+AppID,
+LastReloadDate
+
+FROM [lib://Monitoring:DataFiles/appFiles_29_3_2024_gzip.parquet]
+(parquet);Data:
+LOAD
+Spacename,
+Name,
+Size,
+OwnerId,
+DataFileID,
+DateExtraction
+FROM [lib://Monitoring:DataFiles/datafiles_30_3_2024_gzip.parquet] (parquet);
+
+AppFiles:
+LOAD
+AppSpacename,
+AppName,
+DiskSize,
+MemorySize,
+lastReloadTime,
+OwnerId,
+AppID,
+LastReloadDate
+
+FROM [lib://Monitoring:DataFiles/appFiles_30_3_2024_gzip.parquet]
+(parquet);Data:
+LOAD
+Spacename,
+Name,
+Size,
+OwnerId,
+DataFileID,
+DateExtraction
+FROM [lib://Monitoring:DataFiles/datafiles_31_3_2024_gzip.parquet] (parquet);
+
+AppFiles:
+LOAD
+AppSpacename,
+AppName,
+DiskSize,
+MemorySize,
+lastReloadTime,
+OwnerId,
+AppID,
+LastReloadDate
+
+FROM [lib://Monitoring:DataFiles/appFiles_31_3_2024_gzip.parquet]
+(parquet);Data:
+LOAD
+Spacename,
+Name,
+Size,
+OwnerId,
+DataFileID,
+DateExtraction
+FROM [lib://Monitoring:DataFiles/datafiles_1_4_2024_gzip.parquet] (parquet);
+
+AppFiles:
+LOAD
+AppSpacename,
+AppName,
+DiskSize,
+MemorySize,
+lastReloadTime,
+OwnerId,
+AppID,
+LastReloadDate
+
+FROM [lib://Monitoring:DataFiles/appFiles_1_4_2024_gzip.parquet]
+(parquet);Data:
+LOAD
+Spacename,
+Name,
+Size,
+OwnerId,
+DataFileID,
+DateExtraction
+FROM [lib://Monitoring:DataFiles/datafiles_2_4_2024_gzip.parquet] (parquet);
+
+AppFiles:
+LOAD
+AppSpacename,
+AppName,
+DiskSize,
+MemorySize,
+lastReloadTime,
+OwnerId,
+AppID,
+LastReloadDate
+
+FROM [lib://Monitoring:DataFiles/appFiles_2_4_2024_gzip.parquet]
+(parquet);Data:
+LOAD
+Spacename,
+Name,
+Size,
+OwnerId,
+DataFileID,
+DateExtraction
+FROM [lib://Monitoring:DataFiles/datafiles_3_4_2024_gzip.parquet] (parquet);
+
+AppFiles:
+LOAD
+AppSpacename,
+AppName,
+DiskSize,
+MemorySize,
+lastReloadTime,
+OwnerId,
+AppID,
+LastReloadDate
+
+FROM [lib://Monitoring:DataFiles/appFiles_3_4_2024_gzip.parquet]
+(parquet);Data:
+LOAD
+Spacename,
+Name,
+Size,
+OwnerId,
+DataFileID,
+DateExtraction
+FROM [lib://Monitoring:DataFiles/datafiles_4_4_2024_gzip.parquet] (parquet);
+
+AppFiles:
+LOAD
+AppSpacename,
+AppName,
+DiskSize,
+MemorySize,
+lastReloadTime,
+OwnerId,
+AppID,
+LastReloadDate
+
+FROM [lib://Monitoring:DataFiles/appFiles_4_4_2024_gzip.parquet]
+(parquet);Data:
+LOAD
+Spacename,
+Name,
+Size,
+OwnerId,
+DataFileID,
+DateExtraction
+FROM [lib://Monitoring:DataFiles/datafiles_5_4_2024_gzip.parquet] (parquet);
+
+AppFiles:
+LOAD
+AppSpacename,
+AppName,
+DiskSize,
+MemorySize,
+lastReloadTime,
+OwnerId,
+AppID,
+LastReloadDate
+
+FROM [lib://Monitoring:DataFiles/appFiles_5_4_2024_gzip.parquet]
+(parquet);Data:
+LOAD
+Spacename,
+Name,
+Size,
+OwnerId,
+DataFileID,
+DateExtraction
+FROM [lib://Monitoring:DataFiles/datafiles_6_4_2024_gzip.parquet] (parquet);
+
+AppFiles:
+LOAD
+AppSpacename,
+AppName,
+DiskSize,
+MemorySize,
+lastReloadTime,
+OwnerId,
+AppID,
+LastReloadDate
+
+FROM [lib://Monitoring:DataFiles/appFiles_6_4_2024_gzip.parquet]
+(parquet);Data:
+LOAD
+Spacename,
+Name,
+Size,
+OwnerId,
+DataFileID,
+DateExtraction
+FROM [lib://Monitoring:DataFiles/datafiles_7_4_2024_gzip.parquet] (parquet);
+
+AppFiles:
+LOAD
+AppSpacename,
+AppName,
+DiskSize,
+MemorySize,
+lastReloadTime,
+OwnerId,
+AppID,
+LastReloadDate
+
+FROM [lib://Monitoring:DataFiles/appFiles_7_4_2024_gzip.parquet]
+(parquet);Data:
+LOAD
+Spacename,
+Name,
+Size,
+OwnerId,
+DataFileID,
+DateExtraction
+FROM [lib://Monitoring:DataFiles/datafiles_8_4_2024_gzip.parquet] (parquet);
+
+AppFiles:
+LOAD
+AppSpacename,
+AppName,
+DiskSize,
+MemorySize,
+lastReloadTime,
+OwnerId,
+AppID,
+LastReloadDate
+
+FROM [lib://Monitoring:DataFiles/appFiles_8_4_2024_gzip.parquet]
+(parquet);Data:
+LOAD
+Spacename,
+Name,
+Size,
+OwnerId,
+DataFileID,
+DateExtraction
+FROM [lib://Monitoring:DataFiles/datafiles_9_4_2024_gzip.parquet] (parquet);
+
+AppFiles:
+LOAD
+AppSpacename,
+AppName,
+DiskSize,
+MemorySize,
+lastReloadTime,
+OwnerId,
+AppID,
+LastReloadDate
+
+FROM [lib://Monitoring:DataFiles/appFiles_9_4_2024_gzip.parquet]
+(parquet);Data:
+LOAD
+Spacename,
+Name,
+Size,
+OwnerId,
+DataFileID,
+DateExtraction
+FROM [lib://Monitoring:DataFiles/datafiles_10_4_2024_gzip.parquet] (parquet);
+
+AppFiles:
+LOAD
+AppSpacename,
+AppName,
+DiskSize,
+MemorySize,
+lastReloadTime,
+OwnerId,
+AppID,
+LastReloadDate
+
+FROM [lib://Monitoring:DataFiles/appFiles_10_4_2024_gzip.parquet]
+(parquet);Data:
+LOAD
+Spacename,
+Name,
+Size,
+OwnerId,
+DataFileID,
+DateExtraction
+FROM [lib://Monitoring:DataFiles/datafiles_11_4_2024_gzip.parquet] (parquet);
+
+AppFiles:
+LOAD
+AppSpacename,
+AppName,
+DiskSize,
+MemorySize,
+lastReloadTime,
+OwnerId,
+AppID,
+LastReloadDate
+
+FROM [lib://Monitoring:DataFiles/appFiles_11_4_2024_gzip.parquet]
+(parquet);Data:
+LOAD
+Spacename,
+Name,
+Size,
+OwnerId,
+DataFileID,
+DateExtraction
+FROM [lib://Monitoring:DataFiles/datafiles_12_4_2024_gzip.parquet] (parquet);
+
+AppFiles:
+LOAD
+AppSpacename,
+AppName,
+DiskSize,
+MemorySize,
+lastReloadTime,
+OwnerId,
+AppID,
+LastReloadDate
+
+FROM [lib://Monitoring:DataFiles/appFiles_12_4_2024_gzip.parquet]
+(parquet);Data:
+LOAD
+Spacename,
+Name,
+Size,
+OwnerId,
+DataFileID,
+DateExtraction
+FROM [lib://Monitoring:DataFiles/datafiles_13_4_2024_gzip.parquet] (parquet);
+
+AppFiles:
+LOAD
+AppSpacename,
+AppName,
+DiskSize,
+MemorySize,
+lastReloadTime,
+OwnerId,
+AppID,
+LastReloadDate
+
+FROM [lib://Monitoring:DataFiles/appFiles_13_4_2024_gzip.parquet]
+(parquet);Data:
+LOAD
+Spacename,
+Name,
+Size,
+OwnerId,
+DataFileID,
+DateExtraction
+FROM [lib://Monitoring:DataFiles/datafiles_14_4_2024_gzip.parquet] (parquet);
+
+AppFiles:
+LOAD
+AppSpacename,
+AppName,
+DiskSize,
+MemorySize,
+lastReloadTime,
+OwnerId,
+AppID,
+LastReloadDate
+
+FROM [lib://Monitoring:DataFiles/appFiles_14_4_2024_gzip.parquet]
+(parquet);Data:
+LOAD
+Spacename,
+Name,
+Size,
+OwnerId,
+DataFileID,
+DateExtraction
+FROM [lib://Monitoring:DataFiles/datafiles_15_4_2024_gzip.parquet] (parquet);
+
+AppFiles:
+LOAD
+AppSpacename,
+AppName,
+DiskSize,
+MemorySize,
+lastReloadTime,
+OwnerId,
+AppID,
+LastReloadDate
+
+FROM [lib://Monitoring:DataFiles/appFiles_15_4_2024_gzip.parquet]
+(parquet);Data:
+LOAD
+Spacename,
+Name,
+Size,
+OwnerId,
+DataFileID,
+DateExtraction
+FROM [lib://Monitoring:DataFiles/datafiles_16_4_2024_gzip.parquet] (parquet);
+
+AppFiles:
+LOAD
+AppSpacename,
+AppName,
+DiskSize,
+MemorySize,
+lastReloadTime,
+OwnerId,
+AppID,
+LastReloadDate
+
+FROM [lib://Monitoring:DataFiles/appFiles_16_4_2024_gzip.parquet]
+(parquet);Data:
+LOAD
+Spacename,
+Name,
+Size,
+OwnerId,
+DataFileID,
+DateExtraction
+FROM [lib://Monitoring:DataFiles/datafiles_17_4_2024_gzip.parquet] (parquet);
+
+AppFiles:
+LOAD
+AppSpacename,
+AppName,
+DiskSize,
+MemorySize,
+lastReloadTime,
+OwnerId,
+AppID,
+LastReloadDate
+
+FROM [lib://Monitoring:DataFiles/appFiles_17_4_2024_gzip.parquet]
+(parquet);Data:
+LOAD
+Spacename,
+Name,
+Size,
+OwnerId,
+DataFileID,
+DateExtraction
+FROM [lib://Monitoring:DataFiles/datafiles_18_4_2024_gzip.parquet] (parquet);
+
+AppFiles:
+LOAD
+AppSpacename,
+AppName,
+DiskSize,
+MemorySize,
+lastReloadTime,
+OwnerId,
+AppID,
+LastReloadDate
+
+FROM [lib://Monitoring:DataFiles/appFiles_18_4_2024_gzip.parquet]
+(parquet);Data:
+LOAD
+Spacename,
+Name,
+Size,
+OwnerId,
+DataFileID,
+DateExtraction
+FROM [lib://Monitoring:DataFiles/datafiles_19_4_2024_gzip.parquet] (parquet);
+
+AppFiles:
+LOAD
+AppSpacename,
+AppName,
+DiskSize,
+MemorySize,
+lastReloadTime,
+OwnerId,
+AppID,
+LastReloadDate
+
+FROM [lib://Monitoring:DataFiles/appFiles_19_4_2024_gzip.parquet]
+(parquet);Data:
+LOAD
+Spacename,
+Name,
+Size,
+OwnerId,
+DataFileID,
+DateExtraction
+FROM [lib://Monitoring:DataFiles/datafiles_20_4_2024_gzip.parquet] (parquet);
+
+AppFiles:
+LOAD
+AppSpacename,
+AppName,
+DiskSize,
+MemorySize,
+lastReloadTime,
+OwnerId,
+AppID,
+LastReloadDate
+
+FROM [lib://Monitoring:DataFiles/appFiles_20_4_2024_gzip.parquet]
+(parquet);Data:
+LOAD
+Spacename,
+Name,
+Size,
+OwnerId,
+DataFileID,
+DateExtraction
+FROM [lib://Monitoring:DataFiles/datafiles_21_4_2024_gzip.parquet] (parquet);
+
+AppFiles:
+LOAD
+AppSpacename,
+AppName,
+DiskSize,
+MemorySize,
+lastReloadTime,
+OwnerId,
+AppID,
+LastReloadDate
+
+FROM [lib://Monitoring:DataFiles/appFiles_21_4_2024_gzip.parquet]
+(parquet);Data:
+LOAD
+Spacename,
+Name,
+Size,
+OwnerId,
+DataFileID,
+DateExtraction
+FROM [lib://Monitoring:DataFiles/datafiles_22_4_2024_gzip.parquet] (parquet);
+
+AppFiles:
+LOAD
+AppSpacename,
+AppName,
+DiskSize,
+MemorySize,
+lastReloadTime,
+OwnerId,
+AppID,
+LastReloadDate
+
+FROM [lib://Monitoring:DataFiles/appFiles_22_4_2024_gzip.parquet]
+(parquet);Data:
+LOAD
+Spacename,
+Name,
+Size,
+OwnerId,
+DataFileID,
+DateExtraction
+FROM [lib://Monitoring:DataFiles/datafiles_23_4_2024_gzip.parquet] (parquet);
+
+AppFiles:
+LOAD
+AppSpacename,
+AppName,
+DiskSize,
+MemorySize,
+lastReloadTime,
+OwnerId,
+AppID,
+LastReloadDate
+
+FROM [lib://Monitoring:DataFiles/appFiles_23_4_2024_gzip.parquet]
+(parquet);Data:
+LOAD
+Spacename,
+Name,
+Size,
+OwnerId,
+DataFileID,
+DateExtraction
+FROM [lib://Monitoring:DataFiles/datafiles_24_4_2024_gzip.parquet] (parquet);
+
+AppFiles:
+LOAD
+AppSpacename,
+AppName,
+DiskSize,
+MemorySize,
+lastReloadTime,
+OwnerId,
+AppID,
+LastReloadDate
+
+FROM [lib://Monitoring:DataFiles/appFiles_24_4_2024_gzip.parquet]
+(parquet);Data:
+LOAD
+Spacename,
+Name,
+Size,
+OwnerId,
+DataFileID,
+DateExtraction
+FROM [lib://Monitoring:DataFiles/datafiles_25_4_2024_gzip.parquet] (parquet);
+
+AppFiles:
+LOAD
+AppSpacename,
+AppName,
+DiskSize,
+MemorySize,
+lastReloadTime,
+OwnerId,
+AppID,
+LastReloadDate
+
+FROM [lib://Monitoring:DataFiles/appFiles_25_4_2024_gzip.parquet]
+(parquet);Data:
+LOAD
+Spacename,
+Name,
+Size,
+OwnerId,
+DataFileID,
+DateExtraction
+FROM [lib://Monitoring:DataFiles/datafiles_26_4_2024_gzip.parquet] (parquet);
+
+AppFiles:
+LOAD
+AppSpacename,
+AppName,
+DiskSize,
+MemorySize,
+lastReloadTime,
+OwnerId,
+AppID,
+LastReloadDate
+
+FROM [lib://Monitoring:DataFiles/appFiles_26_4_2024_gzip.parquet]
+(parquet);Data:
+LOAD
+Spacename,
+Name,
+Size,
+OwnerId,
+DataFileID,
+DateExtraction
+FROM [lib://Monitoring:DataFiles/datafiles_27_4_2024_gzip.parquet] (parquet);
+
+AppFiles:
+LOAD
+AppSpacename,
+AppName,
+DiskSize,
+MemorySize,
+lastReloadTime,
+OwnerId,
+AppID,
+LastReloadDate
+
+FROM [lib://Monitoring:DataFiles/appFiles_27_4_2024_gzip.parquet]
+(parquet);Data:
+LOAD
+Spacename,
+Name,
+Size,
+OwnerId,
+DataFileID,
+DateExtraction
+FROM [lib://Monitoring:DataFiles/datafiles_28_4_2024_gzip.parquet] (parquet);
+
+AppFiles:
+LOAD
+AppSpacename,
+AppName,
+DiskSize,
+MemorySize,
+lastReloadTime,
+OwnerId,
+AppID,
+LastReloadDate
+
+FROM [lib://Monitoring:DataFiles/appFiles_28_4_2024_gzip.parquet]
+(parquet);Data:
+LOAD
+Spacename,
+Name,
+Size,
+OwnerId,
+DataFileID,
+DateExtraction
+FROM [lib://Monitoring:DataFiles/datafiles_29_4_2024_gzip.parquet] (parquet);
+
+AppFiles:
+LOAD
+AppSpacename,
+AppName,
+DiskSize,
+MemorySize,
+lastReloadTime,
+OwnerId,
+AppID,
+LastReloadDate
+
+FROM [lib://Monitoring:DataFiles/appFiles_29_4_2024_gzip.parquet]
+(parquet);Data:
+LOAD
+Spacename,
+Name,
+Size,
+OwnerId,
+DataFileID,
+DateExtraction
+FROM [lib://Monitoring:DataFiles/datafiles_30_4_2024_gzip.parquet] (parquet);
+
+AppFiles:
+LOAD
+AppSpacename,
+AppName,
+DiskSize,
+MemorySize,
+lastReloadTime,
+OwnerId,
+AppID,
+LastReloadDate
+
+FROM [lib://Monitoring:DataFiles/appFiles_30_4_2024_gzip.parquet]
+(parquet);Data:
+LOAD
+Spacename,
+Name,
+Size,
+OwnerId,
+DataFileID,
+DateExtraction
+FROM [lib://Monitoring:DataFiles/datafiles_30_4_2024_gzip.parquet] (parquet);
+
+AppFiles:
+LOAD
+AppSpacename,
+AppName,
+DiskSize,
+MemorySize,
+lastReloadTime,
+OwnerId,
+AppID,
+LastReloadDate
+
+FROM [lib://Monitoring:DataFiles/appFiles_30_4_2024_gzip.parquet]
+(parquet);Data:
+LOAD
+Spacename,
+Name,
+Size,
+OwnerId,
+DataFileID,
+DateExtraction
+FROM [lib://Monitoring:DataFiles/datafiles_1_5_2024_gzip.parquet] (parquet);
+
+AppFiles:
+LOAD
+AppSpacename,
+AppName,
+DiskSize,
+MemorySize,
+lastReloadTime,
+OwnerId,
+AppID,
+LastReloadDate
+
+FROM [lib://Monitoring:DataFiles/appFiles_1_5_2024_gzip.parquet]
+(parquet);Data:
+LOAD
+Spacename,
+Name,
+Size,
+OwnerId,
+DataFileID,
+DateExtraction
+FROM [lib://Monitoring:DataFiles/datafiles_2_5_2024_gzip.parquet] (parquet);
+
+AppFiles:
+LOAD
+AppSpacename,
+AppName,
+DiskSize,
+MemorySize,
+lastReloadTime,
+OwnerId,
+AppID,
+LastReloadDate
+
+FROM [lib://Monitoring:DataFiles/appFiles_2_5_2024_gzip.parquet]
+(parquet);Data:
+LOAD
+Spacename,
+Name,
+Size,
+OwnerId,
+DataFileID,
+DateExtraction
+FROM [lib://Monitoring:DataFiles/datafiles_3_5_2024_gzip.parquet] (parquet);
+
+AppFiles:
+LOAD
+AppSpacename,
+AppName,
+DiskSize,
+MemorySize,
+lastReloadTime,
+OwnerId,
+AppID,
+LastReloadDate
+
+FROM [lib://Monitoring:DataFiles/appFiles_3_5_2024_gzip.parquet]
+(parquet);Data:
+LOAD
+Spacename,
+Name,
+Size,
+OwnerId,
+DataFileID,
+DateExtraction
+FROM [lib://Monitoring:DataFiles/datafiles_4_5_2024_gzip.parquet] (parquet);
+
+AppFiles:
+LOAD
+AppSpacename,
+AppName,
+DiskSize,
+MemorySize,
+lastReloadTime,
+OwnerId,
+AppID,
+LastReloadDate
+
+FROM [lib://Monitoring:DataFiles/appFiles_4_5_2024_gzip.parquet]
+(parquet);Data:
+LOAD
+Spacename,
+Name,
+Size,
+OwnerId,
+DataFileID,
+DateExtraction
+FROM [lib://Monitoring:DataFiles/datafiles_5_5_2024_gzip.parquet] (parquet);
+
+AppFiles:
+LOAD
+AppSpacename,
+AppName,
+DiskSize,
+MemorySize,
+lastReloadTime,
+OwnerId,
+AppID,
+LastReloadDate
+
+FROM [lib://Monitoring:DataFiles/appFiles_5_5_2024_gzip.parquet]
+(parquet);Data:
+LOAD
+Spacename,
+Name,
+Size,
+OwnerId,
+DataFileID,
+DateExtraction
+FROM [lib://Monitoring:DataFiles/datafiles_6_5_2024_gzip.parquet] (parquet);
+
+AppFiles:
+LOAD
+AppSpacename,
+AppName,
+DiskSize,
+MemorySize,
+lastReloadTime,
+OwnerId,
+AppID,
+LastReloadDate
+
+FROM [lib://Monitoring:DataFiles/appFiles_6_5_2024_gzip.parquet]
+(parquet);Data:
+LOAD
+Spacename,
+Name,
+Size,
+OwnerId,
+DataFileID,
+DateExtraction
+FROM [lib://Monitoring:DataFiles/datafiles_7_5_2024_gzip.parquet] (parquet);
+
+AppFiles:
+LOAD
+AppSpacename,
+AppName,
+DiskSize,
+MemorySize,
+lastReloadTime,
+OwnerId,
+AppID,
+LastReloadDate
+
+FROM [lib://Monitoring:DataFiles/appFiles_7_5_2024_gzip.parquet]
+(parquet);Data:
+LOAD
+Spacename,
+Name,
+Size,
+OwnerId,
+DataFileID,
+DateExtraction
+FROM [lib://Monitoring:DataFiles/datafiles_8_5_2024_gzip.parquet] (parquet);
+
+AppFiles:
+LOAD
+AppSpacename,
+AppName,
+DiskSize,
+MemorySize,
+lastReloadTime,
+OwnerId,
+AppID,
+LastReloadDate
+
+FROM [lib://Monitoring:DataFiles/appFiles_8_5_2024_gzip.parquet]
+(parquet);Data:
+LOAD
+Spacename,
+Name,
+Size,
+OwnerId,
+DataFileID,
+DateExtraction
+FROM [lib://Monitoring:DataFiles/datafiles_9_5_2024_gzip.parquet] (parquet);
+
+AppFiles:
+LOAD
+AppSpacename,
+AppName,
+DiskSize,
+MemorySize,
+lastReloadTime,
+OwnerId,
+AppID,
+LastReloadDate
+
+FROM [lib://Monitoring:DataFiles/appFiles_9_5_2024_gzip.parquet]
+(parquet);Data:
+LOAD
+Spacename,
+Name,
+Size,
+OwnerId,
+DataFileID,
+DateExtraction
+FROM [lib://Monitoring:DataFiles/datafiles_10_5_2024_gzip.parquet] (parquet);
+
+AppFiles:
+LOAD
+AppSpacename,
+AppName,
+DiskSize,
+MemorySize,
+lastReloadTime,
+OwnerId,
+AppID,
+LastReloadDate
+
+FROM [lib://Monitoring:DataFiles/appFiles_10_5_2024_gzip.parquet]
+(parquet);Data:
+LOAD
+Spacename,
+Name,
+Size,
+OwnerId,
+DataFileID,
+DateExtraction
+FROM [lib://Monitoring:DataFiles/datafiles_11_5_2024_gzip.parquet] (parquet);
+
+AppFiles:
+LOAD
+AppSpacename,
+AppName,
+DiskSize,
+MemorySize,
+lastReloadTime,
+OwnerId,
+AppID,
+LastReloadDate
+
+FROM [lib://Monitoring:DataFiles/appFiles_11_5_2024_gzip.parquet]
+(parquet);Data:
+LOAD
+Spacename,
+Name,
+Size,
+OwnerId,
+DataFileID,
+DateExtraction
+FROM [lib://Monitoring:DataFiles/datafiles_12_5_2024_gzip.parquet] (parquet);
+
+AppFiles:
+LOAD
+AppSpacename,
+AppName,
+DiskSize,
+MemorySize,
+lastReloadTime,
+OwnerId,
+AppID,
+LastReloadDate
+
+FROM [lib://Monitoring:DataFiles/appFiles_12_5_2024_gzip.parquet]
+(parquet);Data:
+LOAD
+Spacename,
+Name,
+Size,
+OwnerId,
+DataFileID,
+DateExtraction
+FROM [lib://Monitoring:DataFiles/datafiles_13_5_2024_gzip.parquet] (parquet);
+
+AppFiles:
+LOAD
+AppSpacename,
+AppName,
+DiskSize,
+MemorySize,
+lastReloadTime,
+OwnerId,
+AppID,
+LastReloadDate
+
+FROM [lib://Monitoring:DataFiles/appFiles_13_5_2024_gzip.parquet]
+(parquet);Data:
+LOAD
+Spacename,
+Name,
+Size,
+OwnerId,
+DataFileID,
+DateExtraction
+FROM [lib://Monitoring:DataFiles/datafiles_14_5_2024_gzip.parquet] (parquet);
+
+AppFiles:
+LOAD
+AppSpacename,
+AppName,
+DiskSize,
+MemorySize,
+lastReloadTime,
+OwnerId,
+AppID,
+LastReloadDate
+
+FROM [lib://Monitoring:DataFiles/appFiles_14_5_2024_gzip.parquet]
+(parquet);Data:
+LOAD
+Spacename,
+Name,
+Size,
+OwnerId,
+DataFileID,
+DateExtraction
+FROM [lib://Monitoring:DataFiles/datafiles_15_5_2024_gzip.parquet] (parquet);
+
+AppFiles:
+LOAD
+AppSpacename,
+AppName,
+DiskSize,
+MemorySize,
+lastReloadTime,
+OwnerId,
+AppID,
+LastReloadDate
+
+FROM [lib://Monitoring:DataFiles/appFiles_15_5_2024_gzip.parquet]
+(parquet);Data:
+LOAD
+Spacename,
+Name,
+Size,
+OwnerId,
+DataFileID,
+DateExtraction
+FROM [lib://Monitoring:DataFiles/datafiles_16_5_2024_gzip.parquet] (parquet);
+
+AppFiles:
+LOAD
+AppSpacename,
+AppName,
+DiskSize,
+MemorySize,
+lastReloadTime,
+OwnerId,
+AppID,
+LastReloadDate
+
+FROM [lib://Monitoring:DataFiles/appFiles_16_5_2024_gzip.parquet]
+(parquet);Data:
+LOAD
+Spacename,
+Name,
+Size,
+OwnerId,
+DataFileID,
+DateExtraction
+FROM [lib://Monitoring:DataFiles/datafiles_17_5_2024_gzip.parquet] (parquet);
+
+AppFiles:
+LOAD
+AppSpacename,
+AppName,
+DiskSize,
+MemorySize,
+lastReloadTime,
+OwnerId,
+AppID,
+LastReloadDate
+
+FROM [lib://Monitoring:DataFiles/appFiles_17_5_2024_gzip.parquet]
+(parquet);Data:
+LOAD
+Spacename,
+Name,
+Size,
+OwnerId,
+DataFileID,
+DateExtraction
+FROM [lib://Monitoring:DataFiles/datafiles_18_5_2024_gzip.parquet] (parquet);
+
+AppFiles:
+LOAD
+AppSpacename,
+AppName,
+DiskSize,
+MemorySize,
+lastReloadTime,
+OwnerId,
+AppID,
+LastReloadDate
+
+FROM [lib://Monitoring:DataFiles/appFiles_18_5_2024_gzip.parquet]
+(parquet);Data:
+LOAD
+Spacename,
+Name,
+Size,
+OwnerId,
+DataFileID,
+DateExtraction
+FROM [lib://Monitoring:DataFiles/datafiles_19_5_2024_gzip.parquet] (parquet);
+
+AppFiles:
+LOAD
+AppSpacename,
+AppName,
+DiskSize,
+MemorySize,
+lastReloadTime,
+OwnerId,
+AppID,
+LastReloadDate
+
+FROM [lib://Monitoring:DataFiles/appFiles_19_5_2024_gzip.parquet]
+(parquet);Data:
+LOAD
+Spacename,
+Name,
+Size,
+OwnerId,
+DataFileID,
+DateExtraction
+FROM [lib://Monitoring:DataFiles/datafiles_20_5_2024_gzip.parquet] (parquet);
+
+AppFiles:
+LOAD
+AppSpacename,
+AppName,
+DiskSize,
+MemorySize,
+lastReloadTime,
+OwnerId,
+AppID,
+LastReloadDate
+
+FROM [lib://Monitoring:DataFiles/appFiles_20_5_2024_gzip.parquet]
+(parquet);Data:
+LOAD
+Spacename,
+Name,
+Size,
+OwnerId,
+DataFileID,
+DateExtraction
+FROM [lib://Monitoring:DataFiles/datafiles_21_5_2024_gzip.parquet] (parquet);
+
+AppFiles:
+LOAD
+AppSpacename,
+AppName,
+DiskSize,
+MemorySize,
+lastReloadTime,
+OwnerId,
+AppID,
+LastReloadDate
+
+FROM [lib://Monitoring:DataFiles/appFiles_21_5_2024_gzip.parquet]
+(parquet);Data:
+LOAD
+Spacename,
+Name,
+Size,
+OwnerId,
+DataFileID,
+DateExtraction
+FROM [lib://Monitoring:DataFiles/datafiles_22_5_2024_gzip.parquet] (parquet);
+
+AppFiles:
+LOAD
+AppSpacename,
+AppName,
+DiskSize,
+MemorySize,
+lastReloadTime,
+OwnerId,
+AppID,
+LastReloadDate
+
+FROM [lib://Monitoring:DataFiles/appFiles_22_5_2024_gzip.parquet]
+(parquet);Data:
+LOAD
+Spacename,
+Name,
+Size,
+OwnerId,
+DataFileID,
+DateExtraction
+FROM [lib://Monitoring:DataFiles/datafiles_23_5_2024_gzip.parquet] (parquet);
+
+AppFiles:
+LOAD
+AppSpacename,
+AppName,
+DiskSize,
+MemorySize,
+lastReloadTime,
+OwnerId,
+AppID,
+LastReloadDate
+
+FROM [lib://Monitoring:DataFiles/appFiles_23_5_2024_gzip.parquet]
+(parquet);Data:
+LOAD
+Spacename,
+Name,
+Size,
+OwnerId,
+DataFileID,
+DateExtraction
+FROM [lib://Monitoring:DataFiles/datafiles_24_5_2024_gzip.parquet] (parquet);
+
+AppFiles:
+LOAD
+AppSpacename,
+AppName,
+DiskSize,
+MemorySize,
+lastReloadTime,
+OwnerId,
+AppID,
+LastReloadDate
+
+FROM [lib://Monitoring:DataFiles/appFiles_24_5_2024_gzip.parquet]
+(parquet);Data:
+LOAD
+Spacename,
+Name,
+Size,
+OwnerId,
+DataFileID,
+DateExtraction
+FROM [lib://Monitoring:DataFiles/datafiles_25_5_2024_gzip.parquet] (parquet);
+
+AppFiles:
+LOAD
+AppSpacename,
+AppName,
+DiskSize,
+MemorySize,
+lastReloadTime,
+OwnerId,
+AppID,
+LastReloadDate
+
+FROM [lib://Monitoring:DataFiles/appFiles_25_5_2024_gzip.parquet]
+(parquet);Data:
+LOAD
+Spacename,
+Name,
+Size,
+OwnerId,
+DataFileID,
+DateExtraction
+FROM [lib://Monitoring:DataFiles/datafiles_26_5_2024_gzip.parquet] (parquet);
+
+AppFiles:
+LOAD
+AppSpacename,
+AppName,
+DiskSize,
+MemorySize,
+lastReloadTime,
+OwnerId,
+AppID,
+LastReloadDate
+
+FROM [lib://Monitoring:DataFiles/appFiles_26_5_2024_gzip.parquet]
+(parquet);Data:
+LOAD
+Spacename,
+Name,
+Size,
+OwnerId,
+DataFileID,
+DateExtraction
+FROM [lib://Monitoring:DataFiles/datafiles_27_5_2024_gzip.parquet] (parquet);
+
+AppFiles:
+LOAD
+AppSpacename,
+AppName,
+DiskSize,
+MemorySize,
+lastReloadTime,
+OwnerId,
+AppID,
+LastReloadDate
+
+FROM [lib://Monitoring:DataFiles/appFiles_27_5_2024_gzip.parquet]
+(parquet);Data:
+LOAD
+Spacename,
+Name,
+Size,
+OwnerId,
+DataFileID,
+DateExtraction
+FROM [lib://Monitoring:DataFiles/datafiles_28_5_2024_gzip.parquet] (parquet);
+
+AppFiles:
+LOAD
+AppSpacename,
+AppName,
+DiskSize,
+MemorySize,
+lastReloadTime,
+OwnerId,
+AppID,
+LastReloadDate
+
+FROM [lib://Monitoring:DataFiles/appFiles_28_5_2024_gzip.parquet]
+(parquet);Data:
+LOAD
+Spacename,
+Name,
+Size,
+OwnerId,
+DataFileID,
+DateExtraction
+FROM [lib://Monitoring:DataFiles/datafiles_29_5_2024_gzip.parquet] (parquet);
+
+AppFiles:
+LOAD
+AppSpacename,
+AppName,
+DiskSize,
+MemorySize,
+lastReloadTime,
+OwnerId,
+AppID,
+LastReloadDate
+
+FROM [lib://Monitoring:DataFiles/appFiles_29_5_2024_gzip.parquet]
+(parquet);Data:
+LOAD
+Spacename,
+Name,
+Size,
+OwnerId,
+DataFileID,
+DateExtraction
+FROM [lib://Monitoring:DataFiles/datafiles_30_5_2024_gzip.parquet] (parquet);
+
+AppFiles:
+LOAD
+AppSpacename,
+AppName,
+DiskSize,
+MemorySize,
+lastReloadTime,
+OwnerId,
+AppID,
+LastReloadDate
+
+FROM [lib://Monitoring:DataFiles/appFiles_30_5_2024_gzip.parquet]
+(parquet);Data:
+LOAD
+Spacename,
+Name,
+Size,
+OwnerId,
+DataFileID,
+DateExtraction
+FROM [lib://Monitoring:DataFiles/datafiles_31_5_2024_gzip.parquet] (parquet);
+
+AppFiles:
+LOAD
+AppSpacename,
+AppName,
+DiskSize,
+MemorySize,
+lastReloadTime,
+OwnerId,
+AppID,
+LastReloadDate
+
+FROM [lib://Monitoring:DataFiles/appFiles_31_5_2024_gzip.parquet]
+(parquet);Data:
+LOAD
+Spacename,
+Name,
+Size,
+OwnerId,
+DataFileID,
+DateExtraction
+FROM [lib://Monitoring:DataFiles/datafiles_1_6_2024_gzip.parquet] (parquet);
+
+AppFiles:
+LOAD
+AppSpacename,
+AppName,
+DiskSize,
+MemorySize,
+lastReloadTime,
+OwnerId,
+AppID,
+LastReloadDate
+
+FROM [lib://Monitoring:DataFiles/appFiles_1_6_2024_gzip.parquet]
+(parquet);Data:
+LOAD
+Spacename,
+Name,
+Size,
+OwnerId,
+DataFileID,
+DateExtraction
+FROM [lib://Monitoring:DataFiles/datafiles_2_6_2024_gzip.parquet] (parquet);
+
+AppFiles:
+LOAD
+AppSpacename,
+AppName,
+DiskSize,
+MemorySize,
+lastReloadTime,
+OwnerId,
+AppID,
+LastReloadDate
+
+FROM [lib://Monitoring:DataFiles/appFiles_2_6_2024_gzip.parquet]
+(parquet);Data:
+LOAD
+Spacename,
+Name,
+Size,
+OwnerId,
+DataFileID,
+DateExtraction
+FROM [lib://Monitoring:DataFiles/datafiles_3_6_2024_gzip.parquet] (parquet);
+
+AppFiles:
+LOAD
+AppSpacename,
+AppName,
+DiskSize,
+MemorySize,
+lastReloadTime,
+OwnerId,
+AppID,
+LastReloadDate
+
+FROM [lib://Monitoring:DataFiles/appFiles_3_6_2024_gzip.parquet]
+(parquet);Data:
+LOAD
+Spacename,
+Name,
+Size,
+OwnerId,
+DataFileID,
+DateExtraction
+FROM [lib://Monitoring:DataFiles/datafiles_4_6_2024_gzip.parquet] (parquet);
+
+AppFiles:
+LOAD
+AppSpacename,
+AppName,
+DiskSize,
+MemorySize,
+lastReloadTime,
+OwnerId,
+AppID,
+LastReloadDate
+
+FROM [lib://Monitoring:DataFiles/appFiles_4_6_2024_gzip.parquet]
+(parquet);Data:
+LOAD
+Spacename,
+Name,
+Size,
+OwnerId,
+DataFileID,
+DateExtraction
+FROM [lib://Monitoring:DataFiles/datafiles_5_6_2024_gzip.parquet] (parquet);
+
+AppFiles:
+LOAD
+AppSpacename,
+AppName,
+DiskSize,
+MemorySize,
+lastReloadTime,
+OwnerId,
+AppID,
+LastReloadDate
+
+FROM [lib://Monitoring:DataFiles/appFiles_5_6_2024_gzip.parquet]
+(parquet);Data:
+LOAD
+Spacename,
+Name,
+Size,
+OwnerId,
+DataFileID,
+DateExtraction
+FROM [lib://Monitoring:DataFiles/datafiles_6_6_2024_gzip.parquet] (parquet);
+
+AppFiles:
+LOAD
+AppSpacename,
+AppName,
+DiskSize,
+MemorySize,
+lastReloadTime,
+OwnerId,
+AppID,
+LastReloadDate
+
+FROM [lib://Monitoring:DataFiles/appFiles_6_6_2024_gzip.parquet]
+(parquet);Data:
+LOAD
+Spacename,
+Name,
+Size,
+OwnerId,
+DataFileID,
+DateExtraction
+FROM [lib://Monitoring:DataFiles/datafiles_8_6_2024_gzip.parquet] (parquet);
+
+AppFiles:
+LOAD
+AppSpacename,
+AppName,
+DiskSize,
+MemorySize,
+lastReloadTime,
+OwnerId,
+AppID,
+LastReloadDate
+
+FROM [lib://Monitoring:DataFiles/appFiles_8_6_2024_gzip.parquet]
+(parquet);Data:
+LOAD
+Spacename,
+Name,
+Size,
+OwnerId,
+DataFileID,
+DateExtraction
+FROM [lib://Monitoring:DataFiles/datafiles_9_6_2024_gzip.parquet] (parquet);
+
+AppFiles:
+LOAD
+AppSpacename,
+AppName,
+DiskSize,
+MemorySize,
+lastReloadTime,
+OwnerId,
+AppID,
+LastReloadDate
+
+FROM [lib://Monitoring:DataFiles/appFiles_9_6_2024_gzip.parquet]
+(parquet);Data:
+LOAD
+Spacename,
+Name,
+Size,
+OwnerId,
+DataFileID,
+DateExtraction
+FROM [lib://Monitoring:DataFiles/datafiles_10_6_2024_gzip.parquet] (parquet);
+
+AppFiles:
+LOAD
+AppSpacename,
+AppName,
+DiskSize,
+MemorySize,
+lastReloadTime,
+OwnerId,
+AppID,
+LastReloadDate
+
+FROM [lib://Monitoring:DataFiles/appFiles_10_6_2024_gzip.parquet]
+(parquet);Data:
+LOAD
+Spacename,
+Name,
+Size,
+OwnerId,
+DataFileID,
+DateExtraction
+FROM [lib://Monitoring:DataFiles/datafiles_11_6_2024_gzip.parquet] (parquet);
+
+AppFiles:
+LOAD
+AppSpacename,
+AppName,
+DiskSize,
+MemorySize,
+lastReloadTime,
+OwnerId,
+AppID,
+LastReloadDate
+
+FROM [lib://Monitoring:DataFiles/appFiles_11_6_2024_gzip.parquet]
+(parquet);Data:
+LOAD
+Spacename,
+Name,
+Size,
+OwnerId,
+DataFileID,
+DateExtraction
+FROM [lib://Monitoring:DataFiles/datafiles_12_6_2024_gzip.parquet] (parquet);
+
+AppFiles:
+LOAD
+AppSpacename,
+AppName,
+DiskSize,
+MemorySize,
+lastReloadTime,
+OwnerId,
+AppID,
+LastReloadDate
+
+FROM [lib://Monitoring:DataFiles/appFiles_12_6_2024_gzip.parquet]
+(parquet);Data:
+LOAD
+Spacename,
+Name,
+Size,
+OwnerId,
+DataFileID,
+DateExtraction
+FROM [lib://Monitoring:DataFiles/datafiles_13_6_2024_gzip.parquet] (parquet);
+
+AppFiles:
+LOAD
+AppSpacename,
+AppName,
+DiskSize,
+MemorySize,
+lastReloadTime,
+OwnerId,
+AppID,
+LastReloadDate
+
+FROM [lib://Monitoring:DataFiles/appFiles_13_6_2024_gzip.parquet]
+(parquet);Data:
+LOAD
+Spacename,
+Name,
+Size,
+OwnerId,
+DataFileID,
+DateExtraction
+FROM [lib://Monitoring:DataFiles/datafiles_14_6_2024_gzip.parquet] (parquet);
+
+AppFiles:
+LOAD
+AppSpacename,
+AppName,
+DiskSize,
+MemorySize,
+lastReloadTime,
+OwnerId,
+AppID,
+LastReloadDate
+
+FROM [lib://Monitoring:DataFiles/appFiles_14_6_2024_gzip.parquet]
+(parquet);Data:
+LOAD
+Spacename,
+Name,
+Size,
+OwnerId,
+DataFileID,
+DateExtraction
+FROM [lib://Monitoring:DataFiles/datafiles_15_6_2024_gzip.parquet] (parquet);
+
+AppFiles:
+LOAD
+AppSpacename,
+AppName,
+DiskSize,
+MemorySize,
+lastReloadTime,
+OwnerId,
+AppID,
+LastReloadDate
+
+FROM [lib://Monitoring:DataFiles/appFiles_15_6_2024_gzip.parquet]
+(parquet);Data:
+LOAD
+Spacename,
+Name,
+Size,
+OwnerId,
+DataFileID,
+DateExtraction
+FROM [lib://Monitoring:DataFiles/datafiles_16_6_2024_gzip.parquet] (parquet);
+
+AppFiles:
+LOAD
+AppSpacename,
+AppName,
+DiskSize,
+MemorySize,
+lastReloadTime,
+OwnerId,
+AppID,
+LastReloadDate
+
+FROM [lib://Monitoring:DataFiles/appFiles_16_6_2024_gzip.parquet]
+(parquet);Data:
+LOAD
+Spacename,
+Name,
+Size,
+OwnerId,
+DataFileID,
+DateExtraction
+FROM [lib://Monitoring:DataFiles/datafiles_17_6_2024_gzip.parquet] (parquet);
+
+AppFiles:
+LOAD
+AppSpacename,
+AppName,
+DiskSize,
+MemorySize,
+lastReloadTime,
+OwnerId,
+AppID,
+LastReloadDate
+
+FROM [lib://Monitoring:DataFiles/appFiles_17_6_2024_gzip.parquet]
+(parquet);Data:
+LOAD
+Spacename,
+Name,
+Size,
+OwnerId,
+DataFileID,
+DateExtraction
+FROM [lib://Monitoring:DataFiles/datafiles_18_6_2024_gzip.parquet] (parquet);
+
+AppFiles:
+LOAD
+AppSpacename,
+AppName,
+DiskSize,
+MemorySize,
+lastReloadTime,
+OwnerId,
+AppID,
+LastReloadDate
+
+FROM [lib://Monitoring:DataFiles/appFiles_18_6_2024_gzip.parquet]
+(parquet);Data:
+LOAD
+Spacename,
+Name,
+Size,
+OwnerId,
+DataFileID,
+DateExtraction
+FROM [lib://Monitoring:DataFiles/datafiles_19_6_2024_gzip.parquet] (parquet);
+
+AppFiles:
+LOAD
+AppSpacename,
+AppName,
+DiskSize,
+MemorySize,
+lastReloadTime,
+OwnerId,
+AppID,
+LastReloadDate
+
+FROM [lib://Monitoring:DataFiles/appFiles_19_6_2024_gzip.parquet]
+(parquet);Data:
+LOAD
+Spacename,
+Name,
+Size,
+OwnerId,
+DataFileID,
+DateExtraction
+FROM [lib://Monitoring:DataFiles/datafiles_20_6_2024_gzip.parquet] (parquet);
+
+AppFiles:
+LOAD
+AppSpacename,
+AppName,
+DiskSize,
+MemorySize,
+lastReloadTime,
+OwnerId,
+AppID,
+LastReloadDate
+
+FROM [lib://Monitoring:DataFiles/appFiles_20_6_2024_gzip.parquet]
+(parquet);Data:
+LOAD
+Spacename,
+Name,
+Size,
+OwnerId,
+DataFileID,
+DateExtraction
+FROM [lib://Monitoring:DataFiles/datafiles_21_6_2024_gzip.parquet] (parquet);
+
+AppFiles:
+LOAD
+AppSpacename,
+AppName,
+DiskSize,
+MemorySize,
+lastReloadTime,
+OwnerId,
+AppID,
+LastReloadDate
+
+FROM [lib://Monitoring:DataFiles/appFiles_21_6_2024_gzip.parquet]
+(parquet);Data:
+LOAD
+Spacename,
+Name,
+Size,
+OwnerId,
+DataFileID,
+DateExtraction
+FROM [lib://Monitoring:DataFiles/datafiles_22_6_2024_gzip.parquet] (parquet);
+
+AppFiles:
+LOAD
+AppSpacename,
+AppName,
+DiskSize,
+MemorySize,
+lastReloadTime,
+OwnerId,
+AppID,
+LastReloadDate
+
+FROM [lib://Monitoring:DataFiles/appFiles_22_6_2024_gzip.parquet]
+(parquet);Data:
+LOAD
+Spacename,
+Name,
+Size,
+OwnerId,
+DataFileID,
+DateExtraction
+FROM [lib://Monitoring:DataFiles/datafiles_23_6_2024_gzip.parquet] (parquet);
+
+AppFiles:
+LOAD
+AppSpacename,
+AppName,
+DiskSize,
+MemorySize,
+lastReloadTime,
+OwnerId,
+AppID,
+LastReloadDate
+
+FROM [lib://Monitoring:DataFiles/appFiles_23_6_2024_gzip.parquet]
+(parquet);Data:
+LOAD
+Spacename,
+Name,
+Size,
+OwnerId,
+DataFileID,
+DateExtraction
+FROM [lib://Monitoring:DataFiles/datafiles_24_6_2024_gzip.parquet] (parquet);
+
+AppFiles:
+LOAD
+AppSpacename,
+AppName,
+DiskSize,
+MemorySize,
+lastReloadTime,
+OwnerId,
+AppID,
+LastReloadDate
+
+FROM [lib://Monitoring:DataFiles/appFiles_24_6_2024_gzip.parquet]
+(parquet);Data:
+LOAD
+Spacename,
+Name,
+Size,
+OwnerId,
+DataFileID,
+DateExtraction
+FROM [lib://Monitoring:DataFiles/datafiles_25_6_2024_gzip.parquet] (parquet);
+
+AppFiles:
+LOAD
+AppSpacename,
+AppName,
+DiskSize,
+MemorySize,
+lastReloadTime,
+OwnerId,
+AppID,
+LastReloadDate
+
+FROM [lib://Monitoring:DataFiles/appFiles_25_6_2024_gzip.parquet]
+(parquet);Data:
+LOAD
+Spacename,
+Name,
+Size,
+OwnerId,
+DataFileID,
+DateExtraction
+FROM [lib://Monitoring:DataFiles/datafiles_26_6_2024_gzip.parquet] (parquet);
+
+AppFiles:
+LOAD
+AppSpacename,
+AppName,
+DiskSize,
+MemorySize,
+lastReloadTime,
+OwnerId,
+AppID,
+LastReloadDate
+
+FROM [lib://Monitoring:DataFiles/appFiles_26_6_2024_gzip.parquet]
+(parquet);Data:
+LOAD
+Spacename,
+Name,
+Size,
+OwnerId,
+DataFileID,
+DateExtraction
+FROM [lib://Monitoring:DataFiles/datafiles_27_6_2024_gzip.parquet] (parquet);
+
+AppFiles:
+LOAD
+AppSpacename,
+AppName,
+DiskSize,
+MemorySize,
+lastReloadTime,
+OwnerId,
+AppID,
+LastReloadDate
+
+FROM [lib://Monitoring:DataFiles/appFiles_27_6_2024_gzip.parquet]
+(parquet);Data:
+LOAD
+Spacename,
+Name,
+Size,
+OwnerId,
+DataFileID,
+DateExtraction
+FROM [lib://Monitoring:DataFiles/datafiles_28_6_2024_gzip.parquet] (parquet);
+
+AppFiles:
+LOAD
+AppSpacename,
+AppName,
+DiskSize,
+MemorySize,
+lastReloadTime,
+OwnerId,
+AppID,
+LastReloadDate
+
+FROM [lib://Monitoring:DataFiles/appFiles_28_6_2024_gzip.parquet]
+(parquet);Data:
+LOAD
+Spacename,
+Name,
+Size,
+OwnerId,
+DataFileID,
+DateExtraction
+FROM [lib://Monitoring:DataFiles/datafiles_29_6_2024_gzip.parquet] (parquet);
+
+AppFiles:
+LOAD
+AppSpacename,
+AppName,
+DiskSize,
+MemorySize,
+lastReloadTime,
+OwnerId,
+AppID,
+LastReloadDate
+
+FROM [lib://Monitoring:DataFiles/appFiles_29_6_2024_gzip.parquet]
+(parquet);Data:
+LOAD
+Spacename,
+Name,
+Size,
+OwnerId,
+DataFileID,
+DateExtraction
+FROM [lib://Monitoring:DataFiles/datafiles_30_6_2024_gzip.parquet] (parquet);
+
+AppFiles:
+LOAD
+AppSpacename,
+AppName,
+DiskSize,
+MemorySize,
+lastReloadTime,
+OwnerId,
+AppID,
+LastReloadDate
+
+FROM [lib://Monitoring:DataFiles/appFiles_30_6_2024_gzip.parquet]
+(parquet);Data:
+LOAD
+Spacename,
+Name,
+Size,
+OwnerId,
+DataFileID,
+DateExtraction
+FROM [lib://Monitoring:DataFiles/datafiles_1_7_2024_gzip.parquet] (parquet);
+
+AppFiles:
+LOAD
+AppSpacename,
+AppName,
+DiskSize,
+MemorySize,
+lastReloadTime,
+OwnerId,
+AppID,
+LastReloadDate
+
+FROM [lib://Monitoring:DataFiles/appFiles_1_7_2024_gzip.parquet]
+(parquet);Data:
+LOAD
+Spacename,
+Name,
+Size,
+OwnerId,
+DataFileID,
+DateExtraction
+FROM [lib://Monitoring:DataFiles/datafiles_2_7_2024_gzip.parquet] (parquet);
+
+AppFiles:
+LOAD
+AppSpacename,
+AppName,
+DiskSize,
+MemorySize,
+lastReloadTime,
+OwnerId,
+AppID,
+LastReloadDate
+
+FROM [lib://Monitoring:DataFiles/appFiles_2_7_2024_gzip.parquet]
+(parquet);Data:
+LOAD
+Spacename,
+Name,
+Size,
+OwnerId,
+DataFileID,
+DateExtraction
+FROM [lib://Monitoring:DataFiles/datafiles_3_7_2024_gzip.parquet] (parquet);
+
+AppFiles:
+LOAD
+AppSpacename,
+AppName,
+DiskSize,
+MemorySize,
+lastReloadTime,
+OwnerId,
+AppID,
+LastReloadDate
+
+FROM [lib://Monitoring:DataFiles/appFiles_3_7_2024_gzip.parquet]
+(parquet);Data:
+LOAD
+Spacename,
+Name,
+Size,
+OwnerId,
+DataFileID,
+DateExtraction
+FROM [lib://Monitoring:DataFiles/datafiles_4_7_2024_gzip.parquet] (parquet);
+
+AppFiles:
+LOAD
+AppSpacename,
+AppName,
+DiskSize,
+MemorySize,
+lastReloadTime,
+OwnerId,
+AppID,
+LastReloadDate
+
+FROM [lib://Monitoring:DataFiles/appFiles_4_7_2024_gzip.parquet]
+(parquet);Data:
+LOAD
+Spacename,
+Name,
+Size,
+OwnerId,
+DataFileID,
+DateExtraction
+FROM [lib://Monitoring:DataFiles/datafiles_5_7_2024_gzip.parquet] (parquet);
+
+AppFiles:
+LOAD
+AppSpacename,
+AppName,
+DiskSize,
+MemorySize,
+lastReloadTime,
+OwnerId,
+AppID,
+LastReloadDate
+
+FROM [lib://Monitoring:DataFiles/appFiles_5_7_2024_gzip.parquet]
+(parquet);Data:
+LOAD
+Spacename,
+Name,
+Size,
+OwnerId,
+DataFileID,
+DateExtraction
+FROM [lib://Monitoring:DataFiles/datafiles_6_7_2024_gzip.parquet] (parquet);
+
+AppFiles:
+LOAD
+AppSpacename,
+AppName,
+DiskSize,
+MemorySize,
+lastReloadTime,
+OwnerId,
+AppID,
+LastReloadDate
+
+FROM [lib://Monitoring:DataFiles/appFiles_6_7_2024_gzip.parquet]
+(parquet);Data:
+LOAD
+Spacename,
+Name,
+Size,
+OwnerId,
+DataFileID,
+DateExtraction
+FROM [lib://Monitoring:DataFiles/datafiles_7_7_2024_gzip.parquet] (parquet);
+
+AppFiles:
+LOAD
+AppSpacename,
+AppName,
+DiskSize,
+MemorySize,
+lastReloadTime,
+OwnerId,
+AppID,
+LastReloadDate
+
+FROM [lib://Monitoring:DataFiles/appFiles_7_7_2024_gzip.parquet]
+(parquet);Data:
+LOAD
+Spacename,
+Name,
+Size,
+OwnerId,
+DataFileID,
+DateExtraction
+FROM [lib://Monitoring:DataFiles/datafiles_8_7_2024_gzip.parquet] (parquet);
+
+AppFiles:
+LOAD
+AppSpacename,
+AppName,
+DiskSize,
+MemorySize,
+lastReloadTime,
+OwnerId,
+AppID,
+LastReloadDate
+
+FROM [lib://Monitoring:DataFiles/appFiles_8_7_2024_gzip.parquet]
+(parquet);Data:
+LOAD
+Spacename,
+Name,
+Size,
+OwnerId,
+DataFileID,
+DateExtraction
+FROM [lib://Monitoring:DataFiles/datafiles_9_7_2024_gzip.parquet] (parquet);
+
+AppFiles:
+LOAD
+AppSpacename,
+AppName,
+DiskSize,
+MemorySize,
+lastReloadTime,
+OwnerId,
+AppID,
+LastReloadDate
+
+FROM [lib://Monitoring:DataFiles/appFiles_9_7_2024_gzip.parquet]
+(parquet);Data:
+LOAD
+Spacename,
+Name,
+Size,
+OwnerId,
+DataFileID,
+DateExtraction
+FROM [lib://Monitoring:DataFiles/datafiles_10_7_2024_gzip.parquet] (parquet);
+
+AppFiles:
+LOAD
+AppSpacename,
+AppName,
+DiskSize,
+MemorySize,
+lastReloadTime,
+OwnerId,
+AppID,
+LastReloadDate
+
+FROM [lib://Monitoring:DataFiles/appFiles_10_7_2024_gzip.parquet]
+(parquet);Data:
+LOAD
+Spacename,
+Name,
+Size,
+OwnerId,
+DataFileID,
+DateExtraction
+FROM [lib://Monitoring:DataFiles/datafiles_11_7_2024_gzip.parquet] (parquet);
+
+AppFiles:
+LOAD
+AppSpacename,
+AppName,
+DiskSize,
+MemorySize,
+lastReloadTime,
+OwnerId,
+AppID,
+LastReloadDate
+
+FROM [lib://Monitoring:DataFiles/appFiles_11_7_2024_gzip.parquet]
+(parquet);Data:
+LOAD
+Spacename,
+Name,
+Size,
+OwnerId,
+DataFileID,
+DateExtraction
+FROM [lib://Monitoring:DataFiles/datafiles_12_7_2024_gzip.parquet] (parquet);
+
+AppFiles:
+LOAD
+AppSpacename,
+AppName,
+DiskSize,
+MemorySize,
+lastReloadTime,
+OwnerId,
+AppID,
+LastReloadDate
+
+FROM [lib://Monitoring:DataFiles/appFiles_12_7_2024_gzip.parquet]
+(parquet);Data:
+LOAD
+Spacename,
+Name,
+Size,
+OwnerId,
+DataFileID,
+DateExtraction
+FROM [lib://Monitoring:DataFiles/datafiles_13_7_2024_gzip.parquet] (parquet);
+
+AppFiles:
+LOAD
+AppSpacename,
+AppName,
+DiskSize,
+MemorySize,
+lastReloadTime,
+OwnerId,
+AppID,
+LastReloadDate
+
+FROM [lib://Monitoring:DataFiles/appFiles_13_7_2024_gzip.parquet]
+(parquet);Data:
+LOAD
+Spacename,
+Name,
+Size,
+OwnerId,
+DataFileID,
+DateExtraction
+FROM [lib://Monitoring:DataFiles/datafiles_14_7_2024_gzip.parquet] (parquet);
+
+AppFiles:
+LOAD
+AppSpacename,
+AppName,
+DiskSize,
+MemorySize,
+lastReloadTime,
+OwnerId,
+AppID,
+LastReloadDate
+
+FROM [lib://Monitoring:DataFiles/appFiles_14_7_2024_gzip.parquet]
+(parquet);Data:
+LOAD
+Spacename,
+Name,
+Size,
+OwnerId,
+DataFileID,
+DateExtraction
+FROM [lib://Monitoring:DataFiles/datafiles_15_7_2024_gzip.parquet] (parquet);
+
+AppFiles:
+LOAD
+AppSpacename,
+AppName,
+DiskSize,
+MemorySize,
+lastReloadTime,
+OwnerId,
+AppID,
+LastReloadDate
+
+FROM [lib://Monitoring:DataFiles/appFiles_15_7_2024_gzip.parquet]
+(parquet);Data:
+LOAD
+Spacename,
+Name,
+Size,
+OwnerId,
+DataFileID,
+DateExtraction
+FROM [lib://Monitoring:DataFiles/datafiles_16_7_2024_gzip.parquet] (parquet);
+
+AppFiles:
+LOAD
+AppSpacename,
+AppName,
+DiskSize,
+MemorySize,
+lastReloadTime,
+OwnerId,
+AppID,
+LastReloadDate
+
+FROM [lib://Monitoring:DataFiles/appFiles_16_7_2024_gzip.parquet]
+(parquet);Data:
+LOAD
+Spacename,
+Name,
+Size,
+OwnerId,
+DataFileID,
+DateExtraction
+FROM [lib://Monitoring:DataFiles/datafiles_17_7_2024_gzip.parquet] (parquet);
+
+AppFiles:
+LOAD
+AppSpacename,
+AppName,
+DiskSize,
+MemorySize,
+lastReloadTime,
+OwnerId,
+AppID,
+LastReloadDate
+
+FROM [lib://Monitoring:DataFiles/appFiles_17_7_2024_gzip.parquet]
+(parquet);Data:
+LOAD
+Spacename,
+Name,
+Size,
+OwnerId,
+DataFileID,
+DateExtraction
+FROM [lib://Monitoring:DataFiles/datafiles_18_7_2024_gzip.parquet] (parquet);
+
+AppFiles:
+LOAD
+AppSpacename,
+AppName,
+DiskSize,
+MemorySize,
+lastReloadTime,
+OwnerId,
+AppID,
+LastReloadDate
+
+FROM [lib://Monitoring:DataFiles/appFiles_18_7_2024_gzip.parquet]
+(parquet);Data:
+LOAD
+Spacename,
+Name,
+Size,
+OwnerId,
+DataFileID,
+DateExtraction
+FROM [lib://Monitoring:DataFiles/datafiles_19_7_2024_gzip.parquet] (parquet);
+
+AppFiles:
+LOAD
+AppSpacename,
+AppName,
+DiskSize,
+MemorySize,
+lastReloadTime,
+OwnerId,
+AppID,
+LastReloadDate
+
+FROM [lib://Monitoring:DataFiles/appFiles_19_7_2024_gzip.parquet]
+(parquet);Data:
+LOAD
+Spacename,
+Name,
+Size,
+OwnerId,
+DataFileID,
+DateExtraction
+FROM [lib://Monitoring:DataFiles/datafiles_20_7_2024_gzip.parquet] (parquet);
+
+AppFiles:
+LOAD
+AppSpacename,
+AppName,
+DiskSize,
+MemorySize,
+lastReloadTime,
+OwnerId,
+AppID,
+LastReloadDate
+
+FROM [lib://Monitoring:DataFiles/appFiles_20_7_2024_gzip.parquet]
+(parquet);Data:
+LOAD
+Spacename,
+Name,
+Size,
+OwnerId,
+DataFileID,
+DateExtraction
+FROM [lib://Monitoring:DataFiles/datafiles_21_7_2024_gzip.parquet] (parquet);
+
+AppFiles:
+LOAD
+AppSpacename,
+AppName,
+DiskSize,
+MemorySize,
+lastReloadTime,
+OwnerId,
+AppID,
+LastReloadDate
+
+FROM [lib://Monitoring:DataFiles/appFiles_21_7_2024_gzip.parquet]
+(parquet);Data:
+LOAD
+Spacename,
+Name,
+Size,
+OwnerId,
+DataFileID,
+DateExtraction
+FROM [lib://Monitoring:DataFiles/datafiles_22_7_2024_gzip.parquet] (parquet);
+
+AppFiles:
+LOAD
+AppSpacename,
+AppName,
+DiskSize,
+MemorySize,
+lastReloadTime,
+OwnerId,
+AppID,
+LastReloadDate
+
+FROM [lib://Monitoring:DataFiles/appFiles_22_7_2024_gzip.parquet]
+(parquet);Data:
+LOAD
+Spacename,
+Name,
+Size,
+OwnerId,
+DataFileID,
+DateExtraction
+FROM [lib://Monitoring:DataFiles/datafiles_23_7_2024_gzip.parquet] (parquet);
+
+AppFiles:
+LOAD
+AppSpacename,
+AppName,
+DiskSize,
+MemorySize,
+lastReloadTime,
+OwnerId,
+AppID,
+LastReloadDate
+
+FROM [lib://Monitoring:DataFiles/appFiles_23_7_2024_gzip.parquet]
+(parquet);Data:
+LOAD
+Spacename,
+Name,
+Size,
+OwnerId,
+DataFileID,
+DateExtraction
+FROM [lib://Monitoring:DataFiles/datafiles_24_7_2024_gzip.parquet] (parquet);
+
+AppFiles:
+LOAD
+AppSpacename,
+AppName,
+DiskSize,
+MemorySize,
+lastReloadTime,
+OwnerId,
+AppID,
+LastReloadDate
+
+FROM [lib://Monitoring:DataFiles/appFiles_24_7_2024_gzip.parquet]
+(parquet);Data:
+LOAD
+Spacename,
+Name,
+Size,
+OwnerId,
+DataFileID,
+DateExtraction
+FROM [lib://Monitoring:DataFiles/datafiles_25_7_2024_gzip.parquet] (parquet);
+
+AppFiles:
+LOAD
+AppSpacename,
+AppName,
+DiskSize,
+MemorySize,
+lastReloadTime,
+OwnerId,
+AppID,
+LastReloadDate
+
+FROM [lib://Monitoring:DataFiles/appFiles_25_7_2024_gzip.parquet]
+(parquet);Data:
+LOAD
+Spacename,
+Name,
+Size,
+OwnerId,
+DataFileID,
+DateExtraction
+FROM [lib://Monitoring:DataFiles/datafiles_26_7_2024_gzip.parquet] (parquet);
+
+AppFiles:
+LOAD
+AppSpacename,
+AppName,
+DiskSize,
+MemorySize,
+lastReloadTime,
+OwnerId,
+AppID,
+LastReloadDate
+
+FROM [lib://Monitoring:DataFiles/appFiles_26_7_2024_gzip.parquet]
+(parquet);Data:
+LOAD
+Spacename,
+Name,
+Size,
+OwnerId,
+DataFileID,
+DateExtraction
+FROM [lib://Monitoring:DataFiles/datafiles_27_7_2024_gzip.parquet] (parquet);
+
+AppFiles:
+LOAD
+AppSpacename,
+AppName,
+DiskSize,
+MemorySize,
+lastReloadTime,
+OwnerId,
+AppID,
+LastReloadDate
+
+FROM [lib://Monitoring:DataFiles/appFiles_27_7_2024_gzip.parquet]
+(parquet);Data:
+LOAD
+Spacename,
+Name,
+Size,
+OwnerId,
+DataFileID,
+DateExtraction
+FROM [lib://Monitoring:DataFiles/datafiles_28_7_2024_gzip.parquet] (parquet);
+
+AppFiles:
+LOAD
+AppSpacename,
+AppName,
+DiskSize,
+MemorySize,
+lastReloadTime,
+OwnerId,
+AppID,
+LastReloadDate
+
+FROM [lib://Monitoring:DataFiles/appFiles_28_7_2024_gzip.parquet]
+(parquet);Data:
+LOAD
+Spacename,
+Name,
+Size,
+OwnerId,
+DataFileID,
+DateExtraction
+FROM [lib://Monitoring:DataFiles/datafiles_29_7_2024_gzip.parquet] (parquet);
+
+AppFiles:
+LOAD
+AppSpacename,
+AppName,
+DiskSize,
+MemorySize,
+lastReloadTime,
+OwnerId,
+AppID,
+LastReloadDate
+
+FROM [lib://Monitoring:DataFiles/appFiles_29_7_2024_gzip.parquet]
+(parquet);Data:
+LOAD
+Spacename,
+Name,
+Size,
+OwnerId,
+DataFileID,
+DateExtraction
+FROM [lib://Monitoring:DataFiles/datafiles_30_7_2024_gzip.parquet] (parquet);
+
+AppFiles:
+LOAD
+AppSpacename,
+AppName,
+DiskSize,
+MemorySize,
+lastReloadTime,
+OwnerId,
+AppID,
+LastReloadDate
+
+FROM [lib://Monitoring:DataFiles/appFiles_30_7_2024_gzip.parquet]
+(parquet);Data:
+LOAD
+Spacename,
+Name,
+Size,
+OwnerId,
+DataFileID,
+DateExtraction
+FROM [lib://Monitoring:DataFiles/datafiles_31_7_2024_gzip.parquet] (parquet);
+
+AppFiles:
+LOAD
+AppSpacename,
+AppName,
+DiskSize,
+MemorySize,
+lastReloadTime,
+OwnerId,
+AppID,
+LastReloadDate
+
+FROM [lib://Monitoring:DataFiles/appFiles_31_7_2024_gzip.parquet]
+(parquet);Data:
+LOAD
+Spacename,
+Name,
+Size,
+OwnerId,
+DataFileID,
+DateExtraction
+FROM [lib://Monitoring:DataFiles/datafiles_1_8_2024_gzip.parquet] (parquet);
+
+AppFiles:
+LOAD
+AppSpacename,
+AppName,
+DiskSize,
+MemorySize,
+lastReloadTime,
+OwnerId,
+AppID,
+LastReloadDate
+
+FROM [lib://Monitoring:DataFiles/appFiles_1_8_2024_gzip.parquet]
+(parquet);Data:
+LOAD
+Spacename,
+Name,
+Size,
+OwnerId,
+DataFileID,
+DateExtraction
+FROM [lib://Monitoring:DataFiles/datafiles_2_8_2024_gzip.parquet] (parquet);
+
+AppFiles:
+LOAD
+AppSpacename,
+AppName,
+DiskSize,
+MemorySize,
+lastReloadTime,
+OwnerId,
+AppID,
+LastReloadDate
+
+FROM [lib://Monitoring:DataFiles/appFiles_2_8_2024_gzip.parquet]
+(parquet);Data:
+LOAD
+Spacename,
+Name,
+Size,
+OwnerId,
+DataFileID,
+DateExtraction
+FROM [lib://Monitoring:DataFiles/datafiles_3_8_2024_gzip.parquet] (parquet);
+
+AppFiles:
+LOAD
+AppSpacename,
+AppName,
+DiskSize,
+MemorySize,
+lastReloadTime,
+OwnerId,
+AppID,
+LastReloadDate
+
+FROM [lib://Monitoring:DataFiles/appFiles_3_8_2024_gzip.parquet]
+(parquet);Data:
+LOAD
+Spacename,
+Name,
+Size,
+OwnerId,
+DataFileID,
+DateExtraction
+FROM [lib://Monitoring:DataFiles/datafiles_4_8_2024_gzip.parquet] (parquet);
+
+AppFiles:
+LOAD
+AppSpacename,
+AppName,
+DiskSize,
+MemorySize,
+lastReloadTime,
+OwnerId,
+AppID,
+LastReloadDate
+
+FROM [lib://Monitoring:DataFiles/appFiles_4_8_2024_gzip.parquet]
+(parquet);Data:
+LOAD
+Spacename,
+Name,
+Size,
+OwnerId,
+DataFileID,
+DateExtraction
+FROM [lib://Monitoring:DataFiles/datafiles_5_8_2024_gzip.parquet] (parquet);
+
+AppFiles:
+LOAD
+AppSpacename,
+AppName,
+DiskSize,
+MemorySize,
+lastReloadTime,
+OwnerId,
+AppID,
+LastReloadDate
+
+FROM [lib://Monitoring:DataFiles/appFiles_5_8_2024_gzip.parquet]
+(parquet);Data:
+LOAD
+Spacename,
+Name,
+Size,
+OwnerId,
+DataFileID,
+DateExtraction
+FROM [lib://Monitoring:DataFiles/datafiles_6_8_2024_gzip.parquet] (parquet);
+
+AppFiles:
+LOAD
+AppSpacename,
+AppName,
+DiskSize,
+MemorySize,
+lastReloadTime,
+OwnerId,
+AppID,
+LastReloadDate
+
+FROM [lib://Monitoring:DataFiles/appFiles_6_8_2024_gzip.parquet]
+(parquet);Data:
+LOAD
+Spacename,
+Name,
+Size,
+OwnerId,
+DataFileID,
+DateExtraction
+FROM [lib://Monitoring:DataFiles/datafiles_7_8_2024_gzip.parquet] (parquet);
+
+AppFiles:
+LOAD
+AppSpacename,
+AppName,
+DiskSize,
+MemorySize,
+lastReloadTime,
+OwnerId,
+AppID,
+LastReloadDate
+
+FROM [lib://Monitoring:DataFiles/appFiles_7_8_2024_gzip.parquet]
+(parquet);Data:
+LOAD
+Spacename,
+Name,
+Size,
+OwnerId,
+DataFileID,
+DateExtraction
+FROM [lib://Monitoring:DataFiles/datafiles_8_8_2024_gzip.parquet] (parquet);
+
+AppFiles:
+LOAD
+AppSpacename,
+AppName,
+DiskSize,
+MemorySize,
+lastReloadTime,
+OwnerId,
+AppID,
+LastReloadDate
+
+FROM [lib://Monitoring:DataFiles/appFiles_8_8_2024_gzip.parquet]
+(parquet);Data:
+LOAD
+Spacename,
+Name,
+Size,
+OwnerId,
+DataFileID,
+DateExtraction
+FROM [lib://Monitoring:DataFiles/datafiles_9_8_2024_gzip.parquet] (parquet);
+
+AppFiles:
+LOAD
+AppSpacename,
+AppName,
+DiskSize,
+MemorySize,
+lastReloadTime,
+OwnerId,
+AppID,
+LastReloadDate
+
+FROM [lib://Monitoring:DataFiles/appFiles_9_8_2024_gzip.parquet]
+(parquet);Data:
+LOAD
+Spacename,
+Name,
+Size,
+OwnerId,
+DataFileID,
+DateExtraction
+FROM [lib://Monitoring:DataFiles/datafiles_10_8_2024_gzip.parquet] (parquet);
+
+AppFiles:
+LOAD
+AppSpacename,
+AppName,
+DiskSize,
+MemorySize,
+lastReloadTime,
+OwnerId,
+AppID,
+LastReloadDate
+
+FROM [lib://Monitoring:DataFiles/appFiles_10_8_2024_gzip.parquet]
+(parquet);Data:
+LOAD
+Spacename,
+Name,
+Size,
+OwnerId,
+DataFileID,
+DateExtraction
+FROM [lib://Monitoring:DataFiles/datafiles_11_8_2024_gzip.parquet] (parquet);
+
+AppFiles:
+LOAD
+AppSpacename,
+AppName,
+DiskSize,
+MemorySize,
+lastReloadTime,
+OwnerId,
+AppID,
+LastReloadDate
+
+FROM [lib://Monitoring:DataFiles/appFiles_11_8_2024_gzip.parquet]
+(parquet);Data:
+LOAD
+Spacename,
+Name,
+Size,
+OwnerId,
+DataFileID,
+DateExtraction
+FROM [lib://Monitoring:DataFiles/datafiles_12_8_2024_gzip.parquet] (parquet);
+
+AppFiles:
+LOAD
+AppSpacename,
+AppName,
+DiskSize,
+MemorySize,
+lastReloadTime,
+OwnerId,
+AppID,
+LastReloadDate
+
+FROM [lib://Monitoring:DataFiles/appFiles_12_8_2024_gzip.parquet]
+(parquet);Data:
+LOAD
+Spacename,
+Name,
+Size,
+OwnerId,
+DataFileID,
+DateExtraction
+FROM [lib://Monitoring:DataFiles/datafiles_13_8_2024_gzip.parquet] (parquet);
+
+AppFiles:
+LOAD
+AppSpacename,
+AppName,
+DiskSize,
+MemorySize,
+lastReloadTime,
+OwnerId,
+AppID,
+LastReloadDate
+
+FROM [lib://Monitoring:DataFiles/appFiles_13_8_2024_gzip.parquet]
+(parquet);Data:
+LOAD
+Spacename,
+Name,
+Size,
+OwnerId,
+DataFileID,
+DateExtraction
+FROM [lib://Monitoring:DataFiles/datafiles_14_8_2024_gzip.parquet] (parquet);
+
+AppFiles:
+LOAD
+AppSpacename,
+AppName,
+DiskSize,
+MemorySize,
+lastReloadTime,
+OwnerId,
+AppID,
+LastReloadDate
+
+FROM [lib://Monitoring:DataFiles/appFiles_14_8_2024_gzip.parquet]
+(parquet);Data:
+LOAD
+Spacename,
+Name,
+Size,
+OwnerId,
+DataFileID,
+DateExtraction
+FROM [lib://Monitoring:DataFiles/datafiles_15_8_2024_gzip.parquet] (parquet);
+
+AppFiles:
+LOAD
+AppSpacename,
+AppName,
+DiskSize,
+MemorySize,
+lastReloadTime,
+OwnerId,
+AppID,
+LastReloadDate
+
+FROM [lib://Monitoring:DataFiles/appFiles_15_8_2024_gzip.parquet]
+(parquet);Data:
+LOAD
+Spacename,
+Name,
+Size,
+OwnerId,
+DataFileID,
+DateExtraction
+FROM [lib://Monitoring:DataFiles/datafiles_16_8_2024_gzip.parquet] (parquet);
+
+AppFiles:
+LOAD
+AppSpacename,
+AppName,
+DiskSize,
+MemorySize,
+lastReloadTime,
+OwnerId,
+AppID,
+LastReloadDate
+
+FROM [lib://Monitoring:DataFiles/appFiles_16_8_2024_gzip.parquet]
+(parquet);Data:
+LOAD
+Spacename,
+Name,
+Size,
+OwnerId,
+DataFileID,
+DateExtraction
+FROM [lib://Monitoring:DataFiles/datafiles_17_8_2024_gzip.parquet] (parquet);
+
+AppFiles:
+LOAD
+AppSpacename,
+AppName,
+DiskSize,
+MemorySize,
+lastReloadTime,
+OwnerId,
+AppID,
+LastReloadDate
+
+FROM [lib://Monitoring:DataFiles/appFiles_17_8_2024_gzip.parquet]
+(parquet);Data:
+LOAD
+Spacename,
+Name,
+Size,
+OwnerId,
+DataFileID,
+DateExtraction
+FROM [lib://Monitoring:DataFiles/datafiles_18_8_2024_gzip.parquet] (parquet);
+
+AppFiles:
+LOAD
+AppSpacename,
+AppName,
+DiskSize,
+MemorySize,
+lastReloadTime,
+OwnerId,
+AppID,
+LastReloadDate
+
+FROM [lib://Monitoring:DataFiles/appFiles_18_8_2024_gzip.parquet]
+(parquet);Data:
+LOAD
+Spacename,
+Name,
+Size,
+OwnerId,
+DataFileID,
+DateExtraction
+FROM [lib://Monitoring:DataFiles/datafiles_19_8_2024_gzip.parquet] (parquet);
+
+AppFiles:
+LOAD
+AppSpacename,
+AppName,
+DiskSize,
+MemorySize,
+lastReloadTime,
+OwnerId,
+AppID,
+LastReloadDate
+
+FROM [lib://Monitoring:DataFiles/appFiles_19_8_2024_gzip.parquet]
+(parquet);Data:
+LOAD
+Spacename,
+Name,
+Size,
+OwnerId,
+DataFileID,
+DateExtraction
+FROM [lib://Monitoring:DataFiles/datafiles_20_8_2024_gzip.parquet] (parquet);
+
+AppFiles:
+LOAD
+AppSpacename,
+AppName,
+DiskSize,
+MemorySize,
+lastReloadTime,
+OwnerId,
+AppID,
+LastReloadDate
+
+FROM [lib://Monitoring:DataFiles/appFiles_20_8_2024_gzip.parquet]
+(parquet);Data:
+LOAD
+Spacename,
+Name,
+Size,
+OwnerId,
+DataFileID,
+DateExtraction
+FROM [lib://Monitoring:DataFiles/datafiles_21_8_2024_gzip.parquet] (parquet);
+
+AppFiles:
+LOAD
+AppSpacename,
+AppName,
+DiskSize,
+MemorySize,
+lastReloadTime,
+OwnerId,
+AppID,
+LastReloadDate
+
+FROM [lib://Monitoring:DataFiles/appFiles_21_8_2024_gzip.parquet]
+(parquet);Data:
+LOAD
+Spacename,
+Name,
+Size,
+OwnerId,
+DataFileID,
+DateExtraction
+FROM [lib://Monitoring:DataFiles/datafiles_22_8_2024_gzip.parquet] (parquet);
+
+AppFiles:
+LOAD
+AppSpacename,
+AppName,
+DiskSize,
+MemorySize,
+lastReloadTime,
+OwnerId,
+AppID,
+LastReloadDate
+
+FROM [lib://Monitoring:DataFiles/appFiles_22_8_2024_gzip.parquet]
+(parquet);Data:
+LOAD
+Spacename,
+Name,
+Size,
+OwnerId,
+DataFileID,
+DateExtraction
+FROM [lib://Monitoring:DataFiles/datafiles_23_8_2024_gzip.parquet] (parquet);
+
+AppFiles:
+LOAD
+AppSpacename,
+AppName,
+DiskSize,
+MemorySize,
+lastReloadTime,
+OwnerId,
+AppID,
+LastReloadDate
+
+FROM [lib://Monitoring:DataFiles/appFiles_23_8_2024_gzip.parquet]
+(parquet);Data:
+LOAD
+Spacename,
+Name,
+Size,
+OwnerId,
+DataFileID,
+DateExtraction
+FROM [lib://Monitoring:DataFiles/datafiles_24_8_2024_gzip.parquet] (parquet);
+
+AppFiles:
+LOAD
+AppSpacename,
+AppName,
+DiskSize,
+MemorySize,
+lastReloadTime,
+OwnerId,
+AppID,
+LastReloadDate
+
+FROM [lib://Monitoring:DataFiles/appFiles_24_8_2024_gzip.parquet]
+(parquet);Data:
+LOAD
+Spacename,
+Name,
+Size,
+OwnerId,
+DataFileID,
+DateExtraction
+FROM [lib://Monitoring:DataFiles/datafiles_25_8_2024_gzip.parquet] (parquet);
+
+AppFiles:
+LOAD
+AppSpacename,
+AppName,
+DiskSize,
+MemorySize,
+lastReloadTime,
+OwnerId,
+AppID,
+LastReloadDate
+
+FROM [lib://Monitoring:DataFiles/appFiles_25_8_2024_gzip.parquet]
+(parquet);Data:
+LOAD
+Spacename,
+Name,
+Size,
+OwnerId,
+DataFileID,
+DateExtraction
+FROM [lib://Monitoring:DataFiles/datafiles_26_8_2024_gzip.parquet] (parquet);
+
+AppFiles:
+LOAD
+AppSpacename,
+AppName,
+DiskSize,
+MemorySize,
+lastReloadTime,
+OwnerId,
+AppID,
+LastReloadDate
+
+FROM [lib://Monitoring:DataFiles/appFiles_26_8_2024_gzip.parquet]
+(parquet);Data:
+LOAD
+Spacename,
+Name,
+Size,
+OwnerId,
+DataFileID,
+DateExtraction
+FROM [lib://Monitoring:DataFiles/datafiles_27_8_2024_gzip.parquet] (parquet);
+
+AppFiles:
+LOAD
+AppSpacename,
+AppName,
+DiskSize,
+MemorySize,
+lastReloadTime,
+OwnerId,
+AppID,
+LastReloadDate
+
+FROM [lib://Monitoring:DataFiles/appFiles_27_8_2024_gzip.parquet]
+(parquet);Data:
+LOAD
+Spacename,
+Name,
+Size,
+OwnerId,
+DataFileID,
+DateExtraction
+FROM [lib://Monitoring:DataFiles/datafiles_28_8_2024_gzip.parquet] (parquet);
+
+AppFiles:
+LOAD
+AppSpacename,
+AppName,
+DiskSize,
+MemorySize,
+lastReloadTime,
+OwnerId,
+AppID,
+LastReloadDate
+
+FROM [lib://Monitoring:DataFiles/appFiles_28_8_2024_gzip.parquet]
+(parquet);Data:
+LOAD
+Spacename,
+Name,
+Size,
+OwnerId,
+DataFileID,
+DateExtraction
+FROM [lib://Monitoring:DataFiles/datafiles_29_8_2024_gzip.parquet] (parquet);
+
+AppFiles:
+LOAD
+AppSpacename,
+AppName,
+DiskSize,
+MemorySize,
+lastReloadTime,
+OwnerId,
+AppID,
+LastReloadDate
+
+FROM [lib://Monitoring:DataFiles/appFiles_29_8_2024_gzip.parquet]
+(parquet);Data:
+LOAD
+Spacename,
+Name,
+Size,
+OwnerId,
+DataFileID,
+DateExtraction
+FROM [lib://Monitoring:DataFiles/datafiles_30_8_2024_gzip.parquet] (parquet);
+
+AppFiles:
+LOAD
+AppSpacename,
+AppName,
+DiskSize,
+MemorySize,
+lastReloadTime,
+OwnerId,
+AppID,
+LastReloadDate
+
+FROM [lib://Monitoring:DataFiles/appFiles_30_8_2024_gzip.parquet]
+(parquet);Data:
+LOAD
+Spacename,
+Name,
+Size,
+OwnerId,
+DataFileID,
+DateExtraction
+FROM [lib://Monitoring:DataFiles/datafiles_31_8_2024_gzip.parquet] (parquet);
+
+AppFiles:
+LOAD
+AppSpacename,
+AppName,
+DiskSize,
+MemorySize,
+lastReloadTime,
+OwnerId,
+AppID,
+LastReloadDate
+
+FROM [lib://Monitoring:DataFiles/appFiles_31_8_2024_gzip.parquet]
+(parquet);Data:
+LOAD
+Spacename,
+Name,
+Size,
+OwnerId,
+DataFileID,
+DateExtraction
+FROM [lib://Monitoring:DataFiles/datafiles_1_9_2024_gzip.parquet] (parquet);
+
+AppFiles:
+LOAD
+AppSpacename,
+AppName,
+DiskSize,
+MemorySize,
+lastReloadTime,
+OwnerId,
+AppID,
+LastReloadDate
+
+FROM [lib://Monitoring:DataFiles/appFiles_1_9_2024_gzip.parquet]
+(parquet);Data:
+LOAD
+Spacename,
+Name,
+Size,
+OwnerId,
+DataFileID,
+DateExtraction
+FROM [lib://Monitoring:DataFiles/datafiles_2_9_2024_gzip.parquet] (parquet);
+
+AppFiles:
+LOAD
+AppSpacename,
+AppName,
+DiskSize,
+MemorySize,
+lastReloadTime,
+OwnerId,
+AppID,
+LastReloadDate
+
+FROM [lib://Monitoring:DataFiles/appFiles_2_9_2024_gzip.parquet]
+(parquet);Data:
+LOAD
+Spacename,
+Name,
+Size,
+OwnerId,
+DataFileID,
+DateExtraction
+FROM [lib://Monitoring:DataFiles/datafiles_3_9_2024_gzip.parquet] (parquet);
+
+AppFiles:
+LOAD
+AppSpacename,
+AppName,
+DiskSize,
+MemorySize,
+lastReloadTime,
+OwnerId,
+AppID,
+LastReloadDate
+
+FROM [lib://Monitoring:DataFiles/appFiles_3_9_2024_gzip.parquet]
+(parquet);Data:
+LOAD
+Spacename,
+Name,
+Size,
+OwnerId,
+DataFileID,
+DateExtraction
+FROM [lib://Monitoring:DataFiles/datafiles_4_9_2024_gzip.parquet] (parquet);
+
+AppFiles:
+LOAD
+AppSpacename,
+AppName,
+DiskSize,
+MemorySize,
+lastReloadTime,
+OwnerId,
+AppID,
+LastReloadDate
+
+FROM [lib://Monitoring:DataFiles/appFiles_4_9_2024_gzip.parquet]
+(parquet);Data:
+LOAD
+Spacename,
+Name,
+Size,
+OwnerId,
+DataFileID,
+DateExtraction
+FROM [lib://Monitoring:DataFiles/datafiles_5_9_2024_gzip.parquet] (parquet);
+
+AppFiles:
+LOAD
+AppSpacename,
+AppName,
+DiskSize,
+MemorySize,
+lastReloadTime,
+OwnerId,
+AppID,
+LastReloadDate
+
+FROM [lib://Monitoring:DataFiles/appFiles_5_9_2024_gzip.parquet]
+(parquet);Data:
+LOAD
+Spacename,
+Name,
+Size,
+OwnerId,
+DataFileID,
+DateExtraction
+FROM [lib://Monitoring:DataFiles/datafiles_6_9_2024_gzip.parquet] (parquet);
+
+AppFiles:
+LOAD
+AppSpacename,
+AppName,
+DiskSize,
+MemorySize,
+lastReloadTime,
+OwnerId,
+AppID,
+LastReloadDate
+
+FROM [lib://Monitoring:DataFiles/appFiles_6_9_2024_gzip.parquet]
+(parquet);Data:
+LOAD
+Spacename,
+Name,
+Size,
+OwnerId,
+DataFileID,
+DateExtraction
+FROM [lib://Monitoring:DataFiles/datafiles_7_9_2024_gzip.parquet] (parquet);
+
+AppFiles:
+LOAD
+AppSpacename,
+AppName,
+DiskSize,
+MemorySize,
+lastReloadTime,
+OwnerId,
+AppID,
+LastReloadDate
+
+FROM [lib://Monitoring:DataFiles/appFiles_7_9_2024_gzip.parquet]
+(parquet);Data:
+LOAD
+Spacename,
+Name,
+Size,
+OwnerId,
+DataFileID,
+DateExtraction
+FROM [lib://Monitoring:DataFiles/datafiles_8_9_2024_gzip.parquet] (parquet);
+
+AppFiles:
+LOAD
+AppSpacename,
+AppName,
+DiskSize,
+MemorySize,
+lastReloadTime,
+OwnerId,
+AppID,
+LastReloadDate
+
+FROM [lib://Monitoring:DataFiles/appFiles_8_9_2024_gzip.parquet]
+(parquet);Data:
+LOAD
+Spacename,
+Name,
+Size,
+OwnerId,
+DataFileID,
+DateExtraction
+FROM [lib://Monitoring:DataFiles/datafiles_9_9_2024_gzip.parquet] (parquet);
+
+AppFiles:
+LOAD
+AppSpacename,
+AppName,
+DiskSize,
+MemorySize,
+lastReloadTime,
+OwnerId,
+AppID,
+LastReloadDate
+
+FROM [lib://Monitoring:DataFiles/appFiles_9_9_2024_gzip.parquet]
+(parquet);Data:
+LOAD
+Spacename,
+Name,
+Size,
+OwnerId,
+DataFileID,
+DateExtraction
+FROM [lib://Monitoring:DataFiles/datafiles_10_9_2024_gzip.parquet] (parquet);
+
+AppFiles:
+LOAD
+AppSpacename,
+AppName,
+DiskSize,
+MemorySize,
+lastReloadTime,
+OwnerId,
+AppID,
+LastReloadDate
+
+FROM [lib://Monitoring:DataFiles/appFiles_10_9_2024_gzip.parquet]
+(parquet);Data:
+LOAD
+Spacename,
+Name,
+Size,
+OwnerId,
+DataFileID,
+DateExtraction
+FROM [lib://Monitoring:DataFiles/datafiles_11_9_2024_gzip.parquet] (parquet);
+
+AppFiles:
+LOAD
+AppSpacename,
+AppName,
+DiskSize,
+MemorySize,
+lastReloadTime,
+OwnerId,
+AppID,
+LastReloadDate
+
+FROM [lib://Monitoring:DataFiles/appFiles_11_9_2024_gzip.parquet]
+(parquet);Data:
+LOAD
+Spacename,
+Name,
+Size,
+OwnerId,
+DataFileID,
+DateExtraction
+FROM [lib://Monitoring:DataFiles/datafiles_12_9_2024_gzip.parquet] (parquet);
+
+AppFiles:
+LOAD
+AppSpacename,
+AppName,
+DiskSize,
+MemorySize,
+lastReloadTime,
+OwnerId,
+AppID,
+LastReloadDate
+
+FROM [lib://Monitoring:DataFiles/appFiles_12_9_2024_gzip.parquet]
+(parquet);Data:
+LOAD
+Spacename,
+Name,
+Size,
+OwnerId,
+DataFileID,
+DateExtraction
+FROM [lib://Monitoring:DataFiles/datafiles_13_9_2024_gzip.parquet] (parquet);
+
+AppFiles:
+LOAD
+AppSpacename,
+AppName,
+DiskSize,
+MemorySize,
+lastReloadTime,
+OwnerId,
+AppID,
+LastReloadDate
+
+FROM [lib://Monitoring:DataFiles/appFiles_13_9_2024_gzip.parquet]
+(parquet);Data:
+LOAD
+Spacename,
+Name,
+Size,
+OwnerId,
+DataFileID,
+DateExtraction
+FROM [lib://Monitoring:DataFiles/datafiles_14_9_2024_gzip.parquet] (parquet);
+
+AppFiles:
+LOAD
+AppSpacename,
+AppName,
+DiskSize,
+MemorySize,
+lastReloadTime,
+OwnerId,
+AppID,
+LastReloadDate
+
+FROM [lib://Monitoring:DataFiles/appFiles_14_9_2024_gzip.parquet]
+(parquet);Data:
+LOAD
+Spacename,
+Name,
+Size,
+OwnerId,
+DataFileID,
+DateExtraction
+FROM [lib://Monitoring:DataFiles/datafiles_15_9_2024_gzip.parquet] (parquet);
+
+AppFiles:
+LOAD
+AppSpacename,
+AppName,
+DiskSize,
+MemorySize,
+lastReloadTime,
+OwnerId,
+AppID,
+LastReloadDate
+
+FROM [lib://Monitoring:DataFiles/appFiles_15_9_2024_gzip.parquet]
+(parquet);Data:
+LOAD
+Spacename,
+Name,
+Size,
+OwnerId,
+DataFileID,
+DateExtraction
+FROM [lib://Monitoring:DataFiles/datafiles_16_9_2024_gzip.parquet] (parquet);
+
+AppFiles:
+LOAD
+AppSpacename,
+AppName,
+DiskSize,
+MemorySize,
+lastReloadTime,
+OwnerId,
+AppID,
+LastReloadDate
+
+FROM [lib://Monitoring:DataFiles/appFiles_16_9_2024_gzip.parquet]
+(parquet);Data:
+LOAD
+Spacename,
+Name,
+Size,
+OwnerId,
+DataFileID,
+DateExtraction
+FROM [lib://Monitoring:DataFiles/datafiles_17_9_2024_gzip.parquet] (parquet);
+
+AppFiles:
+LOAD
+AppSpacename,
+AppName,
+DiskSize,
+MemorySize,
+lastReloadTime,
+OwnerId,
+AppID,
+LastReloadDate
+
+FROM [lib://Monitoring:DataFiles/appFiles_17_9_2024_gzip.parquet]
+(parquet);Data:
+LOAD
+Spacename,
+Name,
+Size,
+OwnerId,
+DataFileID,
+DateExtraction
+FROM [lib://Monitoring:DataFiles/datafiles_18_9_2024_gzip.parquet] (parquet);
+
+AppFiles:
+LOAD
+AppSpacename,
+AppName,
+DiskSize,
+MemorySize,
+lastReloadTime,
+OwnerId,
+AppID,
+LastReloadDate
+
+FROM [lib://Monitoring:DataFiles/appFiles_18_9_2024_gzip.parquet]
+(parquet);Data:
+LOAD
+Spacename,
+Name,
+Size,
+OwnerId,
+DataFileID,
+DateExtraction
+FROM [lib://Monitoring:DataFiles/datafiles_19_9_2024_gzip.parquet] (parquet);
+
+AppFiles:
+LOAD
+AppSpacename,
+AppName,
+DiskSize,
+MemorySize,
+lastReloadTime,
+OwnerId,
+AppID,
+LastReloadDate
+
+FROM [lib://Monitoring:DataFiles/appFiles_19_9_2024_gzip.parquet]
+(parquet);Data:
+LOAD
+Spacename,
+Name,
+Size,
+OwnerId,
+DataFileID,
+DateExtraction
+FROM [lib://Monitoring:DataFiles/datafiles_20_9_2024_gzip.parquet] (parquet);
+
+AppFiles:
+LOAD
+AppSpacename,
+AppName,
+DiskSize,
+MemorySize,
+lastReloadTime,
+OwnerId,
+AppID,
+LastReloadDate
+
+FROM [lib://Monitoring:DataFiles/appFiles_20_9_2024_gzip.parquet]
+(parquet);Data:
+LOAD
+Spacename,
+Name,
+Size,
+OwnerId,
+DataFileID,
+DateExtraction
+FROM [lib://Monitoring:DataFiles/datafiles_21_9_2024_gzip.parquet] (parquet);
+
+AppFiles:
+LOAD
+AppSpacename,
+AppName,
+DiskSize,
+MemorySize,
+lastReloadTime,
+OwnerId,
+AppID,
+LastReloadDate
+
+FROM [lib://Monitoring:DataFiles/appFiles_21_9_2024_gzip.parquet]
+(parquet);Data:
+LOAD
+Spacename,
+Name,
+Size,
+OwnerId,
+DataFileID,
+DateExtraction
+FROM [lib://Monitoring:DataFiles/datafiles_22_9_2024_gzip.parquet] (parquet);
+
+AppFiles:
+LOAD
+AppSpacename,
+AppName,
+DiskSize,
+MemorySize,
+lastReloadTime,
+OwnerId,
+AppID,
+LastReloadDate
+
+FROM [lib://Monitoring:DataFiles/appFiles_22_9_2024_gzip.parquet]
+(parquet);Data:
+LOAD
+Spacename,
+Name,
+Size,
+OwnerId,
+DataFileID,
+DateExtraction
+FROM [lib://Monitoring:DataFiles/datafiles_23_9_2024_gzip.parquet] (parquet);
+
+AppFiles:
+LOAD
+AppSpacename,
+AppName,
+DiskSize,
+MemorySize,
+lastReloadTime,
+OwnerId,
+AppID,
+LastReloadDate
+
+FROM [lib://Monitoring:DataFiles/appFiles_23_9_2024_gzip.parquet]
+(parquet);Data:
+LOAD
+Spacename,
+Name,
+Size,
+OwnerId,
+DataFileID,
+DateExtraction
+FROM [lib://Monitoring:DataFiles/datafiles_24_9_2024_gzip.parquet] (parquet);
+
+AppFiles:
+LOAD
+AppSpacename,
+AppName,
+DiskSize,
+MemorySize,
+lastReloadTime,
+OwnerId,
+AppID,
+LastReloadDate
+
+FROM [lib://Monitoring:DataFiles/appFiles_24_9_2024_gzip.parquet]
+(parquet);Data:
+LOAD
+Spacename,
+Name,
+Size,
+OwnerId,
+DataFileID,
+DateExtraction
+FROM [lib://Monitoring:DataFiles/datafiles_25_9_2024_gzip.parquet] (parquet);
+
+AppFiles:
+LOAD
+AppSpacename,
+AppName,
+DiskSize,
+MemorySize,
+lastReloadTime,
+OwnerId,
+AppID,
+LastReloadDate
+
+FROM [lib://Monitoring:DataFiles/appFiles_25_9_2024_gzip.parquet]
+(parquet);Data:
+LOAD
+Spacename,
+Name,
+Size,
+OwnerId,
+DataFileID,
+DateExtraction
+FROM [lib://Monitoring:DataFiles/datafiles_26_9_2024_gzip.parquet] (parquet);
+
+AppFiles:
+LOAD
+AppSpacename,
+AppName,
+DiskSize,
+MemorySize,
+lastReloadTime,
+OwnerId,
+AppID,
+LastReloadDate
+
+FROM [lib://Monitoring:DataFiles/appFiles_26_9_2024_gzip.parquet]
+(parquet);Data:
+LOAD
+Spacename,
+Name,
+Size,
+OwnerId,
+DataFileID,
+DateExtraction
+FROM [lib://Monitoring:DataFiles/datafiles_27_9_2024_gzip.parquet] (parquet);
+
+AppFiles:
+LOAD
+AppSpacename,
+AppName,
+DiskSize,
+MemorySize,
+lastReloadTime,
+OwnerId,
+AppID,
+LastReloadDate
+
+FROM [lib://Monitoring:DataFiles/appFiles_27_9_2024_gzip.parquet]
+(parquet);Data:
+LOAD
+Spacename,
+Name,
+Size,
+OwnerId,
+DataFileID,
+DateExtraction
+FROM [lib://Monitoring:DataFiles/datafiles_28_9_2024_gzip.parquet] (parquet);
+
+AppFiles:
+LOAD
+AppSpacename,
+AppName,
+DiskSize,
+MemorySize,
+lastReloadTime,
+OwnerId,
+AppID,
+LastReloadDate
+
+FROM [lib://Monitoring:DataFiles/appFiles_28_9_2024_gzip.parquet]
+(parquet);Data:
+LOAD
+Spacename,
+Name,
+Size,
+OwnerId,
+DataFileID,
+DateExtraction
+FROM [lib://Monitoring:DataFiles/datafiles_29_9_2024_gzip.parquet] (parquet);
+
+AppFiles:
+LOAD
+AppSpacename,
+AppName,
+DiskSize,
+MemorySize,
+lastReloadTime,
+OwnerId,
+AppID,
+LastReloadDate
+
+FROM [lib://Monitoring:DataFiles/appFiles_29_9_2024_gzip.parquet]
+(parquet);Data:
+LOAD
+Spacename,
+Name,
+Size,
+OwnerId,
+DataFileID,
+DateExtraction
+FROM [lib://Monitoring:DataFiles/datafiles_30_9_2024_gzip.parquet] (parquet);
+
+AppFiles:
+LOAD
+AppSpacename,
+AppName,
+DiskSize,
+MemorySize,
+lastReloadTime,
+OwnerId,
+AppID,
+LastReloadDate
+
+FROM [lib://Monitoring:DataFiles/appFiles_30_9_2024_gzip.parquet]
+(parquet);Data:
+LOAD
+Spacename,
+Name,
+Size,
+OwnerId,
+DataFileID,
+DateExtraction
+FROM [lib://Monitoring:DataFiles/datafiles_1_10_2024_gzip.parquet] (parquet);
+
+AppFiles:
+LOAD
+AppSpacename,
+AppName,
+DiskSize,
+MemorySize,
+lastReloadTime,
+OwnerId,
+AppID,
+LastReloadDate
+
+FROM [lib://Monitoring:DataFiles/appFiles_1_10_2024_gzip.parquet]
+(parquet);Data:
+LOAD
+Spacename,
+Name,
+Size,
+OwnerId,
+DataFileID,
+DateExtraction
+FROM [lib://Monitoring:DataFiles/datafiles_2_10_2024_gzip.parquet] (parquet);
+
+AppFiles:
+LOAD
+AppSpacename,
+AppName,
+DiskSize,
+MemorySize,
+lastReloadTime,
+OwnerId,
+AppID,
+LastReloadDate
+
+FROM [lib://Monitoring:DataFiles/appFiles_2_10_2024_gzip.parquet]
+(parquet);Data:
+LOAD
+Spacename,
+Name,
+Size,
+OwnerId,
+DataFileID,
+DateExtraction
+FROM [lib://Monitoring:DataFiles/datafiles_3_10_2024_gzip.parquet] (parquet);
+
+AppFiles:
+LOAD
+AppSpacename,
+AppName,
+DiskSize,
+MemorySize,
+lastReloadTime,
+OwnerId,
+AppID,
+LastReloadDate
+
+FROM [lib://Monitoring:DataFiles/appFiles_3_10_2024_gzip.parquet]
+(parquet);Data:
+LOAD
+Spacename,
+Name,
+Size,
+OwnerId,
+DataFileID,
+DateExtraction
+FROM [lib://Monitoring:DataFiles/datafiles_4_10_2024_gzip.parquet] (parquet);
+
+AppFiles:
+LOAD
+AppSpacename,
+AppName,
+DiskSize,
+MemorySize,
+lastReloadTime,
+OwnerId,
+AppID,
+LastReloadDate
+
+FROM [lib://Monitoring:DataFiles/appFiles_4_10_2024_gzip.parquet]
+(parquet);Data:
+LOAD
+Spacename,
+Name,
+Size,
+OwnerId,
+DataFileID,
+DateExtraction
+FROM [lib://Monitoring:DataFiles/datafiles_5_10_2024_gzip.parquet] (parquet);
+
+AppFiles:
+LOAD
+AppSpacename,
+AppName,
+DiskSize,
+MemorySize,
+lastReloadTime,
+OwnerId,
+AppID,
+LastReloadDate
+
+FROM [lib://Monitoring:DataFiles/appFiles_5_10_2024_gzip.parquet]
+(parquet);Data:
+LOAD
+Spacename,
+Name,
+Size,
+OwnerId,
+DataFileID,
+DateExtraction
+FROM [lib://Monitoring:DataFiles/datafiles_6_10_2024_gzip.parquet] (parquet);
+
+AppFiles:
+LOAD
+AppSpacename,
+AppName,
+DiskSize,
+MemorySize,
+lastReloadTime,
+OwnerId,
+AppID,
+LastReloadDate
+
+FROM [lib://Monitoring:DataFiles/appFiles_6_10_2024_gzip.parquet]
+(parquet);Data:
+LOAD
+Spacename,
+Name,
+Size,
+OwnerId,
+DataFileID,
+DateExtraction
+FROM [lib://Monitoring:DataFiles/datafiles_7_10_2024_gzip.parquet] (parquet);
+
+AppFiles:
+LOAD
+AppSpacename,
+AppName,
+DiskSize,
+MemorySize,
+lastReloadTime,
+OwnerId,
+AppID,
+LastReloadDate
+
+FROM [lib://Monitoring:DataFiles/appFiles_7_10_2024_gzip.parquet]
+(parquet);Data:
+LOAD
+Spacename,
+Name,
+Size,
+OwnerId,
+DataFileID,
+DateExtraction
+FROM [lib://Monitoring:DataFiles/datafiles_8_10_2024_gzip.parquet] (parquet);
+
+AppFiles:
+LOAD
+AppSpacename,
+AppName,
+DiskSize,
+MemorySize,
+lastReloadTime,
+OwnerId,
+AppID,
+LastReloadDate
+
+FROM [lib://Monitoring:DataFiles/appFiles_8_10_2024_gzip.parquet]
+(parquet);Data:
+LOAD
+Spacename,
+Name,
+Size,
+OwnerId,
+DataFileID,
+DateExtraction
+FROM [lib://Monitoring:DataFiles/datafiles_9_10_2024_gzip.parquet] (parquet);
+
+AppFiles:
+LOAD
+AppSpacename,
+AppName,
+DiskSize,
+MemorySize,
+lastReloadTime,
+OwnerId,
+AppID,
+LastReloadDate
+
+FROM [lib://Monitoring:DataFiles/appFiles_9_10_2024_gzip.parquet]
+(parquet);Data:
+LOAD
+Spacename,
+Name,
+Size,
+OwnerId,
+DataFileID,
+DateExtraction
+FROM [lib://Monitoring:DataFiles/datafiles_10_10_2024_gzip.parquet] (parquet);
+
+AppFiles:
+LOAD
+AppSpacename,
+AppName,
+DiskSize,
+MemorySize,
+lastReloadTime,
+OwnerId,
+AppID,
+LastReloadDate
+
+FROM [lib://Monitoring:DataFiles/appFiles_10_10_2024_gzip.parquet]
+(parquet);Data:
+LOAD
+Spacename,
+Name,
+Size,
+OwnerId,
+DataFileID,
+DateExtraction
+FROM [lib://Monitoring:DataFiles/datafiles_11_10_2024_gzip.parquet] (parquet);
+
+AppFiles:
+LOAD
+AppSpacename,
+AppName,
+DiskSize,
+MemorySize,
+lastReloadTime,
+OwnerId,
+AppID,
+LastReloadDate
+
+FROM [lib://Monitoring:DataFiles/appFiles_11_10_2024_gzip.parquet]
+(parquet);Data:
+LOAD
+Spacename,
+Name,
+Size,
+OwnerId,
+DataFileID,
+DateExtraction
+FROM [lib://Monitoring:DataFiles/datafiles_12_10_2024_gzip.parquet] (parquet);
+
+AppFiles:
+LOAD
+AppSpacename,
+AppName,
+DiskSize,
+MemorySize,
+lastReloadTime,
+OwnerId,
+AppID,
+LastReloadDate
+
+FROM [lib://Monitoring:DataFiles/appFiles_12_10_2024_gzip.parquet]
+(parquet);Data:
+LOAD
+Spacename,
+Name,
+Size,
+OwnerId,
+DataFileID,
+DateExtraction
+FROM [lib://Monitoring:DataFiles/datafiles_13_10_2024_gzip.parquet] (parquet);
+
+AppFiles:
+LOAD
+AppSpacename,
+AppName,
+DiskSize,
+MemorySize,
+lastReloadTime,
+OwnerId,
+AppID,
+LastReloadDate
+
+FROM [lib://Monitoring:DataFiles/appFiles_13_10_2024_gzip.parquet]
+(parquet);Data:
+LOAD
+Spacename,
+Name,
+Size,
+OwnerId,
+DataFileID,
+DateExtraction
+FROM [lib://Monitoring:DataFiles/datafiles_14_10_2024_gzip.parquet] (parquet);
+
+AppFiles:
+LOAD
+AppSpacename,
+AppName,
+DiskSize,
+MemorySize,
+lastReloadTime,
+OwnerId,
+AppID,
+LastReloadDate
+
+FROM [lib://Monitoring:DataFiles/appFiles_14_10_2024_gzip.parquet]
+(parquet);Data:
+LOAD
+Spacename,
+Name,
+Size,
+OwnerId,
+DataFileID,
+DateExtraction
+FROM [lib://Monitoring:DataFiles/datafiles_15_10_2024_gzip.parquet] (parquet);
+
+AppFiles:
+LOAD
+AppSpacename,
+AppName,
+DiskSize,
+MemorySize,
+lastReloadTime,
+OwnerId,
+AppID,
+LastReloadDate
+
+FROM [lib://Monitoring:DataFiles/appFiles_15_10_2024_gzip.parquet]
+(parquet);Data:
+LOAD
+Spacename,
+Name,
+Size,
+OwnerId,
+DataFileID,
+DateExtraction
+FROM [lib://Monitoring:DataFiles/datafiles_16_10_2024_gzip.parquet] (parquet);
+
+AppFiles:
+LOAD
+AppSpacename,
+AppName,
+DiskSize,
+MemorySize,
+lastReloadTime,
+OwnerId,
+AppID,
+LastReloadDate
+
+FROM [lib://Monitoring:DataFiles/appFiles_16_10_2024_gzip.parquet]
+(parquet);Data:
+LOAD
+Spacename,
+Name,
+Size,
+OwnerId,
+DataFileID,
+DateExtraction
+FROM [lib://Monitoring:DataFiles/datafiles_17_10_2024_gzip.parquet] (parquet);
+
+AppFiles:
+LOAD
+AppSpacename,
+AppName,
+DiskSize,
+MemorySize,
+lastReloadTime,
+OwnerId,
+AppID,
+LastReloadDate
+
+FROM [lib://Monitoring:DataFiles/appFiles_17_10_2024_gzip.parquet]
+(parquet);Data:
+LOAD
+Spacename,
+Name,
+Size,
+OwnerId,
+DataFileID,
+DateExtraction
+FROM [lib://Monitoring:DataFiles/datafiles_18_10_2024_gzip.parquet] (parquet);
+
+AppFiles:
+LOAD
+AppSpacename,
+AppName,
+DiskSize,
+MemorySize,
+lastReloadTime,
+OwnerId,
+AppID,
+LastReloadDate
+
+FROM [lib://Monitoring:DataFiles/appFiles_18_10_2024_gzip.parquet]
+(parquet);Data:
+LOAD
+Spacename,
+Name,
+Size,
+OwnerId,
+DataFileID,
+DateExtraction
+FROM [lib://Monitoring:DataFiles/datafiles_19_10_2024_gzip.parquet] (parquet);
+
+AppFiles:
+LOAD
+AppSpacename,
+AppName,
+DiskSize,
+MemorySize,
+lastReloadTime,
+OwnerId,
+AppID,
+LastReloadDate
+
+FROM [lib://Monitoring:DataFiles/appFiles_19_10_2024_gzip.parquet]
+(parquet);Data:
+LOAD
+Spacename,
+Name,
+Size,
+OwnerId,
+DataFileID,
+DateExtraction
+FROM [lib://Monitoring:DataFiles/datafiles_20_10_2024_gzip.parquet] (parquet);
+
+AppFiles:
+LOAD
+AppSpacename,
+AppName,
+DiskSize,
+MemorySize,
+lastReloadTime,
+OwnerId,
+AppID,
+LastReloadDate
+
+FROM [lib://Monitoring:DataFiles/appFiles_20_10_2024_gzip.parquet]
+(parquet);Data:
+LOAD
+Spacename,
+Name,
+Size,
+OwnerId,
+DataFileID,
+DateExtraction
+FROM [lib://Monitoring:DataFiles/datafiles_21_10_2024_gzip.parquet] (parquet);
+
+AppFiles:
+LOAD
+AppSpacename,
+AppName,
+DiskSize,
+MemorySize,
+lastReloadTime,
+OwnerId,
+AppID,
+LastReloadDate
+
+FROM [lib://Monitoring:DataFiles/appFiles_21_10_2024_gzip.parquet]
+(parquet);Data:
+LOAD
+Spacename,
+Name,
+Size,
+OwnerId,
+DataFileID,
+DateExtraction
+FROM [lib://Monitoring:DataFiles/datafiles_22_10_2024_gzip.parquet] (parquet);
+
+AppFiles:
+LOAD
+AppSpacename,
+AppName,
+DiskSize,
+MemorySize,
+lastReloadTime,
+OwnerId,
+AppID,
+LastReloadDate
+
+FROM [lib://Monitoring:DataFiles/appFiles_22_10_2024_gzip.parquet]
+(parquet);Data:
+LOAD
+Spacename,
+Name,
+Size,
+OwnerId,
+DataFileID,
+DateExtraction
+FROM [lib://Monitoring:DataFiles/datafiles_23_10_2024_gzip.parquet] (parquet);
+
+AppFiles:
+LOAD
+AppSpacename,
+AppName,
+DiskSize,
+MemorySize,
+lastReloadTime,
+OwnerId,
+AppID,
+LastReloadDate
+
+FROM [lib://Monitoring:DataFiles/appFiles_23_10_2024_gzip.parquet]
+(parquet);Data:
+LOAD
+Spacename,
+Name,
+Size,
+OwnerId,
+DataFileID,
+DateExtraction
+FROM [lib://Monitoring:DataFiles/datafiles_24_10_2024_gzip.parquet] (parquet);
+
+AppFiles:
+LOAD
+AppSpacename,
+AppName,
+DiskSize,
+MemorySize,
+lastReloadTime,
+OwnerId,
+AppID,
+LastReloadDate
+
+FROM [lib://Monitoring:DataFiles/appFiles_24_10_2024_gzip.parquet]
+(parquet);Data:
+LOAD
+Spacename,
+Name,
+Size,
+OwnerId,
+DataFileID,
+DateExtraction
+FROM [lib://Monitoring:DataFiles/datafiles_25_10_2024_gzip.parquet] (parquet);
+
+AppFiles:
+LOAD
+AppSpacename,
+AppName,
+DiskSize,
+MemorySize,
+lastReloadTime,
+OwnerId,
+AppID,
+LastReloadDate
+
+FROM [lib://Monitoring:DataFiles/appFiles_25_10_2024_gzip.parquet]
+(parquet);Data:
+LOAD
+Spacename,
+Name,
+Size,
+OwnerId,
+DataFileID,
+DateExtraction
+FROM [lib://Monitoring:DataFiles/datafiles_26_10_2024_gzip.parquet] (parquet);
+
+AppFiles:
+LOAD
+AppSpacename,
+AppName,
+DiskSize,
+MemorySize,
+lastReloadTime,
+OwnerId,
+AppID,
+LastReloadDate
+
+FROM [lib://Monitoring:DataFiles/appFiles_26_10_2024_gzip.parquet]
+(parquet);Data:
+LOAD
+Spacename,
+Name,
+Size,
+OwnerId,
+DataFileID,
+DateExtraction
+FROM [lib://Monitoring:DataFiles/datafiles_27_10_2024_gzip.parquet] (parquet);
+
+AppFiles:
+LOAD
+AppSpacename,
+AppName,
+DiskSize,
+MemorySize,
+lastReloadTime,
+OwnerId,
+AppID,
+LastReloadDate
+
+FROM [lib://Monitoring:DataFiles/appFiles_27_10_2024_gzip.parquet]
+(parquet);Data:
+LOAD
+Spacename,
+Name,
+Size,
+OwnerId,
+DataFileID,
+DateExtraction
+FROM [lib://Monitoring:DataFiles/datafiles_28_10_2024_gzip.parquet] (parquet);
+
+AppFiles:
+LOAD
+AppSpacename,
+AppName,
+DiskSize,
+MemorySize,
+lastReloadTime,
+OwnerId,
+AppID,
+LastReloadDate
+
+FROM [lib://Monitoring:DataFiles/appFiles_28_10_2024_gzip.parquet]
+(parquet);Data:
+LOAD
+Spacename,
+Name,
+Size,
+OwnerId,
+DataFileID,
+DateExtraction
+FROM [lib://Monitoring:DataFiles/datafiles_29_10_2024_gzip.parquet] (parquet);
+
+AppFiles:
+LOAD
+AppSpacename,
+AppName,
+DiskSize,
+MemorySize,
+lastReloadTime,
+OwnerId,
+AppID,
+LastReloadDate
+
+FROM [lib://Monitoring:DataFiles/appFiles_29_10_2024_gzip.parquet]
+(parquet);Data:
+LOAD
+Spacename,
+Name,
+Size,
+OwnerId,
+DataFileID,
+DateExtraction
+FROM [lib://Monitoring:DataFiles/datafiles_30_10_2024_gzip.parquet] (parquet);
+
+AppFiles:
+LOAD
+AppSpacename,
+AppName,
+DiskSize,
+MemorySize,
+lastReloadTime,
+OwnerId,
+AppID,
+LastReloadDate
+
+FROM [lib://Monitoring:DataFiles/appFiles_30_10_2024_gzip.parquet]
+(parquet);Data:
+LOAD
+Spacename,
+Name,
+Size,
+OwnerId,
+DataFileID,
+DateExtraction
+FROM [lib://Monitoring:DataFiles/datafiles_31_10_2024_gzip.parquet] (parquet);
+
+AppFiles:
+LOAD
+AppSpacename,
+AppName,
+DiskSize,
+MemorySize,
+lastReloadTime,
+OwnerId,
+AppID,
+LastReloadDate
+
+FROM [lib://Monitoring:DataFiles/appFiles_31_10_2024_gzip.parquet]
+(parquet);Data:
+LOAD
+Spacename,
+Name,
+Size,
+OwnerId,
+DataFileID,
+DateExtraction
+FROM [lib://Monitoring:DataFiles/datafiles_1_11_2024_gzip.parquet] (parquet);
+
+AppFiles:
+LOAD
+AppSpacename,
+AppName,
+DiskSize,
+MemorySize,
+lastReloadTime,
+OwnerId,
+AppID,
+LastReloadDate
+
+FROM [lib://Monitoring:DataFiles/appFiles_1_11_2024_gzip.parquet]
+(parquet);Data:
+LOAD
+Spacename,
+Name,
+Size,
+OwnerId,
+DataFileID,
+DateExtraction
+FROM [lib://Monitoring:DataFiles/datafiles_2_11_2024_gzip.parquet] (parquet);
+
+AppFiles:
+LOAD
+AppSpacename,
+AppName,
+DiskSize,
+MemorySize,
+lastReloadTime,
+OwnerId,
+AppID,
+LastReloadDate
+
+FROM [lib://Monitoring:DataFiles/appFiles_2_11_2024_gzip.parquet]
+(parquet);Data:
+LOAD
+Spacename,
+Name,
+Size,
+OwnerId,
+DataFileID,
+DateExtraction
+FROM [lib://Monitoring:DataFiles/datafiles_3_11_2024_gzip.parquet] (parquet);
+
+AppFiles:
+LOAD
+AppSpacename,
+AppName,
+DiskSize,
+MemorySize,
+lastReloadTime,
+OwnerId,
+AppID,
+LastReloadDate
+
+FROM [lib://Monitoring:DataFiles/appFiles_3_11_2024_gzip.parquet]
+(parquet);Data:
+LOAD
+Spacename,
+Name,
+Size,
+OwnerId,
+DataFileID,
+DateExtraction
+FROM [lib://Monitoring:DataFiles/datafiles_4_11_2024_gzip.parquet] (parquet);
+
+AppFiles:
+LOAD
+AppSpacename,
+AppName,
+DiskSize,
+MemorySize,
+lastReloadTime,
+OwnerId,
+AppID,
+LastReloadDate
+
+FROM [lib://Monitoring:DataFiles/appFiles_4_11_2024_gzip.parquet]
+(parquet);Data:
+LOAD
+Spacename,
+Name,
+Size,
+OwnerId,
+DataFileID,
+DateExtraction
+FROM [lib://Monitoring:DataFiles/datafiles_5_11_2024_gzip.parquet] (parquet);
+
+AppFiles:
+LOAD
+AppSpacename,
+AppName,
+DiskSize,
+MemorySize,
+lastReloadTime,
+OwnerId,
+AppID,
+LastReloadDate
+
+FROM [lib://Monitoring:DataFiles/appFiles_5_11_2024_gzip.parquet]
+(parquet);Data:
+LOAD
+Spacename,
+Name,
+Size,
+OwnerId,
+DataFileID,
+DateExtraction
+FROM [lib://Monitoring:DataFiles/datafiles_6_11_2024_gzip.parquet] (parquet);
+
+AppFiles:
+LOAD
+AppSpacename,
+AppName,
+DiskSize,
+MemorySize,
+lastReloadTime,
+OwnerId,
+AppID,
+LastReloadDate
+
+FROM [lib://Monitoring:DataFiles/appFiles_6_11_2024_gzip.parquet]
+(parquet);Data:
+LOAD
+Spacename,
+Name,
+Size,
+OwnerId,
+DataFileID,
+DateExtraction
+FROM [lib://Monitoring:DataFiles/datafiles_7_11_2024_gzip.parquet] (parquet);
+
+AppFiles:
+LOAD
+AppSpacename,
+AppName,
+DiskSize,
+MemorySize,
+lastReloadTime,
+OwnerId,
+AppID,
+LastReloadDate
+
+FROM [lib://Monitoring:DataFiles/appFiles_7_11_2024_gzip.parquet]
+(parquet);Data:
+LOAD
+Spacename,
+Name,
+Size,
+OwnerId,
+DataFileID,
+DateExtraction
+FROM [lib://Monitoring:DataFiles/datafiles_8_11_2024_gzip.parquet] (parquet);
+
+AppFiles:
+LOAD
+AppSpacename,
+AppName,
+DiskSize,
+MemorySize,
+lastReloadTime,
+OwnerId,
+AppID,
+LastReloadDate
+
+FROM [lib://Monitoring:DataFiles/appFiles_8_11_2024_gzip.parquet]
+(parquet);Data:
+LOAD
+Spacename,
+Name,
+Size,
+OwnerId,
+DataFileID,
+DateExtraction
+FROM [lib://Monitoring:DataFiles/datafiles_9_11_2024_gzip.parquet] (parquet);
+
+AppFiles:
+LOAD
+AppSpacename,
+AppName,
+DiskSize,
+MemorySize,
+lastReloadTime,
+OwnerId,
+AppID,
+LastReloadDate
+
+FROM [lib://Monitoring:DataFiles/appFiles_9_11_2024_gzip.parquet]
+(parquet);Data:
+LOAD
+Spacename,
+Name,
+Size,
+OwnerId,
+DataFileID,
+DateExtraction
+FROM [lib://Monitoring:DataFiles/datafiles_10_11_2024_gzip.parquet] (parquet);
+
+AppFiles:
+LOAD
+AppSpacename,
+AppName,
+DiskSize,
+MemorySize,
+lastReloadTime,
+OwnerId,
+AppID,
+LastReloadDate
+
+FROM [lib://Monitoring:DataFiles/appFiles_10_11_2024_gzip.parquet]
+(parquet);Data:
+LOAD
+Spacename,
+Name,
+Size,
+OwnerId,
+DataFileID,
+DateExtraction
+FROM [lib://Monitoring:DataFiles/datafiles_11_11_2024_gzip.parquet] (parquet);
+
+AppFiles:
+LOAD
+AppSpacename,
+AppName,
+DiskSize,
+MemorySize,
+lastReloadTime,
+OwnerId,
+AppID,
+LastReloadDate
+
+FROM [lib://Monitoring:DataFiles/appFiles_11_11_2024_gzip.parquet]
+(parquet);Data:
+LOAD
+Spacename,
+Name,
+Size,
+OwnerId,
+DataFileID,
+DateExtraction
+FROM [lib://Monitoring:DataFiles/datafiles_12_11_2024_gzip.parquet] (parquet);
+
+AppFiles:
+LOAD
+AppSpacename,
+AppName,
+DiskSize,
+MemorySize,
+lastReloadTime,
+OwnerId,
+AppID,
+LastReloadDate
+
+FROM [lib://Monitoring:DataFiles/appFiles_12_11_2024_gzip.parquet]
+(parquet);Data:
+LOAD
+Spacename,
+Name,
+Size,
+OwnerId,
+DataFileID,
+DateExtraction
+FROM [lib://Monitoring:DataFiles/datafiles_13_11_2024_gzip.parquet] (parquet);
+
+AppFiles:
+LOAD
+AppSpacename,
+AppName,
+DiskSize,
+MemorySize,
+lastReloadTime,
+OwnerId,
+AppID,
+LastReloadDate
+
+FROM [lib://Monitoring:DataFiles/appFiles_13_11_2024_gzip.parquet]
+(parquet);Data:
+LOAD
+Spacename,
+Name,
+Size,
+OwnerId,
+DataFileID,
+DateExtraction
+FROM [lib://Monitoring:DataFiles/datafiles_14_11_2024_gzip.parquet] (parquet);
+
+AppFiles:
+LOAD
+AppSpacename,
+AppName,
+DiskSize,
+MemorySize,
+lastReloadTime,
+OwnerId,
+AppID,
+LastReloadDate
+
+FROM [lib://Monitoring:DataFiles/appFiles_14_11_2024_gzip.parquet]
+(parquet);Data:
+LOAD
+Spacename,
+Name,
+Size,
+OwnerId,
+DataFileID,
+DateExtraction
+FROM [lib://Monitoring:DataFiles/datafiles_15_11_2024_gzip.parquet] (parquet);
+
+AppFiles:
+LOAD
+AppSpacename,
+AppName,
+DiskSize,
+MemorySize,
+lastReloadTime,
+OwnerId,
+AppID,
+LastReloadDate
+
+FROM [lib://Monitoring:DataFiles/appFiles_15_11_2024_gzip.parquet]
+(parquet);Data:
+LOAD
+Spacename,
+Name,
+Size,
+OwnerId,
+DataFileID,
+DateExtraction
+FROM [lib://Monitoring:DataFiles/datafiles_16_11_2024_gzip.parquet] (parquet);
+
+AppFiles:
+LOAD
+AppSpacename,
+AppName,
+DiskSize,
+MemorySize,
+lastReloadTime,
+OwnerId,
+AppID,
+LastReloadDate
+
+FROM [lib://Monitoring:DataFiles/appFiles_16_11_2024_gzip.parquet]
+(parquet);Data:
+LOAD
+Spacename,
+Name,
+Size,
+OwnerId,
+DataFileID,
+DateExtraction
+FROM [lib://Monitoring:DataFiles/datafiles_17_11_2024_gzip.parquet] (parquet);
+
+AppFiles:
+LOAD
+AppSpacename,
+AppName,
+DiskSize,
+MemorySize,
+lastReloadTime,
+OwnerId,
+AppID,
+LastReloadDate
+
+FROM [lib://Monitoring:DataFiles/appFiles_17_11_2024_gzip.parquet]
+(parquet);Data:
+LOAD
+Spacename,
+Name,
+Size,
+OwnerId,
+DataFileID,
+DateExtraction
+FROM [lib://Monitoring:DataFiles/datafiles_18_11_2024_gzip.parquet] (parquet);
+
+AppFiles:
+LOAD
+AppSpacename,
+AppName,
+DiskSize,
+MemorySize,
+lastReloadTime,
+OwnerId,
+AppID,
+LastReloadDate
+
+FROM [lib://Monitoring:DataFiles/appFiles_18_11_2024_gzip.parquet]
+(parquet);Data:
+LOAD
+Spacename,
+Name,
+Size,
+OwnerId,
+DataFileID,
+DateExtraction
+FROM [lib://Monitoring:DataFiles/datafiles_19_11_2024_gzip.parquet] (parquet);
+
+AppFiles:
+LOAD
+AppSpacename,
+AppName,
+DiskSize,
+MemorySize,
+lastReloadTime,
+OwnerId,
+AppID,
+LastReloadDate
+
+FROM [lib://Monitoring:DataFiles/appFiles_19_11_2024_gzip.parquet]
+(parquet);Data:
+LOAD
+Spacename,
+Name,
+Size,
+OwnerId,
+DataFileID,
+DateExtraction
+FROM [lib://Monitoring:DataFiles/datafiles_20_11_2024_gzip.parquet] (parquet);
+
+AppFiles:
+LOAD
+AppSpacename,
+AppName,
+DiskSize,
+MemorySize,
+lastReloadTime,
+OwnerId,
+AppID,
+LastReloadDate
+
+FROM [lib://Monitoring:DataFiles/appFiles_20_11_2024_gzip.parquet]
+(parquet);Data:
+LOAD
+Spacename,
+Name,
+Size,
+OwnerId,
+DataFileID,
+DateExtraction
+FROM [lib://Monitoring:DataFiles/datafiles_21_11_2024_gzip.parquet] (parquet);
+
+AppFiles:
+LOAD
+AppSpacename,
+AppName,
+DiskSize,
+MemorySize,
+lastReloadTime,
+OwnerId,
+AppID,
+LastReloadDate
+
+FROM [lib://Monitoring:DataFiles/appFiles_21_11_2024_gzip.parquet]
+(parquet);Data:
+LOAD
+Spacename,
+Name,
+Size,
+OwnerId,
+DataFileID,
+DateExtraction
+FROM [lib://Monitoring:DataFiles/datafiles_22_11_2024_gzip.parquet] (parquet);
+
+AppFiles:
+LOAD
+AppSpacename,
+AppName,
+DiskSize,
+MemorySize,
+lastReloadTime,
+OwnerId,
+AppID,
+LastReloadDate
+
+FROM [lib://Monitoring:DataFiles/appFiles_22_11_2024_gzip.parquet]
+(parquet);Data:
+LOAD
+Spacename,
+Name,
+Size,
+OwnerId,
+DataFileID,
+DateExtraction
+FROM [lib://Monitoring:DataFiles/datafiles_23_11_2024_gzip.parquet] (parquet);
+
+AppFiles:
+LOAD
+AppSpacename,
+AppName,
+DiskSize,
+MemorySize,
+lastReloadTime,
+OwnerId,
+AppID,
+LastReloadDate
+
+FROM [lib://Monitoring:DataFiles/appFiles_23_11_2024_gzip.parquet]
+(parquet);Data:
+LOAD
+Spacename,
+Name,
+Size,
+OwnerId,
+DataFileID,
+DateExtraction
+FROM [lib://Monitoring:DataFiles/datafiles_24_11_2024_gzip.parquet] (parquet);
+
+AppFiles:
+LOAD
+AppSpacename,
+AppName,
+DiskSize,
+MemorySize,
+lastReloadTime,
+OwnerId,
+AppID,
+LastReloadDate
+
+FROM [lib://Monitoring:DataFiles/appFiles_24_11_2024_gzip.parquet]
+(parquet);Data:
+LOAD
+Spacename,
+Name,
+Size,
+OwnerId,
+DataFileID,
+DateExtraction
+FROM [lib://Monitoring:DataFiles/datafiles_25_11_2024_gzip.parquet] (parquet);
+
+AppFiles:
+LOAD
+AppSpacename,
+AppName,
+DiskSize,
+MemorySize,
+lastReloadTime,
+OwnerId,
+AppID,
+LastReloadDate
+
+FROM [lib://Monitoring:DataFiles/appFiles_25_11_2024_gzip.parquet]
+(parquet);Data:
+LOAD
+Spacename,
+Name,
+Size,
+OwnerId,
+DataFileID,
+DateExtraction
+FROM [lib://Monitoring:DataFiles/datafiles_26_11_2024_gzip.parquet] (parquet);
+
+AppFiles:
+LOAD
+AppSpacename,
+AppName,
+DiskSize,
+MemorySize,
+lastReloadTime,
+OwnerId,
+AppID,
+LastReloadDate
+
+FROM [lib://Monitoring:DataFiles/appFiles_26_11_2024_gzip.parquet]
+(parquet);Data:
+LOAD
+Spacename,
+Name,
+Size,
+OwnerId,
+DataFileID,
+DateExtraction
+FROM [lib://Monitoring:DataFiles/datafiles_27_11_2024_gzip.parquet] (parquet);
+
+AppFiles:
+LOAD
+AppSpacename,
+AppName,
+DiskSize,
+MemorySize,
+lastReloadTime,
+OwnerId,
+AppID,
+LastReloadDate
+
+FROM [lib://Monitoring:DataFiles/appFiles_27_11_2024_gzip.parquet]
+(parquet);Data:
+LOAD
+Spacename,
+Name,
+Size,
+OwnerId,
+DataFileID,
+DateExtraction
+FROM [lib://Monitoring:DataFiles/datafiles_28_11_2024_gzip.parquet] (parquet);
+
+AppFiles:
+LOAD
+AppSpacename,
+AppName,
+DiskSize,
+MemorySize,
+lastReloadTime,
+OwnerId,
+AppID,
+LastReloadDate
+
+FROM [lib://Monitoring:DataFiles/appFiles_28_11_2024_gzip.parquet]
+(parquet);Data:
+LOAD
+Spacename,
+Name,
+Size,
+OwnerId,
+DataFileID,
+DateExtraction
+FROM [lib://Monitoring:DataFiles/datafiles_29_11_2024_gzip.parquet] (parquet);
+
+AppFiles:
+LOAD
+AppSpacename,
+AppName,
+DiskSize,
+MemorySize,
+lastReloadTime,
+OwnerId,
+AppID,
+LastReloadDate
+
+FROM [lib://Monitoring:DataFiles/appFiles_29_11_2024_gzip.parquet]
+(parquet);Data:
+LOAD
+Spacename,
+Name,
+Size,
+OwnerId,
+DataFileID,
+DateExtraction
+FROM [lib://Monitoring:DataFiles/datafiles_30_11_2024_gzip.parquet] (parquet);
+
+AppFiles:
+LOAD
+AppSpacename,
+AppName,
+DiskSize,
+MemorySize,
+lastReloadTime,
+OwnerId,
+AppID,
+LastReloadDate
+
+FROM [lib://Monitoring:DataFiles/appFiles_30_11_2024_gzip.parquet]
+(parquet);Data:
+LOAD
+Spacename,
+Name,
+Size,
+OwnerId,
+DataFileID,
+DateExtraction
+FROM [lib://Monitoring:DataFiles/datafiles_1_12_2024_gzip.parquet] (parquet);
+
+AppFiles:
+LOAD
+AppSpacename,
+AppName,
+DiskSize,
+MemorySize,
+lastReloadTime,
+OwnerId,
+AppID,
+LastReloadDate
+
+FROM [lib://Monitoring:DataFiles/appFiles_1_12_2024_gzip.parquet]
+(parquet);Data:
+LOAD
+Spacename,
+Name,
+Size,
+OwnerId,
+DataFileID,
+DateExtraction
+FROM [lib://Monitoring:DataFiles/datafiles_2_12_2024_gzip.parquet] (parquet);
+
+AppFiles:
+LOAD
+AppSpacename,
+AppName,
+DiskSize,
+MemorySize,
+lastReloadTime,
+OwnerId,
+AppID,
+LastReloadDate
+
+FROM [lib://Monitoring:DataFiles/appFiles_2_12_2024_gzip.parquet]
+(parquet);Data:
+LOAD
+Spacename,
+Name,
+Size,
+OwnerId,
+DataFileID,
+DateExtraction
+FROM [lib://Monitoring:DataFiles/datafiles_3_12_2024_gzip.parquet] (parquet);
+
+AppFiles:
+LOAD
+AppSpacename,
+AppName,
+DiskSize,
+MemorySize,
+lastReloadTime,
+OwnerId,
+AppID,
+LastReloadDate
+
+FROM [lib://Monitoring:DataFiles/appFiles_3_12_2024_gzip.parquet]
+(parquet);Data:
+LOAD
+Spacename,
+Name,
+Size,
+OwnerId,
+DataFileID,
+DateExtraction
+FROM [lib://Monitoring:DataFiles/datafiles_4_12_2024_gzip.parquet] (parquet);
+
+AppFiles:
+LOAD
+AppSpacename,
+AppName,
+DiskSize,
+MemorySize,
+lastReloadTime,
+OwnerId,
+AppID,
+LastReloadDate
+
+FROM [lib://Monitoring:DataFiles/appFiles_4_12_2024_gzip.parquet]
+(parquet);Data:
+LOAD
+Spacename,
+Name,
+Size,
+OwnerId,
+DataFileID,
+DateExtraction
+FROM [lib://Monitoring:DataFiles/datafiles_5_12_2024_gzip.parquet] (parquet);
+
+AppFiles:
+LOAD
+AppSpacename,
+AppName,
+DiskSize,
+MemorySize,
+lastReloadTime,
+OwnerId,
+AppID,
+LastReloadDate
+
+FROM [lib://Monitoring:DataFiles/appFiles_5_12_2024_gzip.parquet]
+(parquet);
