@@ -582,13 +582,13 @@ Replace LOAD
     "Email" AS [DL_DISTRIBUTION_EMAIL],
     SubField([Filters],',') AS [DL_DISTRIBUTION_FILTERS],
     SubField([Groups],',') AS [DL_DISTRIBUTION_GROUP_NAMES]
-FROM "lib://:DataFiles/SampleFile(1).xlsx"
+FROM "lib://:DataFiles/SampleFile(2).xlsx"
 (ooxml, embedded labels, table is DL_DISTRIBUTION_SVC_USERS_QCS);
 
 TempGroups:
   REPLACE LOAD
       *
-    FROM "lib://:DataFiles/SampleFile(1).xlsx"
+    FROM "lib://:DataFiles/SampleFile(2).xlsx"
     (ooxml, embedded labels, table is DL_DISTRIBUTION_SVC_GROUPS_QCS);
 
 let vEnabledFieldNo = FieldNumber('Enabled', 'TempGroups');
