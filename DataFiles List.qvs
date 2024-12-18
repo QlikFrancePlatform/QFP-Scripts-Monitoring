@@ -24,7 +24,7 @@ LOAD
     OwnerId,
     OwnerName
 FROM [lib://Monitoring:DataFiles/UsersList.qvd]
-(qvd)
+(qvd);
 //where Exists(OwnerId)
 
 
